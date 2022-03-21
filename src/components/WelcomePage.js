@@ -1,5 +1,9 @@
 import React from 'react'
-import Header from './Header'
+import Comentarios from './Welcome.js/Comentarios'
+import Consejos from './Welcome.js/Consejos'
+import Cualidades from './Welcome.js/Cualidades'
+import Footer from './Welcome.js/Footer'
+import Header from './Welcome.js/Header'
 
 const WelcomePage = () => {
   return (
@@ -18,6 +22,13 @@ const WelcomePage = () => {
 
       <button className='init'>Comenzar</button>
     </div>
+  <Cualidades/>
+ 
+  <Comentarios/>
+
+
+  <Consejos/>
+<Footer/>
 
     </div>
   )

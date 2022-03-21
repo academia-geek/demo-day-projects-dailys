@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap");
 html {
   background-color: #fbf3ff;
+  margin: 0;
 }
 
 .landingPage {
@@ -78,6 +80,56 @@ html {
   margin-top: 2em;
   font-size: 15px;
   color: whitesmoke;
+}
+
+.coment {
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  color: #626262;
+  height: 15em;
+  padding: 0.5em;
+  margin-top: 2em;
+}
+.coment p {
+  font-family: "Lora", serif;
+}
+.coment span {
+  font-size: 15px;
+}
+.coment .comillas {
+  margin-top: -5em;
+  margin-left: 30em;
+}
+
+.card {
+  width: 14em;
+  margin-right: 4em;
+}
+.card h4 {
+  font-size: 18px;
+  font-family: "Lora", serif;
+  font-weight: bold;
+}
+.card p {
+  color: #626262;
+}
+
+.consejos-cards {
+  text-align: left;
+  display: flex;
+  line-height: 16px;
+}
+
+.container-articulos {
+  text-align: left;
+  padding: 2em;
+}
+
+.footer {
+  width: 100%;
+  background-color: #372e4d;
+  height: 6em;
 }
 
 /*# sourceMappingURL=stylesLanding.css.map */

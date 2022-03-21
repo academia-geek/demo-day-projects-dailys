@@ -1,11 +1,15 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap');
 html{
     background-color:  #fbf3ff;
+    margin: 0;
 }
+
+
 
 .landingPage{
     text-align: center;
+    
 }
 
 .header{
@@ -92,4 +96,63 @@ text-align: center;
       font-size: 15px;
       color: whitesmoke;
     }
+}
+
+.coment{
+    width: 50% ;
+    margin: auto;
+    // background-color: #d1c7f5 !important;
+    // background-color: #fde6fd;
+    // background-color: white;
+    border-radius: 10px;
+    color: #626262;
+    height: 15em;
+    padding: 0.5em;
+    margin-top: 2em;
+    p{
+        
+        font-family: 'Lora', serif;
+    }
+
+    span{
+        font-size: 15px;
+    }
+
+    .comillas{
+        margin-top: -5em;
+        margin-left: 30em;
+    }
+}
+
+
+.card{
+    width: 14em;
+    margin-right: 4em;
+
+    h4{
+        font-size: 18px;
+        font-family: 'Lora', serif;
+        font-weight: bold;
+    }
+
+    p{
+        color: #626262;
+    }
+}
+.consejos-cards{
+    text-align: left;
+    display: flex;
+    line-height: 16px;
+}
+
+.container-articulos{
+    text-align: left;
+    padding: 2em;
+}
+
+
+.footer{
+    width: 100%;
+    background-color: #372e4d;
+    height: 6em;
 }
