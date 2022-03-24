@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { loginEmailPassword, loginFacebook, loginGoogle } from '../redux/actions/actionLogin';
 import * as Yup from "yup";
 import {DivInicio, SubDiv, ButtonInicio } from '../styles/login/styledLogin'
-import "../styles/stylesLogin.css"
+import "../styles/login/stylesLogin.css"
 const Login = () => {
 
     

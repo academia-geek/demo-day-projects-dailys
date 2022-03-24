@@ -1,23 +1,14 @@
 import styled from "styled-components"
-
-
-export const DivInicio = styled.div`
-justify-content: center;
-text-align: center;
-
-`
-
-export const SubDiv = styled.div`
+export const SubDiv2 = styled.div`
 width: 30%;
 margin: auto;
-background-color: #ffff;
 border:  solid 1px lightgray;
-height: 77vh;
+height: 75vh;
 border-radius: 15px;
-
 padding: 2em;
 text-align: left;
-line-height: 17px;
+line-height: 20px;
+background-color: white;
 h3{
     margin-top: 1em;
     font-weight: normal;
@@ -33,8 +24,8 @@ label{
        width: 80%;
        height: 33em;
      }
-`
 
+`
 
 export const ButtonInicio = styled.button`
 border-style: none;
@@ -46,4 +37,3 @@ color: white;
 height: 3em;
 margin-top: 2em;
 `
-

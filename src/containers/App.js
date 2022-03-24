@@ -1,11 +1,12 @@
 import Login from "../components/Login";
+import WelcomePage from "../components/WelcomePage";
 
 
 
 function App() {
   return (
     <div className="App">
-   <Login/>
+   <WelcomePage/>
   
     </div>
   );

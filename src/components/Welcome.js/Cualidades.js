@@ -1,5 +1,6 @@
+
 import React from 'react'
-import { Qualities, SubQualities, H5 } from '../../styles/styledLanding'
+import { Qualities, SubQualities, H5 } from "../../styles/landing/styledLanding"
 const Cualidades = () => {
   return (
     <div>
