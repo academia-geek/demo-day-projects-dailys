@@ -19,7 +19,7 @@ body {
 .containerHome {
   display: flex;
   flex-direction: row;
-  background: var(--fond-default);
+  background: var(--color-white);
   height: 50px;
 }
 .containerHome .nav-sg {
@@ -28,14 +28,13 @@ body {
   margin: 0 15px 0 0;
 }
 .containerHome .nav-sg img {
-  display: none;
+  width: 22%;
 }
 .containerHome .nav-sg .title {
-  color: var(--color-white);
+  color: var(--fond-default);
   font-size: 20px;
   position: relative;
   cursor: pointer;
-  line-height: 40px;
 }
 .containerHome .nav-sg .title img {
   width: 15%;
@@ -59,16 +58,15 @@ body {
   display: flex;
   width: 100%;
   height: 50px;
-  background: var(--fond-default);
+  background: var(--color-white);
 }
-
-.content {
-  width: 100%;
-  height: 90vh;
+.containerHome .MuiButton-label {
+  margin: 5px 0 0 0;
+  justify-content: initial;
 }
-
-.Tareas {
-  text-align: center;
+.containerHome .MuiButton-label img {
+  width: 60px;
+  padding: 0 15px;
 }
 
 .navMobile {
@@ -86,70 +84,26 @@ body {
   height: 40px;
   margin: 0 27px 0 27px;
 }
+.navMobile .MuiButton-label {
+  justify-content: initial;
+}
+.navMobile .MuiButton-label img {
+  width: 70px;
+  padding: 0 15px;
+}
+.navMobile .MuiButton-text {
+  padding: 6px;
+}
 .navMobile .nav-sd:hover {
   background: var(--fond-button);
 }
 
 @media (min-width: 0px) and (max-width: 375px) {
   .containerHome {
-    position: absolute;
-    display: flex;
-    flex-direction: column !important;
-    background: var(--color-white);
-    height: 100vh;
-    width: 65% !important;
-  }
-  .containerHome .nav-sg {
-    text-align: center;
-    width: 150px;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 10px;
-  }
-  .containerHome .nav-sg img {
-    display: inline;
-    width: 15%;
-  }
-  .containerHome .nav-sg .title {
-    color: var(--color-sub-text);
-    font-size: 20px;
-    position: relative;
-    cursor: pointer;
-    line-height: 40px;
-    margin: 0 15px;
-  }
-  .containerHome .nav-sg .title img {
-    width: 15%;
-    position: relative;
-  }
-  .containerHome .d6 {
     display: none;
-  }
-  .containerHome .d3 {
-    display: none;
-  }
-  .containerHome .d1 {
-    display: none;
-  }
-  .containerHome .nav-sg:hover {
-    color: var(--fond-default);
-    font-size: 20px;
-    text-align: center;
-  }
-  .containerHome .nav-sg:hover img {
-    width: 20%;
-    position: relative;
-  }
-  .containerHome .nav-sg:hover .title {
-    color: var(--fond-default);
   }
   .containerHome .logos {
-    display: flex;
-    width: 100%;
-    height: 50px;
-    background: var(--fond-default);
+    display: none;
   }
 }
 @media (min-width: 376px) and (max-width: 1440px) {

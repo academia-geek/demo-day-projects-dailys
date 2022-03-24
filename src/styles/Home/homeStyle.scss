@@ -17,21 +17,20 @@ body{
 .containerHome{
     display: flex;
     flex-direction: row;
-    background: var(--fond-default);
+    background: var(--color-white);
     height: 50px;
     .nav-sg{
         text-align: center;
         width: 150px;
         margin: 0 15px 0 0;
         img{
-            display: none;
+            width: 22%;
         }
         .title{
-            color: var(--color-white);
+            color: var(--fond-default);
             font-size: 20px;
             position: relative;
             cursor: pointer;
-            line-height: 40px;
             img{
                 width: 15%;
                 position: relative;
@@ -56,17 +55,17 @@ body{
         display: flex;
         width: 100%;
         height: 50px;
-        background: var(--fond-default);
+        background: var(--color-white);
+    }
+    .MuiButton-label{
+        margin: 5px 0 0 0;
+        justify-content: initial;
+        img{
+            width: 60px;
+            padding: 0 15px;
+        }
     }
     
-}
-
-.content{
-    width: 100%;
-    height: 90vh;
-}
-.Tareas{
-    text-align: center;
 }
 .navMobile{
     display: flex;
@@ -82,6 +81,16 @@ body{
         height: 40px;
         margin: 0 27px 0 27px;
     }
+    .MuiButton-label{
+        justify-content: initial;
+        img{
+            width: 70px;
+            padding: 0 15px;
+        }
+    }
+    .MuiButton-text {
+       padding: 6px;
+    }
     .nav-sd:hover{
         background: var(--fond-button)
     }
@@ -89,65 +98,10 @@ body{
 
 @media (min-width: 0px) and (max-width: 375px){
     .containerHome{
-        position: absolute;
-        display: flex;
-        flex-direction: column !important;
-        background: var(--color-white);
-        height: 100vh;
-        width: 65% !important;
-        .nav-sg{
-            text-align: center;
-            width: 150px;
-            margin: 0;
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            padding: 10px;
-            img{
-                display: inline;
-                width: 15%;
-            }
-            .title{
-                color: var(--color-sub-text);
-                font-size: 20px;
-                position: relative;
-                cursor: pointer;
-                line-height: 40px;
-                margin: 0 15px;
-                img{
-                    width: 15%;
-                    position: relative;
-                }
-            }
-        }
-        .d6{
+        display: none;
+    .logos{
             display: none;
-        }
-        .d3{
-            display: none;
-        }
-        .d1{
-            display: none;
-        }
-        .nav-sg:hover{
-            color: var(--fond-default);
-            font-size: 20px;
-            text-align: center;
-            img{
-                width: 20%;
-                position: relative;
-            }
-            .title{
-                color: var(--fond-default);
-            }
-        }
-        .logos{
-            display: flex;
-            width: 100%;
-            height: 50px;
-            background: var(--fond-default);
-        }
-        
+        } 
     }
 }
 @media (min-width: 376px) and (max-width: 1440px){
