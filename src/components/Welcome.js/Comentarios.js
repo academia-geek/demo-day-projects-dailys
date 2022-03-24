@@ -1,5 +1,6 @@
 import React from 'react'
 import "../../styles/landing/stylesLanding.css"
+
 const Comentarios = () => {
   return (
     <div className='coment'>

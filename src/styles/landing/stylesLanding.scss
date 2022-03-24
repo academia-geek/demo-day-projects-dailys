@@ -4,10 +4,7 @@ html{
     background-color:  #fbf3ff;
     margin: 0;
     overflow: scroll;
-    
     overflow-x: hidden;
-
-   
 }
 
 
@@ -154,9 +151,6 @@ text-align: center;
     text-align: left;
     padding: 2em;
     overflow: scroll;
-    // ::-webkit-scrollbar {
-    //     display: none;
-    // }
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
     margin-top: 4em;
@@ -177,9 +171,3 @@ text-align: center;
     background-color: #372e4d;
     height: 6em;
 }
-
-// ::-webkit-scrollbar{
-//     width: 0;  /* Remove scrollbar space */
-//     background: transparent;  /* Optional: just make scrollbar invisible */
-// }
-

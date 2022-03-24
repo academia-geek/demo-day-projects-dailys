@@ -141,7 +141,6 @@ html {
 
 .container-articulos::-webkit-scrollbar {
   display: none;
-  /* Safari and Chrome */
 }
 
 .footer {
@@ -149,5 +148,3 @@ html {
   background-color: #372e4d;
   height: 6em;
 }
-
-/*# sourceMappingURL=stylesLanding.css.map */

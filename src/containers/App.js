@@ -1,15 +1,11 @@
 import Login from "../components/Login";
 import WelcomePage from "../components/WelcomePage";
 
-
-
 function App() {
   return (
     <div className="App">
-   <WelcomePage/>
-  
+       <WelcomePage/>
     </div>
   );
 }
-
 export default App;
