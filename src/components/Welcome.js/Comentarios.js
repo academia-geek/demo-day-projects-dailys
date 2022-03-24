@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../styles/landing/styledLanding"
+import "../../styles/landing/stylesLanding.css"
 
 const Comentarios = () => {
   return (
