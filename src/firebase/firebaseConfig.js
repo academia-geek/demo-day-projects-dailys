@@ -3,16 +3,14 @@ import { getFirestore } from "firebase/firestore";
 import { FacebookAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD7TV8YN-htZiYtmzXfPXA6maXBuQosII0",
-    authDomain: "fir-day-396a3.firebaseapp.com",
-    projectId: "fir-day-396a3",
-    storageBucket: "fir-day-396a3.appspot.com",
-    messagingSenderId: "417314420929",
-    appId: "1:417314420929:web:867fceee7f577c98b8bc40"
-  };
+  apiKey: "AIzaSyALq-pvQzyTKAvPFGbe-aEFF6GE8GjeRU8",
+  authDomain: "demodaydailys.firebaseapp.com",
+  projectId: "demodaydailys",
+  storageBucket: "demodaydailys.appspot.com",
+  messagingSenderId: "231571589992",
+  appId: "1:231571589992:web:b46614d3dddef7dcff64dd"
+};
 
-
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const google = new GoogleAuthProvider();
 const facebook = new FacebookAuthProvider();

@@ -1,0 +1,13 @@
+.password2{
+    display: block;
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 0.4em;
+    border-radius: 5px;
+    margin-bottom: -1em;
+    height: 2em;
+}
+
+.registro{
+    text-align: center;
+}
