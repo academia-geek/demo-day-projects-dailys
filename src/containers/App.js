@@ -1,12 +1,10 @@
-
-import WelcomePage from '../components/WelcomePage';
+import { Home } from '../components/Home'
 
 function App() {
   return (
     <div className="App">
-   <WelcomePage/>
+      <Home />
     </div>
   );
 }
-
 export default App;
