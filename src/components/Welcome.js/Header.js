@@ -1,23 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "../../styles/landing/stylesLanding.css"
 
 const Header = () => {
     return (
         <div>
-
             <div className='header'>
-
                 <div className='brand'>
-                Dailys
+                    Dailys
                 </div>
-
                 <div className='buttons'>
-                    <button className='log'>Log in</button>
-                    <button className='sign'>Sign Up</button>
+                    <button className='log'><Link to="/login">Log in</Link></button>
+                    <button className='sign'><Link to="/registro">Sign Up</Link></button>
                 </div>
-
             </div>
-
         </div>
     )
 }
