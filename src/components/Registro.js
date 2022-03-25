@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { registroEmailPasswordNombre } from '../redux/actions/actionRegister';
 import * as Yup from "yup";
 import { SubDiv2, ButtonInicio } from '../styles/registro/styledRegistro';
+import { Link } from 'react-router-dom';
 const Registro = () => {
    const dispatch = useDispatch();
 
@@ -21,7 +22,7 @@ const Registro = () => {
          password2: Yup.string().required(),
       }),
       onSubmit: (data) => {
-         const { name, email, password1, password2 } = data;
+         const { name, email, password1 } = data;
          dispatch(registroEmailPasswordNombre(email, password1, name));
       },
    });
@@ -55,7 +56,7 @@ const Registro = () => {
             <div className='ya'>
                <hr />
                <span >¿Ya tienes cuenta en Dailys?</span> <br/>
-               <span className='creaCuenta'>Inicia sesión</span>
+               <span className='creaCuenta'><Link to="/login" className='creaCuenta'>Inicia sesión</Link></span>
             </div>
 
          </SubDiv2>

@@ -5,6 +5,7 @@ import { loginEmailPassword, loginFacebook, loginGoogle } from '../redux/actions
 import * as Yup from "yup";
 import { DivInicio, SubDiv, ButtonInicio } from '../styles/login/styledLogin'
 import "../styles/login/stylesLogin.css"
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -62,7 +63,7 @@ const Login = () => {
                <button onClick={handleFacebook} id='boton' ><img width={20} height={20} src='https://res.cloudinary.com/paolavbm/image/upload/v1647828889/facebook_3_i1wnhz.png' alt='' />Inicia sesión con Facebook</button> <br />
                <button onClick={handleGoogle} id='boton'><img width={20} height={20} src='https://res.cloudinary.com/paolavbm/image/upload/v1647828890/google_1_ftezas.png' alt='' />Inicia sesión com Google</button>
                <p>¿Eres nuevo en Dailys?</p>
-               <span className='creaCuenta'>Crea tu cuenta</span>
+               <span className='creaCuenta'><Link to="/registro" className='creaCuenta'>Crea tu cuenta</Link></span>
             </div>
 
          </SubDiv>

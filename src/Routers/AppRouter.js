@@ -1,72 +1,62 @@
-import { useFormik } from 'formik';
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import { loginEmailPassword, loginFacebook, loginGoogle } from '../redux/actions/actionLogin';
-import * as Yup from "yup";
-import { DivInicio, SubDiv, ButtonInicio } from '../styles/login/styledLogin'
-import "../styles/login/stylesLogin.css"
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import React, { useEffect, useState } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Login from '../components/Login';
+import Registro from '../components/Registro';
+import WelcomePage from '../components/WelcomePage';
+import DasRouterUser from './DasRouterUser';
+import PrivateRoutes from './PrivateRoutes';
+import PublicRoutes from './PublicRoutes';
 
-const Login = () => {
+const AppRouter = () => {
 
-    const dispatch = useDispatch();
+    const [isLoggedId, setIsLoggedId] = useState(false);
 
-    const formik = useFormik({
-        initialValues: {
-            email: "",
-            password: "",
-        },
-        validationSchema: Yup.object({
-            email: Yup.string().email().required(),
-            password: Yup.string().required(),
-        }),
-        onSubmit: (data) => {
-            const { email, password } = data;
-            dispatch(loginEmailPassword(email, password));
-            console.log("hola" + { email })
-        },
-    });
+    const [checking, setChecking] = useState(true);
 
-    const handleGoogle = () => {
-        dispatch(loginGoogle());
-    };
-
-    const handleFacebook = () => {
-        dispatch(loginFacebook());
-    };
-
+    useEffect(() => {
+        const auth = getAuth()
+        onAuthStateChanged(auth, (user) => {
+            if (user?.uid) {
+                setIsLoggedId(true)
+            } else {
+                setIsLoggedId(false)
+            }
+            setChecking(false)
+        })
+    }, []);
+    if (checking) {
+        return <h1>Espere...</h1>;
+    }
     return (
-        <DivInicio>
-            <h2 className='logo'>Dailys</h2>
-            <SubDiv>
-                <h3>Iniciar sesión</h3>
-
-                <form onSubmit={formik.handleSubmit}>
-                    <label for="correo">Dirección de correo electrónico</label>
-                    <input onChange={formik.handleChange} className="correo" name='email' />
-
-
-                    <label for="password">Contraseña</label>
-                    <input onChange={formik.handleChange} type="password" className="password" name='password' />
-
-
-                    <ButtonInicio type='submit'>Iniciar sesión</ButtonInicio>
-
-                    <span className='terminos'>Al continuar, aceptas las Condiciones de uso y el Aviso de privacidad.</span>
-                </form>
-
-                <hr />
-                <div className='iconos'>
-                    <div className='ya'>
-                        <span >Inicia sesión con Google o Facebook</span>
-                    </div>
-                    <button onClick={handleFacebook} id='boton' ><img width={20} height={20} src='https://res.cloudinary.com/paolavbm/image/upload/v1647828889/facebook_3_i1wnhz.png' alt='' />Inicia sesión con Facebook</button> <br />
-                    <button onClick={handleGoogle} id='boton'><img width={20} height={20} src='https://res.cloudinary.com/paolavbm/image/upload/v1647828890/google_1_ftezas.png' alt='' />Inicia sesión com Google</button>
-                    <p>¿Eres nuevo en Dailys?</p>
-                    <span className='creaCuenta'>Crea tu cuenta</span>
-                </div>
-            </SubDiv>
-        </DivInicio>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={
+                    <PublicRoutes isAuthenticated={isLoggedId}>
+                        <WelcomePage />
+                    </PublicRoutes>
+                }
+                />
+                <Route path="/login" element={
+                    <PublicRoutes isAuthenticated={isLoggedId}>
+                        <Login />
+                    </PublicRoutes>
+                }
+                />
+                <Route path="/registro" element={
+                    <PublicRoutes isAuthenticated={isLoggedId}>
+                        <Registro />
+                    </PublicRoutes>
+                }
+                />
+                <Route path="/*" element={
+                    <PrivateRoutes isAuthenticated={isLoggedId}>
+                        <DasRouterUser />
+                    </PrivateRoutes>
+                } />
+            </Routes>
+        </BrowserRouter>
     )
 }
 
-export default Login
+export default AppRouter
