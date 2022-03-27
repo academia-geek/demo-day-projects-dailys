@@ -1,73 +1,88 @@
-import { useFormik } from 'formik';
-import React from 'react'
+import React from 'react';
+import { Form, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import { loginEmailPassword, loginFacebook, loginGoogle } from '../redux/actions/actionLogin';
-import * as Yup from "yup";
-import { DivInicio, SubDiv, ButtonInicio } from '../styles/login/styledLogin'
-import "../styles/login/stylesLogin.css"
-import { Link } from 'react-router-dom';
+import { useForm } from '../hook/useForm';
+
 
 const Login = () => {
 
-   const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-   const formik = useFormik({
-      initialValues: {
-         email: "",
-         password: "",
-      },
-      validationSchema: Yup.object({
-         email: Yup.string().email().required(),
-         password: Yup.string().required(),
-      }),
-      onSubmit: (data) => {
-         const { email, password } = data;
-         dispatch(loginEmailPassword(email, password));
-         console.log("hola" + { email })
-      },
-   });
+    const [values, handleInputChange, reset] = useForm({
+        email: "",
+        password: ""
 
-   const handleGoogle = () => {
-      dispatch(loginGoogle());
-   };
+    })
 
-   const handleFacebook = () => {
-      dispatch(loginFacebook());
-   };
+    const { email, password } = values;
 
-   return (
-      <DivInicio>
-         <h2 className='logo'>Dailys</h2>
-         <SubDiv>
-            <h3>Iniciar sesión</h3>
+    const handleGoogle = () => {
+        dispatch(loginGoogle())
+    }
 
-            <form onSubmit={formik.handleSubmit}>
-               <label for="correo">Dirección de correo electrónico</label>
-               <input onChange={formik.handleChange} className="correo" name='email' />
+    const handleFacebook = () => {
+        dispatch(loginFacebook())
+    }
 
+    const handleLogin = (e) => {
+        e.preventDefault()
+        dispatch(loginEmailPassword(email, password))
+        reset()
+    }
 
-               <label for="password">Contraseña</label>
-               <input onChange={formik.handleChange} type="password" className="password" name='password' />
+    return (
+        <div className="my-5 w-100">
+            <Form className="my-5 form py-2 w-50 mx-auto" onSubmit={handleLogin}>
+                <div className="auth__social-networks">
+                    <div className="google-btn" onClick={handleGoogle}>
+                        <div className="google-icon-wrapper py-2 google">
+                            <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" /> Iniciar con Google
+                        </div>
+                    </div>
+                </div>
+                <div className="auth__social-networks">
+                    <div className="facebook-btn" onClick={handleFacebook}>
+                        <div className="facebook-icon-wrapper py-2 facebook">
+                            <img className="facebook-icon" src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="facebook button" /> Iniciar con Facebook
+                        </div>
+                    </div>
+                </div>
+                <div className='mx-auto w-75'>
+                    <div className="mx-auto w-75">
+                        <Form.Group className="mb-3 mx-auto w-75" controlId="formBasicEmail">
+                            <Form.Label>Correo</Form.Label>
+                            <Form.Control
+                                type="email"
+                                placeholder="Enter email"
+                                name="email"
+                                value={email}
+                                onChange={handleInputChange} />
+                        </Form.Group>
 
+                        <Form.Group className="mb-3 mx-auto w-75" controlId="formBasicPassword">
+                            <Form.Label>Contraseña</Form.Label>
+                            <Form.Control
+                                type="password"
+                                placeholder="Password"
+                                name="password"
+                                value={password}
+                                onChange={handleInputChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3 mx-auto w-75">
+                            <Button variant="success" className="w-100" type="submit">
+                                Enviar
+                            </Button>
+                        </Form.Group>
+                        <p className="text-center">¿no tienes cuenta? <Link className="link-success" to="/register">Registrate</Link></p>
+                    </div>
+                </div>
 
-               <ButtonInicio type='submit'>Iniciar sesión</ButtonInicio>
+            </Form>
+        </div>
 
-               <span className='terminos'>Al continuar, aceptas las Condiciones de uso y el Aviso de privacidad.</span>
-            </form>
-
-            <hr />
-            <div className='iconos'>
-               <div className='ya'>
-                  <span >Inicia sesión con Google o Facebook</span>
-               </div>
-               <button onClick={handleFacebook} id='boton' ><img width={20} height={20} src='https://res.cloudinary.com/paolavbm/image/upload/v1647828889/facebook_3_i1wnhz.png' alt='' />Inicia sesión con Facebook</button> <br />
-               <button onClick={handleGoogle} id='boton'><img width={20} height={20} src='https://res.cloudinary.com/paolavbm/image/upload/v1647828890/google_1_ftezas.png' alt='' />Inicia sesión com Google</button>
-               <p>¿Eres nuevo en Dailys?</p>
-               <span className='creaCuenta'><Link to="/registro" className='creaCuenta'>Crea tu cuenta</Link></span>
-            </div>
-
-         </SubDiv>
-      </DivInicio>
-   )
+    );
 }
-export default Login
+
+export default Login;
