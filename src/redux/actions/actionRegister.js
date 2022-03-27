@@ -1,31 +1,32 @@
-import { types } from '../types/types';
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 
-export const registroEmailPasswordNombre = (email, password, name) => {
-    return (dispatch) => {
+import {  getAuth, createUserWithEmailAndPassword, updateProfile  } from "@firebase/auth";
+import { typesLogin } from "../types/types";
+
+export const registroEmailPasswordNombre = (email,password,name) => {
+    return(dispatch) => {
         const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
-            .then(async ({ user }) => {
+        createUserWithEmailAndPassword(auth,email,password)
+        .then(async ({user}) => {
 
-                await updateProfile(auth.currentUser, { displayName: name })
+           await updateProfile(auth.currentUser, {displayName: name})
 
-                dispatch(registerSincrono(user.email, user.uid, user.displayName))
-                console.log(user);
-            })
-            .catch(e => {
-                console.log(e);
-            })
+           dispatch(registerSincrono(user.email,user.uid,user.displayName))
+            
+        })
+        .catch(e =>{
+          
+        })
     }
 }
 
-export const registerSincrono = (email, password, name) => {
+export const registerSincrono = (email,password,name) => {
 
-    return {
-        type: types.register,
-        payload: {
-            email,
-            password,
-            name
-        }
+    return{
+       type: typesLogin.register,
+       payload: {
+           email,
+           password,
+           name
+       }
     }
 }

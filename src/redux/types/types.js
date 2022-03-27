@@ -1,10 +1,10 @@
-export const types = {
-    login: "login",
+export const typesLogin = {
+    login: 'login',
     logout: 'logout',
     register: 'register'
 }
 
-export const typesProduct= {
+export const typesTask = {
     list: 'list',
     agregar: "agregar",
     edit: 'edit',

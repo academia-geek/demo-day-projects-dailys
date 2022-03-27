@@ -1,8 +1,8 @@
 import React from 'react'
-import { useForm } from '../hook/useForm';
+import { useForm } from '../../hook/useForm';
 import { Button, Form } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { registertarea } from '../redux/actions/actionTask';
+import { registertarea } from '../../redux/actions/actionTask';
 
 export const Agregar = () => {
 

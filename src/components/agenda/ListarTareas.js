@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Table, Button } from 'react-bootstrap';
-import { deleteTask } from '../redux/actions/actionTask';
+import { deleteTask } from '../../redux/actions/actionTask';
 import Editar from './Editar';
-import "../style/style.css"
+import "../../style/style.css"
 
 export const ListarTareas = () => {
   const dispatch = useDispatch();

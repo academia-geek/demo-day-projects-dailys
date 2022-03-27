@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
-import { useForm } from '../hook/useForm';
-import { editAsyn } from '../redux/actions/actionTask';
+import { useForm } from '../../hook/useForm';
+import { editAsyn } from '../../redux/actions/actionTask';
 
 const Editar = ({ modal }) => {
 

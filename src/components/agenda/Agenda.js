@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
-import { listTasks } from '../redux/actions/actionTask';
+import { listTasks } from '../../redux/actions/actionTask';
 import { Agregar } from './Agregar'
 import { ListarTareas } from './ListarTareas'
 
