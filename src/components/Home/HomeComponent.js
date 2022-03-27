@@ -5,7 +5,9 @@ import SwipeableTemporaryDrawer from './SwipeableTemporaryDrawer'
 export const HomeComponent = () => {
 
     return (
+
         <div>
+            
             <div className="containerHome">
                 <div className="logos">
                     <SwipeableTemporaryDrawer />
