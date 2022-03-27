@@ -1,4 +1,3 @@
-
 import {  getAuth, createUserWithEmailAndPassword, updateProfile  } from "@firebase/auth";
 import { typesLogin } from "../types/types";
 
