@@ -9,16 +9,16 @@ export const Agregar = () => {
   const dispatch = useDispatch()
 
   let [values, handleInputChange, reset] = useForm({
-    hora: "", 
-    fecha: "", 
+    hora: "",
+    fecha: "",
     nombre: "",
     code: parseInt(Math.random() * (50 - 1) + 1)
   })
-  const { hora, fecha, nombre, code} = values
+  const { hora, fecha, nombre, code } = values
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    
+
     dispatch(registertarea(values))
     reset()
   }
