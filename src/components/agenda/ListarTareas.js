@@ -11,11 +11,11 @@ export const ListarTareas = () => {
   const { task } = useSelector(store => store.tarea);
   let estadistica
   let evaluar
-  
+
   const [modal, setModal] = useState(false)
   const [enviarDatosModal, setEnviarDatosModal] = useState([])
 
-  useEffect(() => {}, [task])
+  useEffect(() => { }, [task])
 
   const estadisticas = (e) => {
     evaluar = e.target.value
@@ -25,11 +25,11 @@ export const ListarTareas = () => {
     } else {
       estadistica = "no cumplido"
     }
-    
+
     enviar(estadistica, id)
   }
 
-  const enviar = (estadistica, id) =>{
+  const enviar = (estadistica, id) => {
     dispatch(registerEstadistica(estadistica, id))
     dispatch(deleteTask(id))
   }
@@ -40,7 +40,7 @@ export const ListarTareas = () => {
     setModal(true)
     setEnviarDatosModal(traertarea)
   }
-  
+
   return (
     <div>
       <Table striped bordered hover>
@@ -67,7 +67,7 @@ export const ListarTareas = () => {
                         <td><button value="si" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn btn-success'>Completado</button></td>
                         <td><button value="no" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn btn-danger' >No Completado</button></td>
                       </tr>
-                      </td>
+                    </td>
                     <td><Button variant='light' onClick={() => editar(element.code)}><img className='ico' alt="editar" src="https://res.cloudinary.com/donoutoby/image/upload/v1648323245/iconos/32355_p2dpn1.png" /></Button></td>
                   </tr>
                 )
