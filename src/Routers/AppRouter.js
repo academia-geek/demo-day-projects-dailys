@@ -1,6 +1,7 @@
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Agenda } from '../components/agenda/Agenda';
 import Login from '../components/Login';
 import Registro from '../components/Registro';
 import App from '../containers/App';
@@ -31,6 +32,7 @@ const AppRouter = () => {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/age" element={<Agenda />} />
                 <Route path="/" element={
                     <PublicRoutes isAuthenticated={isLoggedId}>
                         <App />
