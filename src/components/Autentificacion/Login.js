@@ -1,10 +1,10 @@
 import { useFormik } from 'formik';
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { loginEmailPassword, loginFacebook, loginGoogle } from '../redux/actions/actionLogin';
+import { loginEmailPassword, loginFacebook, loginGoogle } from '../../redux/actions/actionLogin';
 import * as Yup from "yup";
-import { DivInicio, SubDiv, ButtonInicio } from '../styles/login/styledLogin'
-import "../styles/login/stylesLogin.css"
+import { DivInicio, SubDiv, ButtonInicio } from '../../styles/login/styledLogin'
+import "../../styles/login/stylesLogin.css"
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -54,7 +54,6 @@ const Login = () => {
 
                <span className='terminos'>Al continuar, aceptas las Condiciones de uso y el Aviso de privacidad.</span>
             </form>
-
             <hr />
             <div className='iconos'>
                <div className='ya'>

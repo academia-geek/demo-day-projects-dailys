@@ -1,9 +1,9 @@
 import { useFormik } from 'formik';
 import React from 'react'
 import { useDispatch } from 'react-redux';
-import { registroEmailPasswordNombre } from '../redux/actions/actionRegister';
+import { registroEmailPasswordNombre } from '../../redux/actions/actionRegister';
 import * as Yup from "yup";
-import { SubDiv2, ButtonInicio } from '../styles/registro/styledRegistro';
+import { SubDiv2, ButtonInicio } from '../../styles/registro/styledRegistro';
 import { Link } from 'react-router-dom';
 const Registro = () => {
    const dispatch = useDispatch();

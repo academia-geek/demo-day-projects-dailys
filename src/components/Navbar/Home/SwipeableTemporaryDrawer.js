@@ -41,6 +41,9 @@ export default function SwipeableTemporaryDrawer() {
         <Nav.Item>
           <Nav.Link href="/calendario">Calendario</Nav.Link>
         </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="/Herramientas">Herramientas</Nav.Link>
+        </Nav.Item>
       </List>
     </div>
   );
