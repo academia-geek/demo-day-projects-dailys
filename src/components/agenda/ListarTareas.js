@@ -2,15 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { Table, Button } from 'react-bootstrap';
-import { deleteTask } from '../../redux/actions/actionTask';
+import { deleteTask, registerEstadistica } from '../../redux/actions/actionTask';
 import Editar from './Editar';
 import "../../styles/agenda/style.css"
 
 export const ListarTareas = () => {
   const dispatch = useDispatch();
   const { task } = useSelector(store => store.tarea);
-  let cumplido = 0
-  let nocumplido = 0
+  let estadistica
   let evaluar
   
   const [modal, setModal] = useState(false)
@@ -18,18 +17,20 @@ export const ListarTareas = () => {
 
   useEffect(() => {}, [task])
 
-  const estadistica = (e) => {
+  const estadisticas = (e) => {
     evaluar = e.target.value
     let id = e.target.id
     if (evaluar === "si") {
-      cumplido ++
+      estadistica = "cumplido"
     } else {
-      nocumplido ++
+      estadistica = "no cumplido"
     }
-    enviar(id, cumplido, nocumplido)
+    
+    enviar(estadistica, id)
   }
 
-  const enviar = (id, cumplido, nocumplido) =>{
+  const enviar = (estadistica, id) =>{
+    dispatch(registerEstadistica(estadistica, id))
     dispatch(deleteTask(id))
   }
 
@@ -63,8 +64,8 @@ export const ListarTareas = () => {
                     <td>{element.nombre}</td>
                     <td>
                       <tr>
-                        <td><button value="si" onClick={(e) => estadistica(e)} id={element.nombre} type="radio" className='btn btn-success'>Completado</button></td>
-                        <td><button value="no" onClick={(e) => estadistica(e)} id={element.nombre} type="radio" className='btn btn-danger' >No Completado</button></td>
+                        <td><button value="si" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn btn-success'>Completado</button></td>
+                        <td><button value="no" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn btn-danger' >No Completado</button></td>
                       </tr>
                       </td>
                     <td><Button variant='light' onClick={() => editar(element.code)}><img className='ico' alt="editar" src="https://res.cloudinary.com/donoutoby/image/upload/v1648323245/iconos/32355_p2dpn1.png" /></Button></td>

@@ -91,11 +91,55 @@ export const registertarea = (newTarea) => {
     }
 }
 
-
 //------Sincronica----------------///
 export const addSyn = (tareas) => {
     return {
         type: typesTask.add,
         payload: tareas
+    }
+}
+
+// -----------------------------------------------> estadisticas
+export const registerEstadistica = (estadistica, id) => {
+    return (dispatch) => {
+        const newEstadist = {
+            estadistica, id
+        }
+        addDoc(collection(db, "estadisticas"), newEstadist)
+            .then(resp => {
+                dispatch(addSynest(newEstadist))
+            })
+            .catch(error => {
+                console.log(error)
+            })
+
+    }
+}
+
+//------Sincronica----------------///
+export const addSynest = (newEstadist) => {
+    return {
+        type: typesTask.add,
+        payload: newEstadist
+    }
+}
+export const listEstadist = () => {
+    return async (dispatch) => {
+        const querySnapshot = await getDocs(collection(db, "estadisticas"));
+        console.log(querySnapshot)
+        const tarea = [];
+        querySnapshot.forEach((doc) => {
+            tarea.push({
+                ...doc.data()
+            })
+        });
+        dispatch(listar(tarea));
+    }
+}
+
+export const listar = (estadisticas) => {
+    return {
+        type: typesTask.list,
+        payload: estadisticas
     }
 }
