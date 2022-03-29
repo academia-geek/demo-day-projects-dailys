@@ -10,6 +10,7 @@ import './styles/Home/homeStyle.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns'
+import './styles/style.css'
 
 ReactDOM.render(
   <Provider store={store}>

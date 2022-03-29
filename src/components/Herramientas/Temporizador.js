@@ -65,24 +65,31 @@ export const Temporizador = () => {
         setHora(hor)
     }
     return (
-        <div>
-            <div>
-                <div>
-                    
-                    <h2>{hora}</h2>
-                    <h3>HOURS</h3>
+        <div className="contens">
+            <div className="contTempori">
+                <div className="contes">
+                    <div className="texts">
+                        <h2>{hora}</h2>
+                        <h3>horas</h3>
+                    </div>
                 </div>
-                <div>
-                    <h2>{minu}</h2>
-                    <h3>MINUTES</h3>
+                <div className="contes">
+                    <div className="texts">
+                        <h2 >{minu}</h2>
+                        <h3 >Minutos</h3>
+                    </div>
+
                 </div>
-                <div>
-                    <h2>{num}</h2>
-                    <h3>SECONDS</h3>
+                <div className="contes">
+                    <div className="texts">
+                        <h2>{num}</h2>
+                        <h3>Segundos</h3>
+                    </div>
+
                 </div>
             </div>
-            <Button onClick={handleShow}>Configurar</Button>
-            <Button onClick={handleClick}>{pause ? "Iniciar" : "Pausar"}</Button>
+            <Button onClick={handleShow} className="boton">Configurar</Button>
+            <Button onClick={handleClick} className="boton">{pause ? "Iniciar" : "Pausar"}</Button>
             <div className="modals">
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>

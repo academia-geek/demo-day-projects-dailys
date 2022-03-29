@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap'
-import { Home } from './Navbar/Home'
 import { Temporizador } from './Herramientas/Temporizador'
 import { Alarma } from './Herramientas/Alarma'
+import { HomeComponent } from './Navbar/Home/HomeComponent'
 
 export const HomeTemAle = () => {
     const [temp, setTemp] = useState(false)
@@ -19,9 +19,11 @@ export const HomeTemAle = () => {
     }
     return (
         <div>
-            <Home />
-            <Button onClick={OnClickTem}>Temporizador</Button>
-            <Button onClick={onClickAlarma}>Alarma</Button>
+            <HomeComponent />
+            <div className="opciones">
+                <Button onClick={OnClickTem} className="boton1">Temporizador</Button>
+                <Button onClick={onClickAlarma} className="boton2">Alarma</Button>
+            </div>
             {
                 temp === true ? <Temporizador /> : ''
             }

@@ -11,7 +11,7 @@ export const HomeComponent = () => {
                     <SwipeableTemporaryDrawer />
                 </div>
                 <div className="nav-sg d1">
-                    <Link to="">
+                    <Link to="/home">
                         <Image src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1647903768/cuaderno_2_szskdd_wirxho.png" alt='Tareas'></Image>
                         <h1 className="title" >Tareas</h1>
                     </Link>

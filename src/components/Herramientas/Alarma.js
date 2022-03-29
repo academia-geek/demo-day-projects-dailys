@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Table } from 'react-bootstrap';
 import { DatePicker, TimePicker } from '@material-ui/pickers'
 
 export const Alarma = () => {
+
     ///fecha a comparar
     const fecha = new Date();
     const month = fecha.getUTCMonth() + 1;
@@ -29,7 +30,6 @@ export const Alarma = () => {
             hora: fechas.getHours(),
             minutos: fechas.getMinutes()
         })
-
     }
     return (
         <div>
@@ -37,18 +37,35 @@ export const Alarma = () => {
                 <h2>{day} / {month} / {year}</h2>
             </div>
             <div className="añadirAlarmas">
-                <Form onSubmit={guarda}>
+                <Form onSubmit={guarda} className="contAlarm">
                     <div className="alarmafecha">
                         <DatePicker value={fechas} onChange={setFechas} />
                     </div>
                     <div className="alarmafecha">
                         <TimePicker value={fechas} onChange={setFechas} />
                     </div>
-                    <Button type="submit">Añadir</Button>
+                    <Button type="submit" className="boton1">Añadir</Button>
                 </Form>
             </div>
             <div className="listarAlarmas">
-
+                <Table striped bordered hover variant="dark">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </Table>
             </div>
         </div>
     )

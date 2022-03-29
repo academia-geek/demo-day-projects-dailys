@@ -57,7 +57,6 @@ export const deleteSincrono = (nombre) => {
 export const listTasks = () => {
     return async (dispatch) => {
         const querySnapshot = await getDocs(collection(db, "tareas"));
-        console.log(querySnapshot)
         const tarea = [];
         querySnapshot.forEach((doc) => {
             tarea.push({

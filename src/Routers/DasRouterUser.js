@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-import {Home} from '../components/Navbar/Home'
 import CalendarioCompo from '../components/CalendarioCompo'
 import { HomeTemAle } from '../components/HomeTemAle';
 import { PefilComponent } from '../components/Perfil/PefilComponent';
+import { Home } from '../containers/Home';
 
 function DasRouterUser() {
     return (
