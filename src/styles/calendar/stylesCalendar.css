@@ -1,9 +1,35 @@
-.calendar {
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap");
+.react-calendar {
   width: 100%;
+  color: #5c436c;
+  font-family: "Patua One", cursive;
+  border: none;
+}
+
+.calendar {
+  width: 30%;
   text-align: center;
   margin: auto;
   justify-content: center;
-  margin-left: 30em;
+}
+.calendar button:enabled:hover, .calendar button:enabled:focus {
+  background-color: #ddbadd;
+  color: white;
+}
+
+.react-calendar__tile--now {
+  border: 2px black solid;
+  border-radius: 60px;
+  background-color: thistle;
+  color: white;
+}
+
+.react-calendar__tile--active {
+  background-color: #fad7f7;
+}
+
+.react-calendar__tile__days__day--weekend {
+  color: #5c436c;
 }
 
 /*# sourceMappingURL=stylesCalendar.css.map */

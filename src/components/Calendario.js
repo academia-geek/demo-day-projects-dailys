@@ -1,8 +1,9 @@
 import React from 'react'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
-import { HomeComponent } from './Navbar/Home/HomeComponent'
-const CalendarioCompo = () => {
+import {HomeComponent} from './Navbar/Home/HomeComponent'
+
+const Calendario = () => {
   return (
     <div>
       <HomeComponent />
@@ -10,7 +11,8 @@ const CalendarioCompo = () => {
         <Calendar />
       </div>
     </div>
+
   )
 }
 
-export default CalendarioCompo
+export default Calendario

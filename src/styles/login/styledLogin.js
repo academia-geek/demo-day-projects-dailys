@@ -12,14 +12,13 @@ width: 30%;
 margin: auto;
 background-color: #ffff;
 border:  solid 1px lightgray;
-height: 77vh;
+height: 75vh;
 border-radius: 15px;
 
-padding: 2em;
+padding: 35px;
 text-align: left;
 line-height: 17px;
 h3{
-    margin-top: 1em;
     font-weight: normal;
     font-size: 28px;
     color: #1e1732;
@@ -43,7 +42,7 @@ font-weight: bold;
 width: 100%;
 background-color: #6a659d;
 color: white;
-height: 3em;
+height: 35px;
 margin-top: 2em;
 `
 

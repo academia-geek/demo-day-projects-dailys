@@ -97,3 +97,9 @@ a {
     width: 85%;
     margin: 15px auto;
 }
+body{
+    font-family: none;
+}
+*{
+    box-sizing: content-box;
+}

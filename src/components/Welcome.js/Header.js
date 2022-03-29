@@ -10,8 +10,8 @@ const Header = () => {
                     Dailys
                 </div>
                 <div className='buttons'>
-                    <button className='log'><Link to="/login">Log in</Link></button>
-                    <button className='sign'><Link to="/registro">Sign Up</Link></button>
+                    <Link to="/login" className='log'>Log in</Link>
+                    <Link to="/registro" className='sign'>Sign Up</Link>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import Consejos from './Welcome.js/Consejos'
 import Cualidades from './Welcome.js/Cualidades'
 import Header from './Welcome.js/Header'
 import "../styles/landing/stylesLanding.css"
+import Footer from './Welcome.js/Footer'
 
 const WelcomePage = () => {
   return (
@@ -22,6 +23,8 @@ const WelcomePage = () => {
       <Cualidades />
       <Comentarios />
       <Consejos />
+
+      <Footer/>
     </div>
   )
 }

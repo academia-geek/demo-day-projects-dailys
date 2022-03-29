@@ -10,7 +10,7 @@ export const AgendaComponent = () => {
   useEffect(() => {
     dispatch(listTasks());
   }, [dispatch])
-  
+
   return (
     <div>
       <Agregar />
