@@ -22,20 +22,24 @@ export const loginEmailPassword = (email,password) =>{
 }
 
 export const loginGoogle = () => {
-
     return(dispatch) => {
         const auth = getAuth();
         signInWithPopup(auth,google)
         .then(({user}) => {
             dispatch(loginSincrono(user.uid,user.displayName))
             console.log(`Bienvenid@ ${user.displayName}`);
+            localStorage.setItem("users", JSON.stringify({
+                name: user.displayName,
+                email: user.email,
+                codigo: user.uid,
+                imagen: user.photoURL
+            }));
         })
         .catch(e =>{
             console.log(e);
         })
     }
 }
-
 export const loginFacebook = () => {
 
     return(dispatch) => {

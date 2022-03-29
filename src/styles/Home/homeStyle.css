@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap");
+:root {
+  --fond: #F4F3FF;
+  --fond-default: #1E1732;
+  --fond-sub-default: #372E4D;
+  --color-white: #fff;
+  --color-text: #47525E;
+  --color-sub-text: #121212;
+  --fond-button: #AD9CE9;
+  --fond-button-sub: #E2E2E2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--fond) !important;
+}
+
+.containerHome {
+  display: flex;
+  flex-direction: row;
+  background: var(--color-white);
+  height: 50px;
+}
+.containerHome .nav-sg {
+  text-align: center;
+  width: 150px;
+  margin: 0 15px 0 0;
+}
+.containerHome .nav-sg img {
+  width: 22%;
+}
+.containerHome .nav-sg .title {
+  color: var(--fond-default);
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
+}
+.containerHome .nav-sg .title img {
+  width: 15%;
+  position: relative;
+}
+.containerHome .nav-sg:hover {
+  color: var(--fond-default);
+  font-size: 20px;
+  background: #eae9fd;
+  text-align: center;
+}
+.containerHome .nav-sg:hover img {
+  width: 30%;
+  position: relative;
+}
+.containerHome .nav-sg:hover .title {
+  background: none;
+  color: var(--fond-default);
+}
+.containerHome .logos {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background: var(--color-white);
+}
+.containerHome .MuiButton-label {
+  justify-content: initial;
+}
+.containerHome .MuiButton-label img {
+  width: 40px;
+  padding: 0 15px;
+}
+
+.navMobile {
+  display: flex;
+  position: fixed;
+  top: 530px;
+  background: white;
+  height: 45px;
+  line-height: 40px;
+  flex-direction: row;
+  cursor: pointer;
+}
+.navMobile .imgNav {
+  width: 40px;
+  height: 40px;
+  margin: 0 27px 0 27px;
+}
+.navMobile .MuiButton-label {
+  justify-content: initial;
+}
+.navMobile .MuiButton-label img {
+  width: 70px;
+  padding: 0 15px;
+}
+.navMobile .MuiButton-text {
+  padding: 6px;
+}
+.navMobile .nav-sd:hover {
+  background: var(--fond-button);
+}
+
+@media (min-width: 0px) and (max-width: 375px) {
+  .containerHome {
+    display: none;
+  }
+  .containerHome .logos {
+    display: none;
+  }
+}
+@media (min-width: 376px) and (max-width: 1440px) {
+  .navMobile {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=homeStyle.css.map */

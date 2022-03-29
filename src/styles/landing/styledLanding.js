@@ -9,7 +9,7 @@ margin-top: 1.5em ;
 `
 
 export const SubQualities= styled.div`
-width: 30%;
+width: 40% !important;
 margin: auto;
 margin-top: 1.5em;
 

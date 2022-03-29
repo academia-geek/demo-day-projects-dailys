@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500 !important;1,400&display=swap') ;
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500 !important;1,400&display=swap');
 html{
-    background-color:  #fbf3ff;
-    margin: 0;
-    overflow: scroll;
-    
-    overflow-x: hidden;
+    background-color:  #fbf3ff  !important;
+    margin: 0 !important;
+    padding: 0;
+    overflow: scroll !important;
+    overflow-x: hidden !important;
 
-   
+    // background: var(--fond) !important;
 }
 
 
@@ -18,37 +18,39 @@ html{
 }
 
 .header{
-display: flex;
-padding: 1em;
+display: flex !important;
+padding: 1em !important;
     .brand{
-        font-family: 'Patua One', cursive;
-        color: #372e4d ;
-        font-size: 20px;
-        font-weight: bold;
+        font-family: 'Patua One', cursive !important;
+        color: #372e4d  !important;
+        font-size: 20px !important;
+        font-weight: bold !important;
     }
 
     .buttons{
-        display: flex ;
-        position: absolute;
-        right: 1.5em ;
+        display: flex  !important;
+        position: absolute !important;
+        right: 1.5em  !important;
 
         .log{
-        border-style: none;
-        padding: 0.6em;
-        margin-right: 0.5em;
-        border-radius: 5px;
-        background-color: #e2e2e2;
-        width: 5em;
-        font-weight: bold;
+        border-style: none !important;
+        margin-right: 0.5em !important;
+        border-radius: 5px !important;
+        background-color: #e2e2e2 !important;
+        color: var(--color-sub-text);
+        width: 5em !important;
+        height: 30px;
+        font-weight: bold !important;
         }
 
         .sign{
-            border-style: none;
-            border-radius: 5px;
-            background-color: #5c436c;
-            color: white;
-            width: 5em;
-            font-weight: bold;
+            border-style: none !important;
+            border-radius: 5px !important;
+            margin-right: 0.5em !important;
+            background-color: #5c436c !important;
+            color: white !important;
+            width: 5em !important;
+            font-weight: bold !important;
         }
     }
 
@@ -58,32 +60,33 @@ padding: 1em;
 }
 
 .imagen-bienvenida{
-text-align: center;
+text-align: center !important;
 
     img{
-     border-radius: 10px;
+     border-radius: 10px !important;
     
      @media (max-width: 720px) {
-       width: 100%;
+       width: 100% !important;
         
      }
     }
 }
 
 .main{
+    margin: 55px 0;
     h2{
-        color: #1e1732;
-        font-size: 25px;
-        font-family: 'Patua One', cursive;
+        color: #1e1732 !important ;
+        font-size: 25px !important;
+        font-family: 'Patua One', cursive !important; 
     }
 
     p{
-        font-size: 20px;
-        width: 60%;
-        margin: auto;
-        color: #626262;
+        font-size: 20px !important;
+        width: 60% !important ;
+        margin: auto !important ;
+        color: #626262 !important;
         @media (max-width: 720px) {
-            width: 90%;
+            width: 90% !important;
              
           }
         
@@ -91,95 +94,85 @@ text-align: center;
 
 
     .init{
-      border-style: none;
-      width: 15em;
-      height: 3em;
-      border-radius: 25px !important;
-      font-weight: bold !important;
-      background-color: #ad9ce9 !important;
-      margin-top: 2em;
-      font-size: 15px;
-      color: whitesmoke;
+      border-style: none !important;
+      width: 15em !important;
+      height: 3em !important;
+      border-radius: 25px !important ;
+      font-weight: bold !important ;
+      background-color: #ad9ce9 !important ;
+      margin-top: 2em !important;
+      font-size: 15px !important;
+      color: whitesmoke !important;
     }
 }
 
 .coment{
-    width: 50% ;
-    margin: auto;
-    // background-color: #d1c7f5 !important;
-    // background-color: #fde6fd;
-    // background-color: white;
-    border-radius: 10px;
-    color: #626262;
-    height: 15em;
-    padding: 0.5em;
-    margin-top: 2em;
+    width: 50%  !important;
+    margin: auto !important;
+    // background-color: #d1c7f5 !important !important;
+    // background-color: #fde6fd !important;
+    // background-color: white !important;
+    border-radius: 10px !important;
+    color: #626262 !important;
+    height: 15em !important;
+    padding: 0.5em !important;
+    margin-top: 2em !important;
     p{
         
         font-family: 'Lora', serif;
     }
 
     span{
-        font-size: 15px;
+        font-size: 15px !important ;
     }
 
     .comillas{
-        margin-top: -5em;
-        margin-left: 30em;
+        margin-top: -5em !important ;
+        margin-left: 30em !important ;
     }
 }
 
 
-.card{
+.card1{
     width: 14em;
-    margin-right: 4em;
-
+    margin-right: 4em !important;
     h4{
-        font-size: 18px;
-        font-family: 'Lora', serif;
-        font-weight: bold;
+        font-size: 18px !important;
+        font-family: 'Lora', serif !important ;
+        font-weight: bold !important;
     }
 
     p{
-        color: #626262;
+        color: #626262 !important;
     }
 }
 .consejos-cards{
-    text-align: left;
-    display: flex;
-    line-height: 16px;
+    text-align: left !important;
+    display: flex !important;
+    line-height: 16px !important;
 }
 
 .container-articulos{
-    text-align: left;
-    padding: 2em;
-    overflow: scroll;
-    // ::-webkit-scrollbar {
-    //     display: none;
-    // }
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-    margin-top: 4em;
+    text-align: left !important;
+    padding: 2em !important;
+    overflow: scroll !important;
+    -ms-overflow-style: none !important;  /* Internet Explorer 10+ */
+    scrollbar-width: none !important;  /* Firefox */
+    margin-top: 4em !important;
     @media (max-width: 720px) {
-        width: 80%;
+        width: 80% !important;
        
         
       }
 }
  
 .container-articulos::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+    display: none !important;  /* Safari and Chrome */
 }
 
 
 .footer{
-    width: 100%;
-    background-color: #372e4d;
-    height: 6em;
+    width: 100% !important;
+    background-color: #372e4d !important;
+    height: 6em !important;
 }
-
-// ::-webkit-scrollbar{
-//     width: 0;  /* Remove scrollbar space */
-//     background: transparent;  /* Optional: just make scrollbar invisible */
-// }
-

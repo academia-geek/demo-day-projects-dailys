@@ -1,82 +1,61 @@
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import React, { useEffect, useState } from 'react'
-import { Calendar } from 'react-calendar';
-
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Calendario from '../components/Calendario';
-import Login from '../components/Login';
-import Registro from '../components/Registro';
-import WelcomePage from '../components/WelcomePage';
-import PublicRoutes from './PublicRoute';
+import Login from '../components/Autentificacion/Login';
+import Registro from '../components/Autentificacion/Registro';
+import App from '../containers/App';
+import DasRouterUser from './DasRouterUser';
+import PrivateRoutes from './PrivateRoutes';
+import PublicRoutes from './PublicRoutes';
 
 const AppRouter = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const [isLoggedId, setIsLoggedId] = useState(false);
+
     const [checking, setChecking] = useState(true);
 
     useEffect(() => {
-        const auth = getAuth();
+        const auth = getAuth()
         onAuthStateChanged(auth, (user) => {
             if (user?.uid) {
-                setIsLoggedIn(true);
+                setIsLoggedId(true)
             } else {
-                setIsLoggedIn(false);
+                setIsLoggedId(false)
             }
-            setChecking(false);
-        });
+            setChecking(false)
+        })
     }, []);
     if (checking) {
         return <h1>Espere...</h1>;
     }
     return (
-        <>
-
-            <BrowserRouter>
-                <Routes>
-
-
-                    <Route
-                        path="/welcome"
-                        element={
-                            <PublicRoutes isAuthenticated={isLoggedIn}>
-                                <WelcomePage />
-                            </PublicRoutes>
-                        }
-                    />
-
-                    <Route
-                        path="/login"
-                        element={
-                            <PublicRoutes isAuthenticated={isLoggedIn}>
-                                <Login />
-                            </PublicRoutes>
-                        }
-                    />
-
-
-                    <Route
-                        path="/registro"
-                        element={
-                            <PublicRoutes isAuthenticated={isLoggedIn}>
-                                <Registro />
-                            </PublicRoutes>
-                        }
-                    />
-
-
-                    <Route
-                        path="/calendar"
-                        element={
-                            <PublicRoutes isAuthenticated={isLoggedIn}>
-                                <Calendario/>
-                            </PublicRoutes>
-                        }
-                    />
-
-
-
-                </Routes>
-            </BrowserRouter>
-        </>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={
+                    <PublicRoutes isAuthenticated={isLoggedId}>
+                        <App />
+                    </PublicRoutes>
+                }
+                />
+                <Route path="/login" element={
+                    <PublicRoutes isAuthenticated={isLoggedId}>
+                        <Login />
+                    </PublicRoutes>
+                }
+                />
+                <Route path="/registro" element={
+                    <PublicRoutes isAuthenticated={isLoggedId}>
+                        <Registro />
+                    </PublicRoutes>
+                }
+                />
+                <Route path="/*" element={
+                    <PrivateRoutes isAuthenticated={isLoggedId}>
+                        <DasRouterUser />
+                    </PrivateRoutes>
+                } />
+            </Routes>
+        </BrowserRouter>
     )
 }
 

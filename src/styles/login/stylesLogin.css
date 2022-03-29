@@ -1,63 +1,65 @@
-@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500 !important;1,400&display=swap");
 .correo {
-  width: 100%;
-  border: 1px solid lightgrey;
-  margin-bottom: 1em;
-  padding: 0.4em;
-  border-radius: 5px;
-  height: 2em;
+  width: 100% !important;
+  border: 1px solid lightgrey !important;
+  margin-bottom: 1em !important;
+  border-radius: 5px !important;
+  height: 2em !important;
 }
 
 .password {
-  display: block;
-  width: 100%;
-  border: 1px solid lightgrey;
-  padding: 0.4em;
-  border-radius: 5px;
-  margin-bottom: 0.5em;
-  height: 2em;
+  display: block !important;
+  width: 100% !important;
+  border: 1px solid lightgrey !important;
+  border-radius: 5px !important;
+  margin-bottom: 0.5em !important;
+  height: 2em !important;
 }
 
 .iconos {
-  text-align: center;
-  margin-top: 1em;
+  text-align: center !important;
+  margin-top: 1em !important;
+  position: relative;
+}
+.iconos p {
+  margin: 15px 0;
 }
 
 .terminos {
-  font-size: 11px;
-  line-height: 2px;
+  font-size: 11px !important;
+  line-height: 2px !important;
 }
 
 .ya {
-  text-align: center;
-  font-size: 14px;
+  text-align: center !important;
+  font-size: 14px !important;
 }
 
 #boton {
-  border-style: none;
-  border-radius: 5px;
-  font-weight: bold;
-  width: 100%;
-  background-color: #f0f0f0;
-  color: #372e4d;
-  height: 3em;
-  margin-top: 1em;
-  padding-left: 1em;
-  text-align: center;
+  border-style: none !important;
+  border-radius: 5px !important;
+  font-weight: bold !important;
+  width: 100% !important;
+  background-color: #f0f0f0 !important;
+  color: #372e4d !important;
+  height: 3em !important;
+  margin-top: 1em !important;
+  text-align: center !important;
+  height: 35px !important;
 }
 #boton img {
-  float: left;
+  float: left !important;
 }
 
 .logo {
-  font-family: "Patua One", cursive;
-  color: #372e4d;
-  font-size: 25px;
-  font-weight: bold;
+  font-family: "Patua One", cursive !important;
+  color: #372e4d !important;
+  font-size: 25px !important;
+  font-weight: bold !important;
 }
 
 .creaCuenta {
-  color: #6a659d;
+  color: #6a659d !important;
 }
 
 /*# sourceMappingURL=stylesLogin.css.map */

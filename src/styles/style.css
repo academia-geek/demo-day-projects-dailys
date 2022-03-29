@@ -1,0 +1,105 @@
+.col-md-4 img{
+    width: 100%;
+}
+
+.card{
+    width: 85% !important;
+    margin: 15px auto !important; 
+}
+.card-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 45px;
+}
+.card-text{
+    font-size: 35px;
+}
+.botonperfil{
+    background: var(--fond-button);
+    border: 2px solid var(--fond-button);
+    width: 250px;
+    height: 35px;
+    font-size: 25px;
+    line-height: 19px;
+    margin-left: 25%;
+}
+.col{
+    width: 25% !important;
+    height: 550px;
+    text-align: center !important;
+}
+.contTempori{
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    margin: auto;
+}
+.contes{
+    width: 34%;
+    height: 138px;
+    text-align: center;
+    background: white;
+    margin: 15px;
+    border-radius: 160px;
+}
+.contens{
+    text-align: center;
+}
+.texts{
+    position: relative;
+    top: 22px;
+}
+.boton{
+    background: var(--fond-button);
+    border: 2px solid var(--fond-button);
+    width: 250px;
+    height: 40px;
+    font-size: 25px;
+    line-height: 19px;
+    margin: 10px;
+    line-height: 13px;
+}
+.opciones{
+    text-align: center;
+    margin: 15px;
+}
+.boton1{
+    margin: 15px;
+    width: 230px;
+    background: #9e95b8;
+    border: #9e95b892;
+}
+.boton2{
+    margin: 15px;
+    width: 230px;
+    background: #7d5b92;
+    border: #7d5b92;
+}
+a {
+    color: var(--fond-default);
+    text-decoration: none;
+}
+.contAlarm{
+    display: flex;
+    flex-direction: row;
+}
+.añadirAlarmas{
+    width: 30%;
+    margin: 15px auto;
+}
+.fechas{
+    text-align: center;
+}
+.alarmafecha{
+    margin: 15px;
+}
+.listarAlarmas{
+    width: 85%;
+    margin: 15px auto;
+}
+body{
+    font-family: none;
+}
+*{
+    box-sizing: content-box;
+}
