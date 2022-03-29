@@ -1,6 +1,5 @@
 import { typesTask } from "../types/types"
 
-
 const initialState = {
     task: []
 }
