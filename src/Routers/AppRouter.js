@@ -34,14 +34,14 @@ const AppRouter = () => {
                 <Routes>
 
 
-                <Route
-                path="/welcome"
-                element={
-                    <PublicRoutes isAuthenticated={isLoggedIn}>
-                        <WelcomePage/>
-                    </PublicRoutes>
-                }
-            />
+                    <Route
+                        path="/welcome"
+                        element={
+                            <PublicRoutes isAuthenticated={isLoggedIn}>
+                                <WelcomePage />
+                            </PublicRoutes>
+                        }
+                    />
 
                     <Route
                         path="/login"
@@ -62,17 +62,15 @@ const AppRouter = () => {
                         }
                     />
 
-                    
-<Route
+
+                    <Route
                         path="/calendar"
                         element={
                             <PublicRoutes isAuthenticated={isLoggedIn}>
-                             <Calendario/>
+                                <Calendario/>
                             </PublicRoutes>
                         }
                     />
-
-
 
 
 
