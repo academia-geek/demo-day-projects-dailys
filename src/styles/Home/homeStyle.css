@@ -8,6 +8,7 @@
   --color-sub-text: #121212;
   --fond-button: #AD9CE9;
   --fond-button-sub: #E2E2E2;
+  --fond-tes: #2e0079;
 }
 
 body {
@@ -19,26 +20,18 @@ body {
 .containerHome {
   display: flex;
   flex-direction: row;
-  background: var(--color-white);
   height: 50px;
 }
 .containerHome .nav-sg {
   text-align: center;
   width: 150px;
-  margin: 0 15px 0 0;
-}
-.containerHome .nav-sg img {
-  width: 22%;
 }
 .containerHome .nav-sg .title {
   color: var(--fond-default);
   font-size: 20px;
   position: relative;
   cursor: pointer;
-}
-.containerHome .nav-sg .title img {
-  width: 15%;
-  position: relative;
+  margin: 15px 0;
 }
 .containerHome .nav-sg:hover {
   color: var(--fond-default);
@@ -52,19 +45,18 @@ body {
 }
 .containerHome .nav-sg:hover .title {
   background: none;
-  color: var(--fond-default);
+  color: var(--fond-tes);
 }
 .containerHome .logos {
   display: flex;
   width: 100%;
   height: 50px;
-  background: var(--color-white);
 }
 .containerHome .MuiButton-label {
   justify-content: initial;
 }
 .containerHome .MuiButton-label img {
-  width: 40px;
+  width: 35px;
   padding: 0 15px;
 }
 
@@ -87,8 +79,10 @@ body {
   justify-content: initial;
 }
 .navMobile .MuiButton-label img {
-  width: 70px;
+  width: 43px;
   padding: 0 15px;
+  position: relative;
+  top: -5px;
 }
 .navMobile .MuiButton-text {
   padding: 6px;
@@ -97,7 +91,7 @@ body {
   background: var(--fond-button);
 }
 
-@media (min-width: 0px) and (max-width: 375px) {
+@media screen and (max-width: 375px) {
   .containerHome {
     display: none;
   }
