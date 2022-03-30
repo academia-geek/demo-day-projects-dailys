@@ -20,7 +20,6 @@ export const ListarTareas = () => {
   const uids = JSON.parse(localStorage.getItem("users"))
 
   const [enviarDatosModal, setEnviarDatosModal] = useState([])
-
   const data = task.filter(user => user.idUser === uids.codigo)
 
   useEffect(() => { 

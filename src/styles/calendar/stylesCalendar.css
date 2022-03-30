@@ -4,32 +4,80 @@
   color: #5c436c;
   font-family: "Patua One", cursive;
   border: none;
+  height: 19em;
+  border-radius: 15px;
 }
 
 .calendar {
-  width: 30%;
+  width: 55%;
   text-align: center;
   margin: auto;
   justify-content: center;
 }
 .calendar button:enabled:hover, .calendar button:enabled:focus {
-  background-color: #ddbadd;
+  background-color: #916093;
   color: white;
 }
 
 .react-calendar__tile--now {
   border: 2px black solid;
-  border-radius: 60px;
   background-color: thistle;
   color: white;
 }
 
 .react-calendar__tile--active {
-  background-color: #fad7f7;
+  background-color: #4f314f;
 }
 
 .react-calendar__tile__days__day--weekend {
   color: #5c436c;
+}
+
+.metas {
+  padding: 1em;
+  padding-left: 3em;
+  line-height: 5px;
+  width: 50%;
+  background-color: #5c436c;
+  opacity: 0.7;
+  color: wheat;
+  margin: auto;
+  margin-top: 2em;
+  border-radius: 15px;
+  margin-bottom: 4em;
+  font-size: 20px;
+}
+.metas h4 {
+  font-weight: bold;
+  margin-bottom: 0.6em;
+}
+
+.eventos {
+  border-radius: 15px;
+  opacity: 0.7;
+  padding: 1em;
+  padding-left: 3em;
+  line-height: 5px;
+  background-color: gainsboro;
+  color: black;
+  width: 50%;
+  margin: auto;
+  margin-top: 2em;
+  font-size: 20px;
+}
+.eventos h4 {
+  font-weight: bold;
+  margin-bottom: 0.6em;
+}
+
+.modal-info {
+  justify-content: center;
+  text-align: center;
+}
+.modal-info th {
+  background-color: #5c436c !important;
+  color: antiquewhite;
+  border: none;
 }
 
 /*# sourceMappingURL=stylesCalendar.css.map */
