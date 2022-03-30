@@ -9,43 +9,51 @@ import { fil } from 'date-fns/locale';
 
 const Calendario = () => {
   const [show, setShow] = useState(false);
+  const [dat, setDat] = useState([]);
   const [day, setDay] = useState(new Date());
   const currentDay = day.getUTCDate();
   const currentMonth = day.getUTCMonth() + 1;
   const currentYear = day.getUTCFullYear();;
+
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
-  const dispatch = useDispatch();
-  const { task } = useSelector(store => store.tarea)
-  const [agenda, setAgenda] = useState(task);
-  //  const filter = agenda.filter(p=> p.hora)
-//  console.log(filter)
- console.log(task)
-  // const [month, dia, year]       = [agenda.getMonth(), task.getDate(), task.getFullYear()];
-  const currentOne = task.find((p) => p.dia === currentDay)
-  
-  console.log(currentOne)
 
-  const abcd = () =>{
-    if(currentOne.mes !== undefined){
-      console.log(currentOne.mes)
-    } else{
-      console.log('hola')
-    }
+  const dispatch = useDispatch();
+
+  const { task } = useSelector(store => store.tarea)
+
+  //  const filter = agenda.filter(p=> p.hora)
+  //  console.log(filter)
+  // const [month, dia, year]       = [agenda.getMonth(), task.getDate(), task.getFullYear()];
+  const uids = JSON.parse(localStorage.getItem("users"))
+
+
+  const osd = () => {
+    setShow(true)
+    const data = task.filter(user => {
+      if (user.idUser === uids.codigo && user.dia === currentDay && user.mes === currentMonth && user.año === currentYear) {
+        return user;
+      }
+    })
+    console.log(data)
+    setDat(data)
+
   }
+
+
 
   useEffect(() => {
     dispatch(listTasks());
-    abcd()
-  }, [dispatch])
- 
 
-  
+  }, [dispatch])
+
+
+
   return (
     <div>
       <HomeComponent />
       <div className='calendar'>
-        <Calendar value={day} onClickDay={() => { setShow(true) }} onChange={setDay} />
+        <Calendar value={day} onClickDay={() => osd()} onChange={setDay} />
       </div>
 
       <>
@@ -55,37 +63,44 @@ const Calendario = () => {
           <Modal.Body>
             {
               <form >
-                <div className='modal-info'>
-                  <h2>Programado</h2>
-                  <h6>{currentDay}</h6>
-                  <Table striped bordered hover size="sm">
-                    <thead>
-                      <tr>
-                        <th>Hora</th>
-                        <th>Actividad</th>
-                        
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>08:34 pm</td>
-                        <td>Sacar al perro</td>
-                        
-                      </tr>
-                      <tr>
-                        <td>08:34 pm</td>
-                        <td>Sacar al perro</td>
-                        
-                      </tr>
-                      <tr>
-                        <td>08:34 pm</td>
-                        <td colSpan={2}>Sacar al perro</td>
-                      
-                      </tr>
-                    </tbody>
-                  </Table>
-                  <button type='submit' >Guardar</button>
-                </div>
+                {
+                  (dat) ? (
+                    dat.map((element, index) => (
+                      <div className='modal-info'>
+                        <h2>Programado</h2>
+                        <h6>{currentDay}</h6>
+                        <Table striped bordered hover size="sm">
+                          <thead>
+                            <tr>
+                              <th>hora</th>
+                              <th>Actividad</th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>{element.hora}:{element.minutos}</td>
+                              <td>Sacar al perro</td>
+
+                            </tr>
+                            <tr>
+                              <td>08:34 pm</td>
+                              <td>Sacar al perro</td>
+
+                            </tr>
+                            <tr>
+                              <td>08:34 pm</td>
+                              <td colSpan={2}>Sacar al perro</td>
+
+                            </tr>
+                          </tbody>
+                        </Table>
+                        <button type='submit' >Guardar</button>
+                      </div>
+                    ))
+
+                  ) : ""
+                }
               </form>
             }
           </Modal.Body>

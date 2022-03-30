@@ -11,9 +11,13 @@ export const AgendaComponent = () => {
   const [selec, setSelec] = useState({});
   const [fechas, setFechas] = useState(new Date())
   const [añadir, setAñadir] = useState({})
+
   const dispatch = useDispatch();
+
   const uids = JSON.parse(localStorage.getItem("users"))
+
   const selector = selec[0]
+
   function cambioDias(e) {
     const opciones = e.target.options
     const seleccionadas = []
@@ -30,8 +34,8 @@ export const AgendaComponent = () => {
 
   const guarda = () => {
     setAñadir({
-      dia: fechas.getUTCDate(),
-      mes: fechas.getUTCMonth(),
+      dia: fechas.getUTCDate() - 1,
+      mes: fechas.getUTCMonth() + 1,
       año: fechas.getUTCFullYear(),
       hora: fechas.getHours(),
       minutos: fechas.getMinutes(),
