@@ -17,10 +17,15 @@ export const ListarTareas = () => {
   let evaluar
 
   const [modal, setModal] = useState(false)
+  const uids = JSON.parse(localStorage.getItem("users"))
 
   const [enviarDatosModal, setEnviarDatosModal] = useState([])
 
-  useEffect(() => { }, [task])
+  const data = task.filter(user => user.idUser === uids.codigo)
+
+  useEffect(() => { 
+
+  }, [task])
 
   const estadisticas = (e) => {
     evaluar = e.target.value
@@ -30,7 +35,6 @@ export const ListarTareas = () => {
     } else {
       estadistica = "no cumplido"
     }
-
     enviar(estadistica, id)
   }
 
@@ -41,7 +45,6 @@ export const ListarTareas = () => {
 
   const editar = (code) => {
     const traertarea = task.find(t => t.code === code)
-
     setModal(true)
     setEnviarDatosModal(traertarea)
   }
@@ -57,9 +60,9 @@ export const ListarTareas = () => {
         </thead>
         <tbody>
           {
-            (task) ?
+            (data) ?
               (
-                task.map((element, index) => (
+                data.map((element, index) => (
                   <tr key={index}>
                     <td>{element.hora}:{element.minutos} </td>
                     <td>{element.dia}/{element.mes}/{element.año}</td>
@@ -74,7 +77,6 @@ export const ListarTareas = () => {
                   </tr>
                 )
                 )
-
               ) :
               <p>Datos no disponibles</p>
           }
