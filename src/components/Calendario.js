@@ -26,17 +26,17 @@ const Calendario = () => {
   
   console.log(currentOne)
 
-  const abcd = () =>{
-    if(currentOne.mes !== undefined){
-      console.log(currentOne.mes)
-    } else{
-      console.log('hola')
-    }
-  }
+  // const abcd = () =>{
+  //   if(currentOne.mes !== undefined){
+  //     console.log(currentOne.mes)
+  //   } else{
+  //     console.log('hola')
+  //   }
+  // }
 
   useEffect(() => {
     dispatch(listTasks());
-    abcd()
+
   }, [dispatch])
  
 
