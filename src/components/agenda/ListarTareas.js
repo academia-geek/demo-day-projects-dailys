@@ -7,12 +7,17 @@ import Editar from './Editar';
 import "../../styles/agenda/style.css"
 
 export const ListarTareas = () => {
+
   const dispatch = useDispatch();
+
   const { task } = useSelector(store => store.tarea);
+
   let estadistica
+
   let evaluar
 
   const [modal, setModal] = useState(false)
+
   const [enviarDatosModal, setEnviarDatosModal] = useState([])
 
   useEffect(() => { }, [task])
@@ -40,7 +45,6 @@ export const ListarTareas = () => {
     setModal(true)
     setEnviarDatosModal(traertarea)
   }
-
   return (
     <div>
       <Table striped bordered hover>
@@ -55,13 +59,11 @@ export const ListarTareas = () => {
           {
             (task) ?
               (
-
                 task.map((element, index) => (
-
                   <tr key={index}>
-                    <td>{element.hora}</td>
-                    <td>{element.fecha}</td>
-                    <td>{element.nombre}</td>
+                    <td>{element.hora}:{element.minutos} </td>
+                    <td>{element.dia}/{element.mes}/{element.año}</td>
+                    <td>{element.actividad}</td>
                     <td>
                       <tr>
                         <td><button value="si" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn btn-success'>Completado</button></td>
