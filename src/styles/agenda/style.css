@@ -1,3 +1,41 @@
 .ico{
     width: 25px;
 }
+.form-control{
+    width: 100% !important;
+    margin: auto !important;
+}
+.form-select{
+    width: 95% !important;
+    margin: auto !important;
+}
+.form-agenda input select{
+    text-align: center;
+}
+.content-Agenda{
+    background-color: white;
+    width: 80%;
+    margin: 15px auto;
+    border-radius: 30px;
+}
+.fechass{
+    display: flex;
+    flex-direction: row;
+    margin: 15px auto;
+    width: 45%;
+}
+.title-Agenda{
+    text-align: center;
+}
+.inputs{
+    width: 45%;
+    margin: auto;
+}
+.buton-agenda{
+    width: 55%;
+    margin: 15px auto;
+}
+.botonagenda{
+    width: 35%;
+    margin: 15px auto;
+}

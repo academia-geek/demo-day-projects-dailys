@@ -9,3 +9,9 @@ export const typesTask = {
     edit: 'edit',
     delete: 'delete'
 }
+export const typesAlarm = {
+    list: 'list',
+    add: "add",
+    edit: 'edit',
+    delete: 'delete'
+}

@@ -6,7 +6,7 @@ import { addDoc, collection, deleteDoc, doc, getDocs, query, where, updateDoc } 
 
 export const editAsyn = (code, tarea) => {
     return async (dispatch) => {
-        const traerCollection = collection(db, "tareas")
+        const traerCollection = collection(db, "DataUsuarios")
         const q = query(traerCollection, where("code", "==", code))
         const datosQ = await getDocs(q)
         let id
@@ -15,7 +15,7 @@ export const editAsyn = (code, tarea) => {
         })
         console.log(id)
 
-        const docRef = doc(db, "tareas", id)
+        const docRef = doc(db, "DataUsuarios", id)
         await updateDoc(docRef, tarea)
             .then(() => list())
         dispatch(listTasks())
@@ -30,25 +30,25 @@ export const editSyn = (code, tarea) => {
 }
 
 // ----------------------------------------------->eliminar el contenido de la base de datos
-export const deleteTask = (nombre) => {
+export const deleteTask = (actividad) => {
     return async (dispatch) => {
 
-        const estCollection = collection(db, "tareas");
-        const q = query(estCollection, where("nombre", "==", nombre))
+        const estCollection = collection(db, "DataUsuarios");
+        const q = query(estCollection, where("actividad", "==", actividad))
 
         const datos = await getDocs(q);
         datos.forEach((docu) => {
-            deleteDoc(doc(db, "tareas", docu.id));
+            deleteDoc(doc(db, "DataUsuarios", docu.id));
         })
-        dispatch(deleteSincrono(nombre));
+        dispatch(deleteSincrono(actividad));
         dispatch(listTasks())
     }
 }
 
-export const deleteSincrono = (nombre) => {
+export const deleteSincrono = (actividad) => {
     return {
         type: typesTask.delete,
-        payload: nombre
+        payload: actividad
     }
 }
 
@@ -56,7 +56,7 @@ export const deleteSincrono = (nombre) => {
 
 export const listTasks = () => {
     return async (dispatch) => {
-        const querySnapshot = await getDocs(collection(db, "tareas"));
+        const querySnapshot = await getDocs(collection(db, "DataUsuarios"));
         const tarea = [];
         querySnapshot.forEach((doc) => {
             tarea.push({
@@ -77,7 +77,7 @@ export const list = (tareas) => {
 // -----------------------------------------------> agregar el contenido de la base de datos
 export const registertarea = (newTarea) => {
     return (dispatch) => {
-        addDoc(collection(db, "tareas"), newTarea)
+        addDoc(collection(db, "DataUsuarios"), newTarea)
             .then(resp=> {
                 dispatch(addSyn(newTarea))
                 dispatch(listTasks())
