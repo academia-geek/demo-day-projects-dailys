@@ -21,7 +21,7 @@ export const ListarTareas = () => {
   const [enviarDatosModal, setEnviarDatosModal] = useState([])
 
   useEffect(() => { }, [task])
-
+console.log(task)
   const estadisticas = (e) => {
     evaluar = e.target.value
     let id = e.target.id
