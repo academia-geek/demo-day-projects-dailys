@@ -18,11 +18,10 @@ export const ListarTareas = () => {
 
   const [modal, setModal] = useState(false)
   const uids = JSON.parse(localStorage.getItem("users"))
-
-  const [enviarDatosModal, setEnviarDatosModal] = useState([])
   const data = task.filter(user => user.idUser === uids.codigo)
+  const [enviarDatosModal, setEnviarDatosModal] = useState([])
 
-  useEffect(() => { 
+  useEffect(() => {
 
   }, [task])
 
