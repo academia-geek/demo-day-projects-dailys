@@ -47,15 +47,15 @@ export const ListarTareas = () => {
     setEnviarDatosModal(traertarea)
   }
   return (
-    <div>
+    <div  className='juju'>
       <Table striped bordered hover>
-        <thead>
+        {/* <thead>
           <tr>
             <th>hora</th>
             <th>fecha</th>
             <th>nombre</th>
           </tr>
-        </thead>
+        </thead> */}
         <tbody>
           {
             (data) ?
@@ -63,15 +63,16 @@ export const ListarTareas = () => {
                 data.map((element, index) => (
                   <tr key={index}>
                     <td>{element.hora}:{element.minutos} </td>
-                    <td>{element.dia}/{element.mes}/{element.año}</td>
+                    {/* <td>{element.dia}/{element.mes}/{element.año}</td> */}
                     <td>{element.actividad}</td>
                     <td>
-                      <tr>
-                        <td><button value="si" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn btn-success'>Completado</button></td>
-                        <td><button value="no" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn btn-danger' >No Completado</button></td>
-                      </tr>
+                    
+                        <td><button value="si" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn btn-si'>Completado</button></td>
+                        <td><button value="no" onClick={(e) => estadisticas(e)} id={element.nombre} type="radio" className='btn-no btn' >No Completado</button></td>
+                        <td><Button variant='light' onClick={() => editar(element.code)}><img className='ico' alt="editar" src="https://res.cloudinary.com/donoutoby/image/upload/v1648323245/iconos/32355_p2dpn1.png" /></Button></td>
                     </td>
-                    <td><Button variant='light' onClick={() => editar(element.code)}><img className='ico' alt="editar" src="https://res.cloudinary.com/donoutoby/image/upload/v1648323245/iconos/32355_p2dpn1.png" /></Button></td>
+                    
+                    
                   </tr>
                 )
                 )

@@ -25,6 +25,7 @@ const Calendario = () => {
   //  const filter = agenda.filter(p=> p.hora)
   //  console.log(filter)
   // const [month, dia, year]       = [agenda.getMonth(), task.getDate(), task.getFullYear()];
+
   const uids = JSON.parse(localStorage.getItem("users"))
 
 
@@ -39,8 +40,6 @@ const Calendario = () => {
     setDat(data)
 
   }
-
-
 
   useEffect(() => {
     dispatch(listTasks());
