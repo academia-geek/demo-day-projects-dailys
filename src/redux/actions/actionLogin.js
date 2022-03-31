@@ -72,7 +72,8 @@ export const loginGoogle = () => {
                     name: user.displayName,
                     email: user.email,
                     codigo: user.uid,
-                    imagen: "https://thumbs.dreamstime.com/b/el-icono-del-perfil-con-a%C3%B1ade-la-muestra-perfile-y-nuevo-m%C3%A1s-positivo-s%C3%ADmbolo-111945352.jpg"
+                    imagen: "https://thumbs.dreamstime.com/b/el-icono-del-perfil-con-a%C3%B1ade-la-muestra-perfile-y-nuevo-m%C3%A1s-positivo-s%C3%ADmbolo-111945352.jpg",
+                    descripcion: ""
                 }
                 if (filts.length === 0) {
                     dispatch(registertarea(dats))
