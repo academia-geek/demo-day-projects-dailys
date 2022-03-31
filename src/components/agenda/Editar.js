@@ -1,3 +1,4 @@
+import { DatePicker, TimePicker } from '@material-ui/pickers';
 import React, { useState } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
@@ -6,27 +7,53 @@ import { editAsyn } from '../../redux/actions/actionTask';
 
 const Editar = ({ modal }) => {
 
-    console.log(modal)
     const dispatch = useDispatch()
     const [show, setShow] = useState(true);
     const handleClose = () => setShow(false);
+    const [selec, setSelec] = useState(modal.selecEvent);
+    const meses = modal.mes - 1
+    const horas = modal.hora + 5
+    const [fechaUTC, setFechaUTC] = useState(new Date(Date.UTC(modal.año, meses, modal.dia, horas, modal.minutos, 0)))
+    const [añadir, setAñadir] = useState({})
 
-    const [values, handleInputChange, reset] = useForm({
-        nombre: modal.nombre,
-        hora: modal.hora,
-        fecha: modal.fecha,
-        code: modal.code
-    })
-    const { nombre, hora, fecha, code } = values
+    const selector = selec[0]
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        dispatch(editAsyn(code, values))
-
-        reset()
+    function cambioDias(e) {
+        const opciones = e.target.options
+        const seleccionadas = []
+        for (let i = 0; i < opciones.length; i++) {
+            if (opciones[i].selected) {
+                seleccionadas.push(opciones[i].value)
+            }
+        }
+        setSelec(seleccionadas)
     }
 
+    const [values, handleInputChange] = useForm({
+        actividad: modal.actividad,
+        codigo: modal.codigo,
+        idUser: modal.idUser,
+    })
+    const { actividad, codigo } = values
 
+    const guarda = () => {
+        setAñadir({
+            dia: fechaUTC.getUTCDate(),
+            mes: fechaUTC.getUTCMonth() + 1,
+            año: fechaUTC.getUTCFullYear(),
+            hora: fechaUTC.getHours(),
+            minutos: fechaUTC.getMinutes(),
+            actividad: values.actividad,
+            idUser: values.idUser,
+            codigo: values.codigo,
+            selecEvent: selector
+        })
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        dispatch(editAsyn(codigo, añadir))
+        setShow(false)
+    }
     return (
         <div>
             <>
@@ -36,29 +63,32 @@ const Editar = ({ modal }) => {
                     </Modal.Header>
                     <Modal.Body>
                         <Form onSubmit={handleSubmit}>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Nombre de la Tarea</Form.Label>
-                                <Form.Control type="text" name="nombre" placeholder="ingrese el nombre de la tarea" value={nombre} onChange={handleInputChange} />
-
-                                <Form.Label>Hora</Form.Label>
-                                <Form.Control type="time" name="hora" value={hora} onChange={handleInputChange} />
-
-                                <Form.Label>Fecha</Form.Label>
-                                <Form.Control type="date" name="fecha" value={fecha} onChange={handleInputChange} />
-
+                            <Form.Group className="mb-3 inputs">
+                                <Form.Label>Nombre de la actividad</Form.Label>
+                                <Form.Control type="text" name="actividad" placeholder="ingrese el nombre" value={actividad} onChange={handleInputChange} />
                             </Form.Group>
+                            <div className="mb-3 inputs">
+                                <Form.Select aria-label="Default select example" value={selec} onChange={cambioDias} >
+                                    <option>Seleciona el tipo de evento</option>
+                                    <option>Especial</option>
+                                    <option>metas</option>
+                                </Form.Select>
+                            </div>
 
-                            <Button variant="secondary" onClick={handleClose}>
-                                Close
-                            </Button>
-                            <Button type="submit" variant="primary" onClick={handleClose}>
-                                Save Changes
-                            </Button>
+                            <div className="fechass">
+                                <div className="alarmafecha">
+                                    <Form.Label>Fecha </Form.Label>
+                                    <DatePicker value={fechaUTC} onChange={setFechaUTC} />
+                                </div>
+
+                                <div className="alarmafecha">
+                                    <Form.Label>Hora </Form.Label>
+                                    <TimePicker value={fechaUTC} onChange={setFechaUTC} />
+                                </div>
+                            </div>
+                            <Button type="submit" onClick={guarda} onHide={handleClose}>Guardar</Button>
                         </Form>
-
                     </Modal.Body>
-
-
                 </Modal>
             </>
         </div>
