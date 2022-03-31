@@ -34,14 +34,16 @@ export const AgendaComponent = () => {
 
   const guarda = () => {
     setAñadir({
-      dia: fechas.getUTCDate() - 1,
+      dia: fechas.getUTCDate(),
       mes: fechas.getUTCMonth() + 1,
       año: fechas.getUTCFullYear(),
       hora: fechas.getHours(),
       minutos: fechas.getMinutes(),
       actividad: values.nombre,
       selecEvent: selector,
-      idUser: uids.codigo
+      idUser: uids.codigo,
+      codigo: parseInt(Math.random() * (50 - 1) + 1),
+      evalue: "No completado"
     })
   }
   const handleSubmit = (e) => {

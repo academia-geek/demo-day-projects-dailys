@@ -4,28 +4,27 @@ import { addDoc, collection, deleteDoc, doc, getDocs, query, where, updateDoc } 
 
 // -----------------------------------------------> editar el contenido de la base de datos
 
-export const editAsyn = (code, tarea) => {
+export const editAsyn = (codigo, actividad) => {
     return async (dispatch) => {
         const traerCollection = collection(db, "DataUsuarios")
-        const q = query(traerCollection, where("code", "==", code))
+        const q = query(traerCollection, where("codigo", "==", codigo))
         const datosQ = await getDocs(q)
         let id
         datosQ.forEach(async (docu) => {
             id = docu.id
         })
-        console.log(id)
 
         const docRef = doc(db, "DataUsuarios", id)
-        await updateDoc(docRef, tarea)
+        await updateDoc(docRef, actividad)
             .then(() => list())
         dispatch(listTasks())
     }
 }
 
-export const editSyn = (code, tarea) => {
+export const editSyn = (codigo, actividad) => {
     return {
         type: typesTask.edit,
-        payload: tarea
+        payload: actividad
     }
 }
 
