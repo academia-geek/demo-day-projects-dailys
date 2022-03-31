@@ -52,7 +52,6 @@ export const deleteSincrono = (actividad) => {
 }
 
 // -----------------------------------------------> listar el contenido de la base de datos
-
 export const listTasks = () => {
     return async (dispatch) => {
         const querySnapshot = await getDocs(collection(db, "DataUsuarios"));
@@ -72,7 +71,6 @@ export const list = (tareas) => {
         payload: tareas
     }
 }
-
 // -----------------------------------------------> agregar el contenido de la base de datos
 export const registertarea = (newTarea) => {
     return (dispatch) => {
@@ -89,7 +87,6 @@ export const registertarea = (newTarea) => {
     }
 }
 
-//------Sincronica----------------///
 export const addSyn = (tareas) => {
     return {
         type: typesTask.add,

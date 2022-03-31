@@ -1,7 +1,10 @@
 export const typesLogin = {
     login: 'login',
     logout: 'logout',
-    register: 'register'
+    register: 'register',
+    add: 'add',
+    list: 'list',
+    edit: 'edit'
 }
 export const typesTask = {
     list: 'list',
@@ -14,4 +17,8 @@ export const typesAlarm = {
     add: "add",
     edit: 'edit',
     delete: 'delete'
+}
+export const typesPerfil = {
+    list: 'list',
+    edit: 'edit',
 }
