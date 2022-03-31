@@ -70,15 +70,15 @@ export const ListarTareas = () => {
 
   }, [task])
   return (
-    <div>
+    <div  className='juju'>
       <Table striped bordered hover>
-        <thead>
+        {/* <thead>
           <tr>
             <th>hora</th>
             <th>fecha</th>
             <th>nombre</th>
           </tr>
-        </thead>
+        </thead> */}
         <tbody>
           {
             (data) ?

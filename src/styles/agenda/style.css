@@ -39,3 +39,19 @@
     width: 35%;
     margin: 15px auto;
 }
+
+.juju{
+    width: 45%;
+    margin: auto;
+    margin-top: 4em;
+}
+
+.btn-no{
+    background-color: #5c436c !important;
+    color: antiquewhite !important;
+}
+
+.btn-si{
+    background-color: #9477a7 !important;
+    color: antiquewhite !important;
+}
