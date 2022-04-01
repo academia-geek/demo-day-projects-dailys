@@ -15,7 +15,6 @@ export const ListarTareas = () => {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
 
   let evaluar
 
@@ -33,8 +32,6 @@ export const ListarTareas = () => {
     setDatas(traertarea)
     setCodigos(codigo)
   }
-  console.log(eva)
-  console.log(datas)
 
   const handleEvalue = (e) => {
     evaluar = e.target.value
