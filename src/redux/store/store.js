@@ -19,7 +19,6 @@ const reducers = combineReducers({
     alarm: AlarmReducer,
     emociones: emocionesReducer
     perfil: perfilReducer
-
 })
 
 

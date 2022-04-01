@@ -13,7 +13,6 @@ export const ListarTareas = () => {
 
   const { task } = useSelector(store => store.tarea);
   const [show, setShow] = useState(false);
-  console.log(task)
 
   const handleClose = () => setShow(false);
 

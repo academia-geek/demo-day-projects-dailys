@@ -22,7 +22,7 @@ export const typesAlarm = {
 export const typesEmociones = {
     list: 'list',
     add: "add"
-   
+}
 export const typesPerfil = {
     list: 'list',
     edit: 'edit',
