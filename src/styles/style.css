@@ -104,3 +104,41 @@ body{
 *{
     box-sizing: content-box;
 }
+.table{
+    width: 85% !important;
+    margin: 15px auto;
+}
+.quits{
+    display: flex;
+    flex-direction: row;
+    width: 44% !important;
+    margin: auto !important;
+}
+.checks{
+    margin: 20px !important;
+    font-size: 19px !important;
+}
+.bton{
+    margin-left: 37% !important;
+}
+.bton1{
+    margin: 0 0 0 15px !important;
+}
+.grafica{
+    width:25%;
+    margin: auto !important;
+}
+.navb-titu{
+    color: var(--fond-default) !important;
+    background: var(--fond) !important;
+    margin: 15px 0 !important;
+}
+.navb-titu:hover{
+    color: var(--color-white) !important;
+    background: var(--fond-button) !important;
+}
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 90% !important;
+    }
+}

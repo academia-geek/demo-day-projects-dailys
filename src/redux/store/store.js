@@ -1,8 +1,10 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk';
+import { AlarmReducer } from '../reducers/AlarmReducer';
+import { perfilReducer } from '../reducers/perfilReducer';
 import { loginReducer } from '../reducers/reducersLogin';
 import { registerReducer } from '../reducers/reducersRegister';
-import {taskReducer} from '../reducers/tareaReducer';
+import { taskReducer } from '../reducers/tareaReducer';
 
 
 
@@ -11,8 +13,10 @@ const composeEnhancers = (typeof window !== 'undefined' &&
 
 const reducers = combineReducers({
     login: loginReducer,
-   register: registerReducer,
-    tarea: taskReducer
+    register: registerReducer,
+    tarea: taskReducer,
+    alarm: AlarmReducer,
+    perfil: perfilReducer
 })
 
 
