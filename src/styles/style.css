@@ -137,8 +137,3 @@ body{
     color: var(--color-white) !important;
     background: var(--fond-button) !important;
 }
-@media (min-width: 576px){
-    .modal-dialog {
-        max-width: 90% !important;
-    }
-}
