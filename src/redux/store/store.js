@@ -17,7 +17,7 @@ const reducers = combineReducers({
     register: registerReducer,
     tarea: taskReducer,
     alarm: AlarmReducer,
-    emociones: emocionesReducer
+    emociones: emocionesReducer,
     perfil: perfilReducer
 })
 

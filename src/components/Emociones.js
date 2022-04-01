@@ -19,11 +19,13 @@ const Emociones = () => {
 
     const handleClose = () => setShow(false);
     const aleatorio = Math.floor((Math.random() * 5) + 0)
-
-    const user = JSON.parse(localStorage.getItem('users'))
-    const { name, email, codigo} = user
-
- console.log(codigo)
+    
+    const { perfil } = useSelector(store => store.perfil);
+  
+    const uids = JSON.parse(localStorage.getItem("users"))
+  
+    // const data = perfil.filter(user => user.codigo === uids.codigo)
+ console.log(perfil)
 
     const dispatch = useDispatch();
 
@@ -36,18 +38,18 @@ const Emociones = () => {
 
     
 
-      const informa = {
-        dia: day,
-        mes: month,
-        año: year,
-        codigo: codigo,
-        asnwer : asnwer
-    }
+    //   const informa = {
+    //     dia: day,
+    //     mes: month,
+    //     año: year,
+    //     codigo: codigo,
+    //     asnwer : asnwer
+    // }
 
-    console.log(informa)
+    // console.log(informa)
     const enviarInfo = (e) => {
         
-        dispatch(AddEmocionesASync(informa))
+        dispatch(AddEmocionesASync())
         setShow(false)
     }
 
@@ -70,7 +72,7 @@ const Emociones = () => {
 
     useEffect(() => {
         dispatch(listEmocionesFrasesAsync());
-
+       
 
     }, []);
     return (
@@ -78,7 +80,7 @@ const Emociones = () => {
           
             <div className='subDivEmociones'>
             <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782823/a837c5c796c1daf0583b7ac1338952c6_iwwiii.jpg" alt='' width={200}/>
-                <h2>Hola {name}</h2>
+                <h2>Hola </h2>
                 <h4>¿Cómo te sientes el día de hoy?</h4>
                 {/* <h2>{day} / {month} / {year}</h2> */}
 
@@ -128,9 +130,8 @@ const Emociones = () => {
              emocion !== undefined
              ?
              <>
-        <Modal show={show} aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose} className="modal">
-          {/* <Modal.Header closeButton>
-          </Modal.Header> */}
+        <Modal show={show}   aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose} className="modal">
+          
           <Modal.Body> 
 
           <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782796/ebe4c9e75f78f80477a2e4ef2a640663_jgm1r3.jpg" alt='' width={150}/> <br/>
