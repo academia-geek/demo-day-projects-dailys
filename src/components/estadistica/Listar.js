@@ -33,9 +33,6 @@ export const Listar = () => {
         setCompl(completado)
         setNocompl(nocompletado)
         setTotal(completado + nocompletado)
-        console.log(completado)
-        console.log(nocompletado)
-        console.log(completado + nocompletado)
     }
 
     const data = {
