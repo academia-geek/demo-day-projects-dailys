@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from '../components/Autentificacion/Login';
 import Registro from '../components/Autentificacion/Registro';
+import Emociones from '../components/Emociones';
 import App from '../containers/App';
 import DasRouterUser from './DasRouterUser';
 import PrivateRoutes from './PrivateRoutes';
@@ -54,6 +55,9 @@ const AppRouter = () => {
                         <DasRouterUser />
                     </PrivateRoutes>
                 } />
+
+                <Route path="/emociones" element={<Emociones/>}/>
+
             </Routes>
         </BrowserRouter>
     )

@@ -1,6 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk';
 import { AlarmReducer } from '../reducers/AlarmReducer';
+import { emocionesReducer } from '../reducers/emocionesReducer';
 import { loginReducer } from '../reducers/reducersLogin';
 import { registerReducer } from '../reducers/reducersRegister';
 import { taskReducer } from '../reducers/tareaReducer';
@@ -14,7 +15,8 @@ const reducers = combineReducers({
     login: loginReducer,
     register: registerReducer,
     tarea: taskReducer,
-    alarm: AlarmReducer
+    alarm: AlarmReducer,
+    emociones: emocionesReducer
 })
 
 
