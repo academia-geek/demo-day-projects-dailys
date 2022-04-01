@@ -13,7 +13,6 @@ export const ListarTareas = () => {
 
   const { task } = useSelector(store => store.tarea);
   const [show, setShow] = useState(false);
-  console.log(task)
 
   const handleClose = () => setShow(false);
 
@@ -44,6 +43,7 @@ export const ListarTareas = () => {
     setShow(false)
   }
 
+
   const guarda = () => {
     setAñadir({
       dia: datas.dia,
@@ -70,13 +70,13 @@ export const ListarTareas = () => {
   return (
     <div  className='juju'>
       <Table striped bordered hover>
-        {/* <thead>
+        <thead>
           <tr>
             <th>hora</th>
             <th>fecha</th>
             <th>nombre</th>
           </tr>
-        </thead> */}
+        </thead>
         <tbody>
           {
             (data) ?
