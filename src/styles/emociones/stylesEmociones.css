@@ -1,0 +1,63 @@
+.subDivEmociones {
+  text-align: center;
+  padding: 1em;
+}
+.subDivEmociones .emociones {
+  display: inline-block;
+  width: 50%;
+  margin: auto;
+}
+.subDivEmociones .emociones .caritas {
+  border-style: none;
+  background-color: inherit;
+  border-radius: 50em;
+  padding: 0;
+  margin-left: 1em;
+}
+.subDivEmociones .emociones .caritas:focus {
+  background-color: #d2c3f3;
+}
+
+.boton-guardar {
+  text-align: center;
+}
+.boton-guardar .guardar {
+  margin-top: 2em;
+  width: 10em;
+  border-style: none;
+  background-color: #ad9ce9;
+  color: white;
+  height: 2em;
+  border-radius: 10px;
+}
+
+.input-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type=radio]:checked + label > img {
+  border: 2px solid #fff;
+  border-radius: 80px;
+  box-shadow: 0 0 3px 3px #ad9ce9;
+}
+
+input[type=radio] + label > img {
+  margin-right: 1em;
+}
+
+.cat {
+  border-radius: 100%;
+}
+
+.modal {
+  text-align: center;
+}
+
+.aceptar {
+  width: 5em;
+  background-color: #ad9ce9 !important;
+  outline: none !important;
+}
+
+/*# sourceMappingURL=stylesEmociones.css.map */
