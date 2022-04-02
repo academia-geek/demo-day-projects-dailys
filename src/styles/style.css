@@ -142,3 +142,21 @@ body{
         max-width: 90% !important;
     }
 } */
+
+.iii{
+    width: 90% !important;
+    margin-bottom: 1em;
+}
+
+.save{
+    margin-left: 1em;
+    background-color: #7d5b92 !important;
+
+}
+
+.close{
+    
+    background-color: #331d41 !important;
+    color: white;
+    
+}

@@ -13,7 +13,6 @@ export const Listar = () => {
     const [total, setTotal] = useState(0)
 
     const { task } = useSelector(store => store.tarea)
-    console.log(task)
     let completado = 0
     let nocompletado = 0
 
@@ -75,12 +74,17 @@ export const Listar = () => {
 
             <Table striped bordered hover>
                 <thead>
-                </thead>
-                <tbody>
                     <tr>
                         <th>complidos</th>
                         <th>No Cumplidos</th>
                         <th>total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{compl}</td>
+                        <td>{nocompl}</td>
+                        <td>{total}</td>
                     </tr>
                 </tbody>
             </Table>

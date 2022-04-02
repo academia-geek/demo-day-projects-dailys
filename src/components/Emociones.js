@@ -20,12 +20,12 @@ const Emociones = () => {
     const handleClose = () => setShow(false);
     const aleatorio = Math.floor((Math.random() * 5) + 0)
     
-    const { perfil } = useSelector(store => store.perfil);
+    // const { perfil } = useSelector(store => store.perfil);
   
     const uids = JSON.parse(localStorage.getItem("users"))
   
     // const data = perfil.filter(user => user.codigo === uids.codigo)
- console.log(perfil)
+//  console.log(perfil)
 
     const dispatch = useDispatch();
 
@@ -38,13 +38,13 @@ const Emociones = () => {
 
     
 
-    //   const informa = {
-    //     dia: day,
-    //     mes: month,
-    //     año: year,
-    //     codigo: codigo,
-    //     asnwer : asnwer
-    // }
+      const informa = {
+        dia: day,
+        mes: month,
+        año: year,
+        codigo: uids.codigo,
+        asnwer : asnwer
+    }
 
     // console.log(informa)
     const enviarInfo = (e) => {
@@ -73,8 +73,7 @@ const Emociones = () => {
     useEffect(() => {
         dispatch(listEmocionesFrasesAsync());
        
-
-    }, []);
+    }, [dispatch]);
     return (
         <div>
           

@@ -43,6 +43,7 @@ export const ListarTareas = () => {
     setShow(false)
   }
 
+
   const guarda = () => {
     setAñadir({
       dia: datas.dia,
@@ -69,13 +70,13 @@ export const ListarTareas = () => {
   return (
     <div  className='juju'>
       <Table striped bordered hover>
-        {/* <thead>
+        <thead>
           <tr>
             <th>hora</th>
             <th>fecha</th>
             <th>nombre</th>
           </tr>
-        </thead> */}
+        </thead>
         <tbody>
           {
             (data) ?
@@ -86,7 +87,7 @@ export const ListarTareas = () => {
                     <td>{element.dia}/{element.mes}/{element.año}</td>
                     <td>{element.actividad}</td>
                     <td>
-                      <Button onClick={() => buscar(element.codigo)}>{element.evalue}</Button>
+                      <Button className='meLleva' onClick={() => buscar(element.codigo)}>{element.evalue}</Button>
                     </td>
                     <td><Button variant='light' onClick={() => editar(element.codigo)}><img className='ico' alt="editar" src="https://res.cloudinary.com/donoutoby/image/upload/v1648323245/iconos/32355_p2dpn1.png" /></Button></td>
                     <Modal show={show} onHide={handleClose}>

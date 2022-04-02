@@ -1,5 +1,7 @@
 .ico{
     width: 25px;
+    border: none !important;
+    background-color: inherit !important;
 }
 .form-control{
     width: 100% !important;
@@ -41,7 +43,7 @@
 }
 
 .juju{
-    width: 45%;
+    width: 85%;
     margin: auto;
     margin-top: 4em;
 }
@@ -54,4 +56,9 @@
 .btn-si{
     background-color: #9477a7 !important;
     color: antiquewhite !important;
+}
+
+
+.meLleva{
+    background-color: #5c436c !important;
 }
