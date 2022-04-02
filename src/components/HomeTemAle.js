@@ -5,7 +5,7 @@ import { Alarma } from './Herramientas/Alarma'
 import { HomeComponent } from './Navbar/Home/HomeComponent'
 
 export const HomeTemAle = () => {
-    const [temp, setTemp] = useState(false)
+    const [temp, setTemp] = useState(true)
 
     const [alarma, setAlarma] = useState(false)
 

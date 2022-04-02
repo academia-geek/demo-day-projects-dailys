@@ -27,3 +27,6 @@ export const typesPerfil = {
     list: 'list',
     edit: 'edit',
 }
+export const typeQuiz = {
+    list: 'list'
+}

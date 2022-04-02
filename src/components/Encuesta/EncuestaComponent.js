@@ -6,10 +6,9 @@ import { listTasks } from '../../redux/actions/actionTask'
 import { Questions } from './Questions'
 
 export const EncuestaComponent = () => {
-    const red = (e) => {
-        dispatch(listTasks());
-    }
+
     const dispatch = useDispatch();
+
     const { task } = useSelector(store => store.tarea);
 
     const [selec, setSelec] = useState({})
@@ -29,17 +28,21 @@ export const EncuestaComponent = () => {
         setSelec(seleccionadas)
     }
     const [dat, setDat] = useState("")
+
     const actualizar = () => {
         const uids = JSON.parse(localStorage.getItem("users"))
         let datas = task.filter(user => user.idUser === uids.codigo);
         setData(datas)
-        const ir = datas.filter(s => s.codigo === selector)
-        setDat(ir)
     }
 
     const handleMostrar = (e) => {
         e.preventDefault()
+        const ir = data.filter(s => s.codigo === selector)
+        setDat(ir)
         setModal(true)
+    }
+    const red = (e) => {
+        dispatch(listTasks());
     }
 
     useEffect(() => {
@@ -49,12 +52,11 @@ export const EncuestaComponent = () => {
         <div>
             <HomeComponent />
             <div>
-                <h1>Encuenta para identificar las actividades con mas prioridad</h1>
-            </div>
-            <div>
-                <Form onSubmit={handleMostrar}>
-                    <div onClick={actualizar}>
-                        <Form.Select aria-label="Default select example" value={selec} onChange={cambioDias} onClick={actualizar}>
+                <Form onSubmit={handleMostrar} className="forsSelect">
+                    <img src="https://cdn.pixabay.com/photo/2020/10/17/22/27/question-5663412_960_720.png" alt="" className="imagens"></img>
+                    <div onClick={actualizar} className="forsSelect1">
+                        <h1 className="titles">Encuenta para identificar las actividades con mas prioridad</h1>
+                        <Form.Select aria-label="Default select example" value={selec} onChange={cambioDias} onClick={actualizar} className="selecsQuiz">
                             <option>Seleciona la actividad</option>
                             {
                                 data !== "" ? (
@@ -64,8 +66,12 @@ export const EncuestaComponent = () => {
                                 ) : ''
                             }
                         </Form.Select>
+                        <div className="clsboton">
+                            <Button variant="outline-success" type="submit" className="botonencuesta">Realizar encuenta</Button>
+                        </div>
+
                     </div>
-                    <Button variant="outline-success" type="submit">Realizar encuenta</Button>
+
                 </Form>
             </div>
             {

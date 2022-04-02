@@ -101,6 +101,7 @@ export const Temporizador = () => {
                                 <Form.Label>Hora</Form.Label>
                                 <Form.Control
                                     type="Number"
+                                    className="iii"
                                     placeholder="00 Horas"
                                     name="hor"
                                     value={hor}
@@ -111,6 +112,7 @@ export const Temporizador = () => {
                                 <Form.Label>Minutos</Form.Label>
                                 <Form.Control
                                     type="Number"
+                                    className="iii"
                                     placeholder="00 Minutos"
                                     name="min"
                                     value={min}
@@ -120,6 +122,7 @@ export const Temporizador = () => {
                             <Form.Group className="mb-3" controlId="Horas">
                                 <Form.Label>Segundos</Form.Label>
                                 <Form.Control
+                                    className="iii"
                                     type="Number"
                                     placeholder="00 Segundos"
                                     name="seg"
@@ -127,10 +130,10 @@ export const Temporizador = () => {
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
-                            <Button variant="secondary" onClick={handleClose}>
+                            <Button variant="secondary" onClick={handleClose} className="close close1">
                                 Close
                             </Button>
-                            <Button variant="primary" type="submit" onClick={handleClose}>
+                            <Button variant="primary" type="submit" onClick={handleClose} className="save">
                                 Save Changes
                             </Button>
                         </Form>
