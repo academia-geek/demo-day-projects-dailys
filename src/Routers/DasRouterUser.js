@@ -2,9 +2,10 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 import { HomeTemAle } from '../components/HomeTemAle';
 import { PefilComponent } from '../components/Perfil/PefilComponent';
 import { Home } from '../containers/Home';
-import  Calendario  from '../components/Calendario'
+import Calendario from '../components/Calendario'
 import { EncuestaComponent } from '../components/Encuesta/EncuestaComponent';
 import { EstadisticaCompo } from '../components/estadistica/EstadisticaCompo';
+import Emociones from '../components/Emociones'
 
 function DasRouterUser() {
     return (
@@ -15,6 +16,7 @@ function DasRouterUser() {
             <Route path="/Perfil" element={<PefilComponent />} />
             <Route path="/Encuesta" element={<EncuestaComponent />} />
             <Route path="/estadistica" element={<EstadisticaCompo />} />
+            <Route path="/Emociones" element={<Emociones />} />
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     )

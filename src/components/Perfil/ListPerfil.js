@@ -115,11 +115,12 @@ export const ListPerfil = (dates) => {
                                             <Form.Label className="textlogin">Imagen perfil</Form.Label>
                                             <Form.Control
                                                 type="file"
+                                                className="iii"
                                                 name="imagen"
                                                 onChange={handleFileChange}
                                             />
                                         </Form.Group>
-                                        <Button type="submit" onHide={handleClose}>Guardar</Button>
+                                        <Button type="submit" onHide={handleClose} className="botonpers">Guardar</Button>
                                     </Form>
                                 </Modal.Body>
                             </Modal>

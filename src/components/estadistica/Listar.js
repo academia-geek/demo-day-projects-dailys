@@ -61,7 +61,11 @@ export const Listar = () => {
             },
         ],
     }
-
+    const pepe = localStorage.setItem("data", JSON.stringify({
+        comple: compl,
+        nocompl: nocompl,
+        total: total
+    }))
 
     useEffect(() => {
         conteo()
