@@ -63,8 +63,10 @@ export const loginGoogle = () => {
                 dispatch(loginSincrono(user.uid, user.displayName))
                 console.log(`Bienvenid@ ${user.displayName}`);
                 localStorage.setItem("users", JSON.stringify({
-                    codigo: user.uid
+                    codigo: user.uid,
+                    name: user.displayName,
                 }));
+
                 const uses = JSON.parse(localStorage.getItem("users"))
                 const filts = data.payload.filter(user => user.codigo === uses.codigo)
                 console.log(filts)
