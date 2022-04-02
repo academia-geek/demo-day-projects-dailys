@@ -1,21 +1,23 @@
-
-.col-md-4 img{
+.col-md-4 img {
     width: 100%;
 }
 
-.card{
+.card {
     width: 85% !important;
-    margin: 15px auto !important; 
+    margin: 15px auto !important;
 }
+
 .card-title {
     text-align: center;
     text-transform: uppercase;
     font-size: 45px;
 }
-.card-text{
+
+.card-text {
     font-size: 35px;
 }
-.botonperfil{
+
+.botonperfil {
     background: var(--fond-button);
     border: 2px solid var(--fond-button);
     width: 250px;
@@ -24,18 +26,21 @@
     line-height: 19px;
     margin-left: 25%;
 }
-.col{
+
+.col {
     width: 25% !important;
     height: 550px;
     text-align: center !important;
 }
-.contTempori{
+
+.contTempori {
     display: flex;
     flex-direction: row;
     width: 40%;
     margin: auto;
 }
-.contes{
+
+.contes {
     width: 34%;
     height: 138px;
     text-align: center;
@@ -43,14 +48,17 @@
     margin: 15px;
     border-radius: 160px;
 }
-.contens{
+
+.contens {
     text-align: center;
 }
-.texts{
+
+.texts {
     position: relative;
     top: 22px;
 }
-.boton{
+
+.boton {
     background: var(--fond-button);
     border: 2px solid var(--fond-button);
     width: 250px;
@@ -60,103 +68,206 @@
     margin: 10px;
     line-height: 13px;
 }
-.opciones{
+
+.opciones {
     text-align: center;
     margin: 15px;
 }
-.boton1{
+
+.boton1 {
     margin: 15px;
     width: 230px;
     background: #9e95b8;
     border: #9e95b892;
 }
-.boton2{
+
+.boton2 {
     margin: 15px;
     width: 230px;
     background: #7d5b92;
     border: #7d5b92;
 }
+
 a {
     color: var(--fond-default);
     text-decoration: none;
 }
-.contAlarm{
+
+.contAlarm {
     display: flex;
     flex-direction: row;
 }
-.añadirAlarmas{
+
+.añadirAlarmas {
     width: 30%;
     margin: 15px auto;
 }
-.fechas{
+
+.fechas {
     text-align: center;
 }
-.alarmafecha{
+
+.alarmafecha {
     margin: 15px;
 }
-.listarAlarmas{
+
+.listarAlarmas {
     width: 85%;
     margin: 15px auto;
 }
-body{
+
+body {
     font-family: none;
 }
-*{
+
+* {
     box-sizing: content-box;
 }
-.table{
+
+.table {
     width: 85% !important;
     margin: 15px auto;
 }
-.quits{
+
+.quits {
     display: flex;
     flex-direction: row;
-    width: 44% !important;
+    width: 49% !important;
     margin: auto !important;
 }
-.checks{
+
+.checks {
     margin: 20px !important;
     font-size: 19px !important;
 }
-.bton{
-    margin-left: 37% !important;
+
+.bton {
+    margin-left: 35% !important;
 }
-.bton1{
+
+.bton1 {
     margin: 0 0 0 15px !important;
 }
-.grafica{
-    width:25%;
+
+.grafica {
+    width: 25%;
     margin: auto !important;
 }
-.navb-titu{
+
+.navb-titu {
     color: var(--fond-default) !important;
     background: var(--fond) !important;
     margin: 15px 0 !important;
 }
-.navb-titu:hover{
+
+.navb-titu:hover {
     color: var(--color-white) !important;
     background: var(--fond-button) !important;
 }
-/* @media (min-width: 576px){
-    .modal-dialog {
-        max-width: 90% !important;
-    }
-} */
 
-.iii{
+.forsSelect {
+    display: flex;
+    flex-direction: row;
+    width: 85% !important;
+    margin: auto !important;
+}
+
+.forsSelect1 {
+    width: 80% !important;
+}
+
+.selecsQuiz {
+    width: 80% !important;
+}
+
+.titles {
+    text-align: center;
+    width: 75%;
+    margin: 55px auto;
+}
+
+.imagens {
+    width: 35%;
+    margin: auto;
+    position: relative;
+    left: -80px;
+}
+
+.clsboton {
+    margin: 15px;
+}
+
+.botonencuesta {
+    margin-left: 40% !important;
+}
+
+.modal1 {
+    text-align: center !important;
+}
+
+.botonlistes {
+    background: #64549d;
+    color: var(--color-white);
+    border: 2px solid #64549d;
+    width: 210px;
+    margin: auto !important;
+    text-align: center !important;
+}
+
+.botonlistes:hover {
+    background: #7461b7;
+    color: var(--color-white);
+    border: 2px solid #7461b7;
+}
+
+.iii {
     width: 90% !important;
     margin-bottom: 1em;
 }
 
-.save{
+.save {
     margin-left: 1em;
     background-color: #7d5b92 !important;
 
 }
 
-.close{
-    
+.close {
+
     background-color: #331d41 !important;
     color: white;
-    
+
+}
+
+.botonpers {
+    margin-left: 40% !important;
+    background: #64549d;
+    color: var(--color-white);
+    border: 2px solid #64549d;
+}
+
+.botonpers:hover {
+    background: #7461b7;
+    color: var(--color-white);
+    border: 2px solid #7461b7;
+}
+
+@media (min-width: 576px) {
+    .modal-quizz .modal-dialog {
+        max-width: 85% !important;
+    }
+}
+
+.modal-info {
+    justify-content: center;
+    text-align: center;
+    width: 65%;
+    margin: auto;
+}
+.close1{
+    margin-left: 30% !important;
+}
+.modal-info th {
+    background-color: #5c436c !important;
+    color: antiquewhite;
+    border: none;
 }

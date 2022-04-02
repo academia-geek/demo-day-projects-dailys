@@ -1,8 +1,8 @@
-import { Modal,  Button } from 'react-bootstrap';
+import { Modal, Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { AddEmocionesASync, listEmocionesFrasesAsync } from '../redux/actions/actionEmociones';
-
+import {HomeComponent} from './Navbar/Home/HomeComponent'
 
 const Emociones = () => {
     const fecha = new Date();
@@ -12,20 +12,16 @@ const Emociones = () => {
     const [show, setShow] = useState(false);
     const [emocion, setEmocion] = useState();
     const [mensaje, setMensaje] = useState(0);
-    const [info, setInfo] = useState()
     const { frases } = useSelector((store) => store.emociones)
-    const [añadir, setAñadir] = useState({})
     console.log(emocion)
 
     const handleClose = () => setShow(false);
     const aleatorio = Math.floor((Math.random() * 5) + 0)
-    
-    // const { perfil } = useSelector(store => store.perfil);
-  
-    const uids = JSON.parse(localStorage.getItem("users"))
-  
-    // const data = perfil.filter(user => user.codigo === uids.codigo)
-//  console.log(perfil)
+
+    const user = JSON.parse(localStorage.getItem('users'))
+    const { name, codigo } = user
+
+    console.log(codigo)
 
     const dispatch = useDispatch();
 
@@ -36,20 +32,18 @@ const Emociones = () => {
         console.log(asnwer)
     }
 
-    
-
-      const informa = {
+    const informa = {
         dia: day,
         mes: month,
         año: year,
-        codigo: uids.codigo,
-        asnwer : asnwer
+        codigo: codigo,
+        asnwer: asnwer
     }
 
     // console.log(informa)
     const enviarInfo = (e) => {
-        
-        dispatch(AddEmocionesASync())
+
+        dispatch(AddEmocionesASync(informa))
         setShow(false)
     }
 
@@ -57,15 +51,15 @@ const Emociones = () => {
         e.preventDefault()
         if (asnwer === "1" || asnwer === "2") {
             setEmocion(frases[0].feliz)
-            setMensaje(aleatorio) 
+            setMensaje(aleatorio)
             setShow(true)
         } else if (asnwer === "3" || asnwer === "4") {
             setEmocion(frases[1].triste)
             setMensaje(aleatorio)
-            setShow(true) 
-        }  else if (asnwer === "5") {
+            setShow(true)
+        } else if (asnwer === "5") {
             setEmocion(frases[2].mal)
-            setMensaje(aleatorio) 
+            setMensaje(aleatorio)
             setShow(true)
         }
     }
@@ -76,7 +70,7 @@ const Emociones = () => {
     }, [dispatch]);
     return (
         <div>
-          
+            <HomeComponent />
             <div className='subDivEmociones'>
             <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782823/a837c5c796c1daf0583b7ac1338952c6_iwwiii.jpg" alt='' width={200}/>
                 <h2>Hola </h2>
@@ -114,9 +108,6 @@ const Emociones = () => {
 
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
 
@@ -133,20 +124,17 @@ const Emociones = () => {
           
           <Modal.Body> 
 
-          <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782796/ebe4c9e75f78f80477a2e4ef2a640663_jgm1r3.jpg" alt='' width={150}/> <br/>
-            <h5>¡Gracias por confiar en nosotros!</h5>
-            
-          <h4>{emocion[mensaje]}</h4>
-          <Button className="aceptar" onClick={enviarInfo}>Aceptar</Button>
-          </Modal.Body>
+                                <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782796/ebe4c9e75f78f80477a2e4ef2a640663_jgm1r3.jpg" alt='' width={150} /> <br />
+                                <h5>¡Gracias por confiar en nosotros!</h5>
 
-        </Modal>
-      </>
-           
-            
-             : ""
+                                <h4>{emocion[mensaje]}</h4>
+                                <Button className="aceptar" onClick={enviarInfo}>Aceptar</Button>
+                            </Modal.Body>
+
+                        </Modal>
+                    </>
+                    : ""
             }
-
 
         </div>
     )

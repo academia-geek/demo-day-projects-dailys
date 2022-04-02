@@ -50,10 +50,6 @@ input[type=radio] + label > img {
   border-radius: 100%;
 }
 
-.modal {
-  text-align: center;
-}
-
 .aceptar {
   width: 5em;
   background-color: #ad9ce9 !important;

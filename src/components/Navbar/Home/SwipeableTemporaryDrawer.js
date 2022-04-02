@@ -53,6 +53,9 @@ export default function SwipeableTemporaryDrawer() {
         <Nav.Item>
           <Nav.Link href="/estadistica" className="navb-titu">Estadistica</Nav.Link>
         </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="/Emociones" className="navb-titu">Emociones</Nav.Link>
+        </Nav.Item>
       </List>
     </div>
   );
