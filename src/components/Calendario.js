@@ -43,6 +43,7 @@ const Calendario = () => {
     }
 
   }
+  console.log(dat)
 
   useEffect(() => {
     dispatch(listTasks());
@@ -59,7 +60,7 @@ const Calendario = () => {
       </div>
       <>
         {
-          show === true ? (
+          (show === true && dat === "") ? (
             <form>
               <div className='modal-info'>
                 <h2>Programado</h2>
