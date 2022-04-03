@@ -73,7 +73,7 @@ const Emociones = () => {
             <HomeComponent />
             <div className='subDivEmociones'>
             <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782823/a837c5c796c1daf0583b7ac1338952c6_iwwiii.jpg" alt='' width={200}/>
-                <h2>Hola </h2>
+                <h2>Hola {name}</h2>
                 <h4>¿Cómo te sientes el día de hoy?</h4>
                 {/* <h2>{day} / {month} / {year}</h2> */}
 
@@ -120,7 +120,7 @@ const Emociones = () => {
              emocion !== undefined
              ?
              <>
-        <Modal show={show}   aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose} className="modal">
+        <Modal show={show}   aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose} className="modal1">
           
           <Modal.Body> 
 

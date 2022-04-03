@@ -12,6 +12,7 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns'
 import './styles/style.css'
 import "./styles/emociones/stylesEmociones.css"
+import "./styles/encuesta/encuesta.css"
 ReactDOM.render(
   <Provider store={store}>
     <MuiPickersUtilsProvider utils={DateFnsUtils}>

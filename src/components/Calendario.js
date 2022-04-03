@@ -60,7 +60,7 @@ const Calendario = () => {
       </div>
       <>
         {
-          (show === true && dat === "") ? (
+          (show === true) ? (
             <form>
               <div className='modal-info'>
                 <h2>Programado</h2>

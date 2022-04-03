@@ -43,7 +43,8 @@ export const AgendaComponent = () => {
       selecEvent: selector,
       idUser: uids.codigo,
       codigo: parseInt(Math.random() * (50 - 1) + 1),
-      evalue: "No completado"
+      evalue: "No completado",
+      quizDs: 0
     })
   }
   const handleSubmit = (e) => {

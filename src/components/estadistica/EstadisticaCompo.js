@@ -6,6 +6,7 @@ import { HomeComponent } from '../Navbar/Home/HomeComponent';
 
 export const EstadisticaCompo = () => {
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(listTasks());
     }, [dispatch])

@@ -129,12 +129,6 @@ body {
     margin: 15px auto;
 }
 
-.quits {
-    display: flex;
-    flex-direction: row;
-    width: 49% !important;
-    margin: auto !important;
-}
 
 .checks {
     margin: 20px !important;
@@ -171,6 +165,7 @@ body {
     width: 85% !important;
     margin: auto !important;
 }
+
 
 .forsSelect1 {
     width: 80% !important;
