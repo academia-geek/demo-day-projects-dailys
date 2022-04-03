@@ -40,7 +40,7 @@ const Emociones = () => {
         asnwer: asnwer
     }
 
-    console.log(informa)
+    // console.log(informa)
     const enviarInfo = (e) => {
 
         dispatch(AddEmocionesASync(informa))
@@ -66,14 +66,13 @@ const Emociones = () => {
 
     useEffect(() => {
         dispatch(listEmocionesFrasesAsync());
-
-
-    }, []);
+       
+    }, [dispatch]);
     return (
         <div>
             <HomeComponent />
             <div className='subDivEmociones'>
-                <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782823/a837c5c796c1daf0583b7ac1338952c6_iwwiii.jpg" alt='' width={200} />
+            <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782823/a837c5c796c1daf0583b7ac1338952c6_iwwiii.jpg" alt='' width={200}/>
                 <h2>Hola {name}</h2>
                 <h4>¿Cómo te sientes el día de hoy?</h4>
                 {/* <h2>{day} / {month} / {year}</h2> */}
@@ -87,21 +86,24 @@ const Emociones = () => {
                     <button className='caritas'  value="3" onClick={handleOnChange}><img src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/aburrido_1_hespzj.png' alt='' width={100} /></button> <br />
                     <button className='caritas'  value="4" onClick={handleOnChange}><img src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/cara-triste-en-cuadrado-redondeado_rwkpnb.png' alt='' width={100} /></button>
                     <button className='caritas'  value="5" onClick={handleOnChange}><img src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/muerto_df1akx.png' alt='' width={100} /></button> */}
-                    <div class="sex">
+
+
+
+                    <div class="">
                         <div class="select">
-                            <label for="sex" class="col-25"></label><br />
-                            <input type="radio" name="sexo" id="hombre" class="input-hidden" value="1" onChange={handleOnChange} />
-                            <label for="hombre"><img src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/happy-face_yapson.png" width={100} alt="" required /></label>
-                            <input type="radio" name="sexo" id="mujer" className="input-hidden" value="2" onChange={handleOnChange} />
-                            <label for="mujer" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/feliz_wxbvxo.png" alt="" required /></label>
-                            <input type="radio" name="sexo" id="jeje" className="input-hidden" value="3" onClick={handleOnChange} />
-                            <label for="jeje" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/aburrido_1_hespzj.png" alt="" required /></label>
+                            <label for="emocion" class="col-25"></label><br />
+                            <input type="radio" name="emociones" id="feliz" class="input-hidden" value="1" onChange={handleOnChange} />
+                            <label for="feliz"><img src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/happy-face_yapson.png" width={100} alt="" required /></label>
+                            <input type="radio" name="emociones" id="muyFeliz" className="input-hidden" value="2" onChange={handleOnChange} />
+                            <label for="muyFeliz" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/feliz_wxbvxo.png" alt="" required /></label>
+                            <input type="radio" name="emociones" id="bored" className="input-hidden" value="3" onClick={handleOnChange} />
+                            <label for="bored" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/aburrido_1_hespzj.png" alt="" required /></label> 
 
-                            <input type="radio" name="sexo" id="juju" className="input-hidden" value="4" onClick={handleOnChange} />
-                            <label for="juju" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/cara-triste-en-cuadrado-redondeado_rwkpnb.png" alt="" required /></label>
+                            <input type="radio" name="emociones" id="sad" className="input-hidden" value="4" onClick={handleOnChange} />
+                            <label for="sad" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/cara-triste-en-cuadrado-redondeado_rwkpnb.png" alt="" required /></label>
 
-                            <input type="radio" name="sexo" id="jojo" className="input-hidden" value="5" onClick={handleOnChange} />
-                            <label for="jojo" id="hm"><img width={100} src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/muerto_df1akx.png' alt="" required /></label> <br />
+                            <input type="radio" name="emociones" id="dead" className="input-hidden" value="5" onClick={handleOnChange} />
+                            <label for="dead" id="hm"><img width={100} src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/muerto_df1akx.png' alt="" required /></label> <br />
 
 
                         </div>
@@ -114,14 +116,13 @@ const Emociones = () => {
 
             </div>
 
-            {
-                emocion !== undefined
-                    ?
-                    <>
-                        <Modal show={show} aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose} className="modal1">
-                            {/* <Modal.Header closeButton>
-          </Modal.Header> */}
-                            <Modal.Body>
+            { 
+             emocion !== undefined
+             ?
+             <>
+        <Modal show={show}   aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose} className="modal1">
+          
+          <Modal.Body> 
 
                                 <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782796/ebe4c9e75f78f80477a2e4ef2a640663_jgm1r3.jpg" alt='' width={150} /> <br />
                                 <h5>¡Gracias por confiar en nosotros!</h5>

@@ -13,15 +13,22 @@ const Calendario = () => {
   // const currentDay = day.getUTCDate();
   // const currentMonth = day.getUTCMonth() + 1;
   // const currentYear = day.getUTCFullYear();
+  
   const handleClose = () => setShow(false);
 
   const dispatch = useDispatch();
 
   const { task } = useSelector(store => store.tarea)
 
+
   const uids = JSON.parse(localStorage.getItem("users"))
+   const codigo = uids.codigo
+  const eventos = task.filter((p) => p.idUser === codigo)
+  const especiales = eventos.filter((p) => p.selecEvent === "Especial")
+  console.log(especiales)
 
 
+  console.log(eventos)
   const osd = () => {
     setShow(true)
     if (day === undefined) {
@@ -43,6 +50,8 @@ const Calendario = () => {
 
   }, [dispatch])
 
+
+  console.log(dat)
   return (
     <div>
       <HomeComponent />
@@ -51,7 +60,7 @@ const Calendario = () => {
       </div>
       <>
         {
-          (show === true && dat === "") ? (
+          (show === true) ? (
             <form>
               <div className='modal-info'>
                 <h2>Programado</h2>
@@ -84,8 +93,13 @@ const Calendario = () => {
       <div className="eventos">
 
         <h4>Eventos especiales:</h4>
-        <p>-Like a RockStar</p>
-        <p>- Slumber party</p>
+        {
+            especiales.map((e, i) => (
+              <div key={i} className='' >
+               <h5>-{e.actividad}</h5>
+              </div>
+            ))
+          }
       </div>
 
 

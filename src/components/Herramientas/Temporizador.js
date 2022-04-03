@@ -97,7 +97,7 @@ export const Temporizador = () => {
                     </Modal.Header>
                     <Modal.Body>
                         <Form onSubmit={handleConfig}>
-                            <Form.Group className="mb-3" controlId="Horas">
+                            <Form.Group className="iii" controlId="Horas">
                                 <Form.Label>Hora</Form.Label>
                                 <Form.Control
                                     type="Number"
@@ -108,7 +108,7 @@ export const Temporizador = () => {
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="minutos">
+                            <Form.Group className="iii" controlId="minutos">
                                 <Form.Label>Minutos</Form.Label>
                                 <Form.Control
                                     type="Number"
@@ -119,7 +119,7 @@ export const Temporizador = () => {
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="Horas">
+                            <Form.Group className="iii" controlId="Horas">
                                 <Form.Label>Segundos</Form.Label>
                                 <Form.Control
                                     className="iii"

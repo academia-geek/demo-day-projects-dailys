@@ -1,5 +1,7 @@
 .ico {
     width: 25px;
+    border: none !important;
+    background-color: inherit !important;
 }
 
 .form-control {
@@ -65,6 +67,10 @@
     color: antiquewhite !important;
 }
 
+
+.meLleva{
+    background-color: #5c436c !important;
+}
 .imgAgenda {
     width: 80px !important;
     margin-left: 20% !important;

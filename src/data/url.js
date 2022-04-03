@@ -1,0 +1,1 @@
+export const url = "https://quiz-dailys.herokuapp.com/quiz/"
