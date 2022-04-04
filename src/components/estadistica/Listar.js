@@ -19,7 +19,6 @@ export const Listar = () => {
     const users = JSON.parse(localStorage.getItem('users'));
     const codigo = users.codigo
 
-
     const conteo = () => {
         // let datas = task.filter(user => user.idUser === users.codigo);
         task.forEach(element => {
@@ -33,6 +32,12 @@ export const Listar = () => {
         setCompl(completado)
         setNocompl(nocompletado)
     }
+    localStorage.setItem("dato", JSON.stringify({
+        compl: compl,
+        nocompl: nocompl,
+        total: compl + nocompl
+    }));
+    console.log(nocompl, compl)
     const data = {
         labels: ['Completado', 'No Completado'],
         datasets: [
@@ -46,7 +51,6 @@ export const Listar = () => {
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)'
-
                 ],
                 borderWidth: 1,
             },
@@ -61,7 +65,7 @@ export const Listar = () => {
 
     return (
         <div>
-            <div claName="grafica">
+            <div className="grafica">
                 <Pie data={data} options={opciones} />
             </div>
             <Table striped bordered hover>

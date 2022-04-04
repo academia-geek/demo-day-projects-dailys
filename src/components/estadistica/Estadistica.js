@@ -27,8 +27,7 @@ export const Estadistica = () => {
                         aria-controls="pills-home"
                         aria-selected="true">Tareas</button>
                 </li>
-
-                <li class="nav-item" role="presentation">
+                <li className="nav-item" role="presentation">
                     <button className="nav-link"
                         id="pills-emociones-tab"
                         data-bs-toggle="pill"

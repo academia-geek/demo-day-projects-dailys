@@ -64,7 +64,7 @@ export const TabTask = () => {
                         </table>
                     </div>
                     <div className="tab-pane fade" id="v-pills-completado" role="tabpanel" aria-labelledby="v-pills-completado-tab">
-                        <table class="table">
+                        <table className="table">
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
@@ -96,7 +96,7 @@ export const TabTask = () => {
                         </table>
                     </div>
                     <div className="tab-pane fade" id="v-pills-ncompletado" role="tabpanel" aria-labelledby="v-pills-ncompletado-tab">
-                        <table class="table">
+                        <table className="table">
                             <thead>
                                 <tr>
                                     <th>Nombre</th>

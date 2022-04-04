@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+// import { useDispatch, useSelector } from 'react-redux'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import "../../styles/estadistica/est.css"
@@ -7,11 +7,11 @@ import "../../styles/estadistica/est.css"
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const Listaremociones = () => {
-    const [happy, setHappy] = useState(0)
-    const [veryHappy, setVeryhappy] = useState(0)
-    const [mehj, setMehj] = useState(0)
-    const [sad, setSad] = useState(0)
-    const [hedied, sehedied] = useState(0)
+    // const [happy, setHappy] = useState(0)
+    // const [veryHappy, setVeryhappy] = useState(0)
+    // const [mehj, setMehj] = useState(0)
+    // const [sad, setSad] = useState(0)
+    // const [hedied, sehedied] = useState(0)
 
     // const dispatch = useDispatch();
 
@@ -72,15 +72,15 @@ export const Listaremociones = () => {
             },
         ],
     };
-     const opciones = {
+    const opciones = {
         responsive: true,
         maintainAspectRatio: false
     }
-  return (
-    <div>
-        <div claName="grafica">
-          <Pie data={data} options={opciones}/>
-          </div>
-    </div>
-  )
+    return (
+        <div>
+            <div>
+                <Pie data={data} options={opciones} />
+            </div>
+        </div>
+    )
 }
