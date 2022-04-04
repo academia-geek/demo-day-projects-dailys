@@ -3,25 +3,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import "../../styles/estadistica/est.css"
-import { listEstadist } from '../../redux/actions/actionTask';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const Listar = () => {
     const dispatch = useDispatch();
 
-    const [estado, setEstado] = useState()
     const [compl, setCompl] = useState(0)
     const [nocompl, setNocompl] = useState(0)
-    const [total, setTotal] = useState(0)
-    const tareasusers= {}
 
     const { task } = useSelector(store => store.tarea)
 
-    useEffect(() => {
-        dispatch(listEstadist())
-        conteo()
-    }, [task])
+    useEffect(() => { conteo() }, [task])
 
     console.log(task)
     let completado = 0
@@ -36,18 +29,16 @@ export const Listar = () => {
         console.log(datas)
         task.forEach(element => {
             
-            const { evalue, idUser, actividad } = element
+            const { evalue, idUser} = element
             if (evalue === "Completado" && codigo === idUser) {
                 completado++
             } else if (evalue === "No completado" && codigo === idUser) {
                 nocompletado++
             }
             
-            setEstado(evalue)
         })
         setCompl(completado)
         setNocompl(nocompletado)
-        setTotal(completado + nocompletado)
     }
 
     const data = {

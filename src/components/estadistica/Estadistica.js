@@ -1,11 +1,18 @@
 import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux';
+import { listTasks } from '../../redux/actions/actionTask';
 import { Listar } from './Listar'
 import { Listaremociones } from './Listaremociones';
 import { Rendimiento } from './Rendimiento';
 import { TabTask } from './TabTask';
 
 export const Estadistica = () => {
-    // const usuario = { codigo: "lytcBPD4p4TFYFZetEMZ74psfkh2"}
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+    dispatch(listTasks());
+  }, [dispatch])
+    // const usuario = { codigo: "uJMZsuD9PfOK5wF8uYl4MaCWuXU2"}
     // localStorage.setItem('users', JSON.stringify(usuario))
     
     return (
@@ -37,7 +44,7 @@ export const Estadistica = () => {
                 <div className="tab-pane fade show active" id="pills-total" role="tabpanel" aria-labelledby="pills-total-tab">
 
                     <Listar />
-                    
+
                     <TabTask />
                     <Rendimiento />
 
