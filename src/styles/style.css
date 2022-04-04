@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap');
+
 .col-md-4 img {
     width: 100%;
 }
@@ -5,8 +7,18 @@
 .card {
     width: 85% !important;
     margin: 15px auto !important;
+    font-family: 'Domine', serif;
+    line-height: 40px;
 }
 
+.picachu{
+    font-family: 'Domine', serif !important;
+}
+
+
+.jajaja{
+    color: #626262 !important;
+}
 .card-title {
     text-align: center;
     text-transform: uppercase;
@@ -15,11 +27,21 @@
 
 .card-text {
     font-size: 35px;
+    
 }
 
+.titlee{
+   text-align: center;
+   font-size: 60px;
+}
+
+.titlee1{
+    font-family: 'Domine', serif !important;
+ }
+
 .botonperfil {
-    background: var(--fond-button);
-    border: 2px solid var(--fond-button);
+    background: var(--fond-button) !important;
+    border: 2px solid var(--fond-button) !important;
     width: 250px;
     height: 35px;
     font-size: 25px;

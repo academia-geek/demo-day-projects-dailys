@@ -6,6 +6,7 @@ import { Listaremociones } from './Listaremociones';
 import { Rangoe } from './Rangoe';
 import { Rendimiento } from './Rendimiento';
 import { TabTask } from './TabTask';
+import "../../styles/estadistica/est.css"
 
 export const Estadistica = () => {
 
