@@ -52,6 +52,7 @@ export const deleteSincrono = (actividad) => {
 }
 
 // -----------------------------------------------> listar el contenido de la base de datos
+
 export const listTasks = () => {
     return async (dispatch) => {
         const querySnapshot = await getDocs(collection(db, "DataUsuarios"));
@@ -71,70 +72,27 @@ export const list = (tareas) => {
         payload: tareas
     }
 }
+
 // -----------------------------------------------> agregar el contenido de la base de datos
 export const registertarea = (newTarea) => {
     return (dispatch) => {
         addDoc(collection(db, "DataUsuarios"), newTarea)
-            .then(resp=> {
+            .then(resp => {
                 dispatch(addSyn(newTarea))
                 dispatch(listTasks())
             })
-            .catch(error=> {
-                console.log(error)
-                dispatch(listTasks())
-            })
-
-    }
-}
-
-export const addSyn = (tareas) => {
-    return {
-        type: typesTask.add,
-        payload: tareas
-    }
-}
-
-// -----------------------------------------------> estadisticas
-export const registerEstadistica = (estadistica, id) => {
-    return (dispatch) => {
-        const newEstadist = {
-            estadistica, id
-        }
-        addDoc(collection(db, "estadisticas"), newEstadist)
-            .then(resp => {
-                dispatch(addSynest(newEstadist))
-            })
             .catch(error => {
                 console.log(error)
+                dispatch(listTasks())
             })
 
     }
 }
 
 //------Sincronica----------------///
-export const addSynest = (newEstadist) => {
+export const addSyn = (tareas) => {
     return {
         type: typesTask.add,
-        payload: newEstadist
-    }
-}
-export const listEstadist = () => {
-    return async (dispatch) => {
-        const querySnapshot = await getDocs(collection(db, "estadisticas"));
-        console.log(querySnapshot)
-        const tarea = [];
-        querySnapshot.forEach((doc) => {
-            tarea.push({
-                ...doc.data()
-            })
-        });
-        dispatch(listar(tarea));
-    }
-}
-
-export const listar = (estadisticas) => {
-    return {
-        type: typesTask.list,
-        payload: estadisticas
+        payload: tareas
     }
 }

@@ -6,14 +6,14 @@ const initialState = {
     seleccionado: []
 }
 
-export const emocionesReducer= (state = initialState, action) => {
+export const emocionesReducer = (state = initialState, action) => {
     switch (action.type) {
-        
+
         case typesEmociones.list:
             return {
                 frases: [...action.payload]
             }
-            case typesEmociones.add:
+        case typesEmociones.add:
             return {
                 seleccionado: [action.payload]
             }
