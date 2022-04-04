@@ -1,27 +1,38 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { Table } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import "../../styles/estadistica/est.css"
 
 export const TabTask = () => {
+    const dispatch = useDispatch();
+
+    const [estado, setEstado] = useState()
     const [compl, setCompl] = useState(0)
     const [nocompl, setNocompl] = useState(0)
     const [total, setTotal] = useState(0)
+    const tareasusers = {}
 
     const { task } = useSelector(store => store.tarea)
 
+    useEffect(() => {
+        conteo()
+    }, [task])
+
+    console.log(task)
+
     const users = JSON.parse(localStorage.getItem('users'));
+    const codigo = users.codigo
+
 
     const conteo = () => {
         let datas = task.filter(user => user.idUser === users.codigo);
         let complet = datas.filter(tareas => tareas.evalue === "Completado");
         let nocomplet = datas.filter(tareas => tareas.evalue === "No completado");
+
         setCompl(complet)
         setNocompl(nocomplet)
         setTotal(datas)
     }
-    useEffect(() => {
-        conteo()
-    }, [task])
     return (
         <div>
             <div className="d-flex align-items-start">
