@@ -1,4 +1,4 @@
-import { Modal, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
@@ -13,7 +13,6 @@ const Calendario = () => {
   // const currentDay = day.getUTCDate();
   // const currentMonth = day.getUTCMonth() + 1;
   // const currentYear = day.getUTCFullYear();
-  const handleClose = () => setShow(false);
 
   const dispatch = useDispatch();
 

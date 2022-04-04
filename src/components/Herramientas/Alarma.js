@@ -18,31 +18,35 @@ export const Alarma = () => {
     const [fechas, setFechas] = useState(new Date())
 
     const { alarm } = useSelector(store => store.alarm)
+    const uids = JSON.parse(localStorage.getItem("users"))
 
     const [añadir, setAñadir] = useState({
         dia: "",
         mes: "",
         año: "",
         hora: "",
-        minutos: ""
+        minutos: ""        
     })
-    console.log(añadir)
+
     const red = () => {
         if (alarm === undefined) {
             dispatch(ListAlarmSync())
         }
     }
 
-    useEffect(() => {
-        red()
-    })
-    const guarda = (e) => {
+    const alrms = () =>{
+
+    }
+
+
+    const guarda = () => {
         setAñadir({
             dia: fechas.getUTCDate(),
             mes: fechas.getUTCMonth(),
             año: fechas.getUTCFullYear(),
             hora: fechas.getHours(),
-            minutos: fechas.getMinutes()
+            minutos: fechas.getMinutes(),
+            codigo: uids.codigo
         })
     }
     const handleAdd = (e) => {
@@ -50,6 +54,10 @@ export const Alarma = () => {
         dispatch(AddAlarmSync(añadir))
     }
 
+    useEffect(() => {
+        red()
+        console.log("hola")
+    }, [])
     return (
         <div>
             <div className="fechas">

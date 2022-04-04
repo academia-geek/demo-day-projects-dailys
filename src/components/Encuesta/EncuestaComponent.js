@@ -41,7 +41,7 @@ export const EncuestaComponent = () => {
         setDat(ir)
         setModal(true)
     }
-    const red = (e) => {
+    const red = () => {
         dispatch(listTasks());
     }
 

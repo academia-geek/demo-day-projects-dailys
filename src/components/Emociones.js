@@ -66,9 +66,7 @@ const Emociones = () => {
 
     useEffect(() => {
         dispatch(listEmocionesFrasesAsync());
-
-
-    }, []);
+    }, [dispatch]);
     return (
         <div>
             <HomeComponent />

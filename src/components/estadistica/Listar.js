@@ -11,7 +11,7 @@ export const Listar = () => {
     const [compl, setCompl] = useState(0)
     const [nocompl, setNocompl] = useState(0)
     const [total, setTotal] = useState(0)
-
+    console.log(estado)
     const { task } = useSelector(store => store.tarea)
     let completado = 0
     let nocompletado = 0
