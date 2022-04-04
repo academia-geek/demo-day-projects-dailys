@@ -64,12 +64,12 @@ export const ListPerfil = (dates) => {
                                 </div>
                                 <div className="col-md-8">
                                     <div className="card-body">
-                                        <h5 className="card-title">Perfil</h5>
-                                        <p className="card-text">Nombre:</p>
+                                        <h5 className="card-title picachu">Perfil</h5>
+                                        <p className="card-text jajaja">Nombre:</p>
                                         <p className="card-text">{perfil.name}</p>
                                         <p className="card-text"><small className="text-muted">Correo: </small></p>
                                         <p className="card-text">{perfil.email}</p>
-                                        <p className="card-text"><small className="text-muted">descripcion: </small></p>
+                                        <p className="card-text"><small className="text-muted">Descripcion: </small></p>
                                         <p className="card-text">{perfil.descripcion}</p>
                                         <Button className="botonperfil" onClick={cargarData}>Editar perfil</Button>
                                     </div>

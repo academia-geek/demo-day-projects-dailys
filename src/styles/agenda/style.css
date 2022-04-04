@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500;1,400&display=swap');
+
 .ico {
     width: 25px;
     border: none !important;
@@ -21,10 +23,33 @@
 .content-Agenda {
     background-color: white;
     width: 80%;
-    margin: 15px auto;
+    margin: 10px auto;
     border-radius: 30px;
+    font-family: 'Domine', serif;
+  
 }
 
+.boton-modal-agenda{
+    text-align: center;
+}
+
+.boton-completadi{
+    background-color: #64549d !important;
+}
+
+
+.citrus{
+    color: #372e4d  !important;
+}
+
+.MuiPickersToolbar-toolbar {
+    background-color: #64549d !important;
+}
+
+.MuiPickersDay-current {
+   background-color:  #64549d !important;
+    font-weight: 600;
+}
 .fechass {
     display: flex;
     flex-direction: row;
@@ -103,6 +128,7 @@
     width: 60% !important;
     position: relative !important;
     top: 10px;
+  
 }
 
 .busagnda {
@@ -121,9 +147,16 @@
 .opcionesaged{
     width: 30% !important;
     margin-left: 63%;
+   
 }
 .botonAgen{
-    margin: 0 15px 0 0
+    margin: 0 15px 0 0;
+    background-color: #5c436c !important
+}
+.botonAgend{
+    
+    background-color:#9477a7!important;
+    
 }
 .botonAgendss{
     background: var(--fond-button) !important;
@@ -133,6 +166,24 @@
     font-size: 25px;
     line-height: 19px;
     margin-left: 25%;
+    background: #64549d !important;
+    color: var(--color-white) !important;
+    border: 2px solid #64549d !important;
+}
+
+
+.titulo-tarea{
+    color: #372e4d  !important;
+}
+.sub{
+    color: #626262 !important;
+}
+
+
+.tareaP{
+    padding: 0.5em;
+    border-radius: 20px !important;
+    font-family: 'Domine', serif;
 }
 @media screen and (max-width: 375px) {
     .botonagenda {
@@ -194,3 +245,4 @@
         width: 50% !important;
     }
 }
+
