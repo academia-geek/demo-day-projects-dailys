@@ -42,7 +42,7 @@ export const AgendaComponent = () => {
       actividad: values.nombre,
       selecEvent: selector,
       idUser: uids.codigo,
-      codigo: parseInt(Math.random() * (50 - 1) + 1),
+      codigo: Date.now(),
       evalue: "No completado",
       quizDs: 0
     })

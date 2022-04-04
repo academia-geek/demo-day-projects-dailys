@@ -1,4 +1,4 @@
-import { Modal, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react'
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css';
@@ -15,7 +15,6 @@ const Calendario = () => {
   // const currentYear = day.getUTCFullYear();
   
   const handleClose = () => setShow(false);
-
   const dispatch = useDispatch();
 
   const { task } = useSelector(store => store.tarea)
