@@ -3,7 +3,6 @@ import { HomeTemAle } from '../components/HomeTemAle';
 import { PefilComponent } from '../components/Perfil/PefilComponent';
 import { Home } from '../containers/Home';
 import Calendario from '../components/Calendario'
-
 import Emociones from '../components/Emociones'
 import { LastEncuesta } from '../components/Encuesta/LastEncuesta';
 
