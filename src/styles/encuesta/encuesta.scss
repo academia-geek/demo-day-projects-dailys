@@ -8,6 +8,7 @@
    padding: 1em;
    border-radius: 15px;
    font-family: 'Domine', serif;
+
    h2{
     color: #290676
    }
@@ -31,6 +32,7 @@
 
 .siguiente{
     background-color: #372e4d  !important;
+    margin-top: 1em;
 }
 
 .justify{
@@ -40,4 +42,27 @@
 }
 input[type="radio"]:checked {
     background-color: #9780eb  !important;
+}
+.tablita{
+    background-color: #ccc5e2;
+    color: #5c436c;
+    border-radius: 15px;
+    padding: 0.3em;
+    margin-bottom: 1em;
+
+    h5{
+        font-weight: bold;
+    }
+}
+
+.modal-encuesta{
+    text-align: center;
+
+    .cancelar{
+        background-color: #9780eb  !important;
+        margin-right: 2em;
+        margin-top: 1em;
+    }
+
+    
 }
