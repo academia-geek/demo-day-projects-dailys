@@ -69,16 +69,17 @@ export const AgendaComponent = () => {
 
         {
           active === true ? <Form onSubmit={handleSubmit} className="form-agenda">
-            <h1 className="title-Agenda">Agrega tu actividad</h1>
+            <h2 className="title-Agenda citrus">Agrega tu actividad</h2>
             <Form.Group className="mb-3 inputs">
               <Form.Label>Nombre de la actividad</Form.Label>
-              <Form.Control type="text" name="nombre" placeholder="ingrese el nombre" value={nombre} onChange={handleInputChange} />
+              <Form.Control type="text" name="nombre" placeholder="Ingrese el nombre" value={nombre} onChange={handleInputChange} />
             </Form.Group>
             <div className="mb-3 inputs">
               <Form.Select aria-label="Default select example" value={selec} onChange={cambioDias} >
-                <option>Seleciona el tipo de evento</option>
+              <option selected hidden>Seleccione un tipo de evento</option>
+                <option>Normal</option>
                 <option>Especial</option>
-                <option>metas</option>
+                <option>Metas</option>
               </Form.Select>
             </div>
 

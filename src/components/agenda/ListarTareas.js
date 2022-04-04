@@ -77,7 +77,7 @@ export const ListarTareas = () => {
         (data) ?
           (
             data.map((element, index) => (
-              <div className="card mb-3 cardsdf" key={index}>
+              <div className="card mb-3 cardsdf tareaP" key={index}>
                 <div className="row g-0">
                   <div class="col-md-4 imgagendas">
                     <img src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648913032/deberes_2_hl8dhm.png" className="imgAgenda img-fluid rounded-start" alt="..."></img>
@@ -85,9 +85,9 @@ export const ListarTareas = () => {
                   <div className="col-md-10">
                     <div className="cardsagenda">
                       <div className="contsAgenda">
-                        <h5 className="titleagenda"><b>Nombre: </b>{element.actividad}</h5>
-                        <h5 className="titleagenda"><b>Fecha:</b> {element.dia}/{element.mes}/{element.año}</h5>
-                        <h5 className="titleagenda"><b>Hora:</b> {element.hora}:{element.minutos}</h5>
+                        <h5 className="titleagenda titulo-tarea"><b>Nombre: </b>{element.actividad}</h5>
+                        <h6 className="sub"><b>Fecha:</b> {element.dia}/{element.mes}/{element.año}</h6>
+                        <h6 className="sub"><b>Hora:</b> {element.hora}:{element.minutos}</h6>
                       </div>
                       <div className="busagnda">
                         <Button className="botonAgenda" onClick={() => buscar(element.codigo)}>{element.evalue}</Button>
@@ -96,11 +96,12 @@ export const ListarTareas = () => {
                     </div>
                   </div>
                 </div>
-                <Modal show={show} onHide={handleClose}>
+                <Modal show={show} onHide={handleClose} className='complet'>
                   <Modal.Header closeButton>
                     <Modal.Title>Editar completado</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
+  
                     <Form onSubmit={handleSubmit}>
                       <Form.Check
                         onClick={handleEvalue}
@@ -118,8 +119,11 @@ export const ListarTareas = () => {
                         label={`No completado`}
                         id={`disabled-default`}
                       />
-                      <Button type="submit" onClick={guarda}>Guardar cambios</Button>
+                      <div className='boton-modal-agenda'>
+                      <Button type="submit" className='boton-completadi' onClick={guarda}>Guardar cambios</Button>
+                      </div>
                     </Form>
+                 
                   </Modal.Body>
                 </Modal>
               </div>

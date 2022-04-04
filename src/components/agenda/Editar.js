@@ -65,13 +65,14 @@ const Editar = ({ modal }) => {
                         <Form onSubmit={handleSubmit}>
                             <Form.Group className="mb-3 inputs">
                                 <Form.Label>Nombre de la actividad</Form.Label>
-                                <Form.Control type="text" name="actividad" placeholder="ingrese el nombre" value={actividad} onChange={handleInputChange} />
+                                <Form.Control type="text" name="actividad" placeholder="Ingrese el nombre" value={actividad} onChange={handleInputChange} />
                             </Form.Group>
                             <div className="mb-3 inputs">
                                 <Form.Select aria-label="Default select example" value={selec} onChange={cambioDias} >
                                     <option>Seleciona el tipo de evento</option>
+                                    <option>Normal</option>
                                     <option>Especial</option>
-                                    <option>metas</option>
+                                    <option>Metas</option>
                                 </Form.Select>
                             </div>
 
@@ -86,7 +87,9 @@ const Editar = ({ modal }) => {
                                     <TimePicker value={fechaUTC} onChange={setFechaUTC} />
                                 </div>
                             </div>
-                            <Button type="submit" onClick={guarda} onHide={handleClose}>Guardar</Button>
+                            <div className='boton-modal-agenda'>
+                            <Button type="submit" className='boton-completadi' onClick={guarda} onHide={handleClose}>Guardar</Button>
+                            </div>
                         </Form>
                     </Modal.Body>
                 </Modal>

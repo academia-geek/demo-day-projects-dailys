@@ -16,7 +16,7 @@ const Emociones = () => {
     console.log(emocion)
 
     const handleClose = () => setShow(false);
-    const aleatorio = Math.floor((Math.random() * 5) + 0)
+    const aleatorio = Math.floor((Math.random() * 10) + 0)
 
     const user = JSON.parse(localStorage.getItem('users'))
     const { name, codigo } = user
@@ -40,7 +40,7 @@ const Emociones = () => {
         asnwer: asnwer
     }
 
-    // console.log(informa)
+
     const enviarInfo = (e) => {
 
         dispatch(AddEmocionesASync(informa))
@@ -75,20 +75,10 @@ const Emociones = () => {
             <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782823/a837c5c796c1daf0583b7ac1338952c6_iwwiii.jpg" alt='' width={200}/>
                 <h2>Hola {name}</h2>
                 <h4>¿Cómo te sientes el día de hoy?</h4>
-                {/* <h2>{day} / {month} / {year}</h2> */}
+           
 
                 <div className="emociones">
-                    {/* <input type="button" className='caritas'  value="1" onClick={handleOnChange}><img src='https://res.cloudinary.com/paolavbm/image/upload/v1648686956/feliz_wxbvxo.png' alt='' width={100} /></input> */}
-
-                    {/*                     
-                     <input type="button" value="1" onClick={handleOnChange}/>
-                    <button className='caritas'  value="2" onClick={handleOnChange}><img src='https://res.cloudinary.com/paolavbm/image/upload/v1648686956/happy-face_yapson.png' alt='' width={100} /></button>
-                    <button className='caritas'  value="3" onClick={handleOnChange}><img src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/aburrido_1_hespzj.png' alt='' width={100} /></button> <br />
-                    <button className='caritas'  value="4" onClick={handleOnChange}><img src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/cara-triste-en-cuadrado-redondeado_rwkpnb.png' alt='' width={100} /></button>
-                    <button className='caritas'  value="5" onClick={handleOnChange}><img src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/muerto_df1akx.png' alt='' width={100} /></button> */}
-
-
-
+                
                     <div class="">
                         <div class="select">
                             <label for="emocion" class="col-25"></label><br />

@@ -25,7 +25,8 @@ const Calendario = () => {
    const codigo = uids.codigo
   const eventos = task.filter((p) => p.idUser === codigo)
   const especiales = eventos.filter((p) => p.selecEvent === "Especial")
-  console.log(especiales)
+  const metas = eventos.filter((p) => p.selecEvent === "Metas")
+  console.log(metas)
 
 
   console.log(eventos)
@@ -108,9 +109,13 @@ const Calendario = () => {
       <div className="metas">
 
         <h4>Metas del mes:</h4>
-        <p>-Like a RockStar</p>
-        <p>- Slumber party</p>
-
+        {
+            metas.map((e, i) => (
+              <div key={i} className='' >
+               <h5>-{e.actividad}</h5>
+              </div>
+            ))
+          }
       </div>
     </div>
 
