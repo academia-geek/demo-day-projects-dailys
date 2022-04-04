@@ -39,12 +39,12 @@ export const Rendimiento = () => {
         maintainAspectRatio: false
     }
 
-  return (
-    <div>
-          <h2 className='mt-5'>rango de actividades cumplidas en la ultima semana</h2>
-          <div claName="grafica">
-              <Bar options={options} data={datas} />
-          </div>
-    </div>
-  )
+    return (
+        <div>
+            <h2 className='mt-5'>rango de actividades cumplidas en la ultima semana</h2>
+            <div>
+                <Bar options={options} data={datas} />
+            </div>
+        </div>
+    )
 }

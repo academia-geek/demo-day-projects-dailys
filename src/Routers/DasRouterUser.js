@@ -5,6 +5,7 @@ import { Home } from '../containers/Home';
 import Calendario from '../components/Calendario'
 import Emociones from '../components/Emociones'
 import { LastEncuesta } from '../components/Encuesta/LastEncuesta';
+import { Premio } from '../components/Perfil/Premio';
 
 function DasRouterUser() {
     return (
@@ -17,6 +18,7 @@ function DasRouterUser() {
             <Route path="/Encuest" element={<LastEncuesta />} />
           
             <Route path="/Emociones" element={<Emociones />} />
+            <Route path="/Premio" element={<Premio />} />
             <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     )
