@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { Table, Button, Form, Modal } from 'react-bootstrap';
+import { Button, Form, Modal } from 'react-bootstrap';
 import { editAsyn } from '../../redux/actions/actionTask';
 import Editar from './Editar';
 import "../../styles/agenda/style.css"
@@ -67,63 +67,67 @@ export const ListarTareas = () => {
 
   }, [task])
   return (
-    <div  className='juju'>
-      <Table striped bordered hover>
-        {/* <thead>
-          <tr>
-            <th>hora</th>
-            <th>fecha</th>
-            <th>nombre</th>
-          </tr>
-        </thead> */}
-        <tbody>
-          {
-            (data) ?
-              (
-                data.map((element, index) => (
-                  <tr key={index}>
-                    <td>{element.hora}:{element.minutos}</td>
-                    <td>{element.dia}/{element.mes}/{element.año}</td>
-                    <td>{element.actividad}</td>
-                    <td>
-                      <Button onClick={() => buscar(element.codigo)}>{element.evalue}</Button>
-                    </td>
-                    <td><Button variant='light' onClick={() => editar(element.codigo)}><img className='ico' alt="editar" src="https://res.cloudinary.com/donoutoby/image/upload/v1648323245/iconos/32355_p2dpn1.png" /></Button></td>
-                    <Modal show={show} onHide={handleClose}>
-                      <Modal.Header closeButton>
-                        <Modal.Title>Editar completado</Modal.Title>
-                      </Modal.Header>
-                      <Modal.Body>
-                        <Form onSubmit={handleSubmit}>
-                          <Form.Check
-                            onClick={handleEvalue}
-                            type="radio"
-                            value="Completado"
-                            name={element.codigo}
-                            label={`Completado `}
-                            id={`disabled-default`}
-                          />
-                          <Form.Check
-                            onClick={handleEvalue}
-                            type="radio"
-                            value="No completado"
-                            name={element.codigo}
-                            label={`No completado`}
-                            id={`disabled-default`}
-                          />
-                          <Button type="submit" onClick={guarda}>Guardar cambios</Button>
-                        </Form>
-                      </Modal.Body>
-                    </Modal>
-                  </tr>
-                )
-                )
-              ) :
-              <p>Datos no disponibles</p>
+    <div className='juju'>
+      <div className="opcionesaged">
+        <Button className="botonAgen">Actividades de hoy</Button>
+        <Button className="botonAgend">Todas las actividades</Button>
+      </div>
 
-          }
-        </tbody>
-      </Table>
+      {
+        (data) ?
+          (
+            data.map((element, index) => (
+              <div className="card mb-3 cardsdf" key={index}>
+                <div className="row g-0">
+                  <div class="col-md-4 imgagendas">
+                    <img src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648913032/deberes_2_hl8dhm.png" className="imgAgenda img-fluid rounded-start" alt="..."></img>
+                  </div>
+                  <div className="col-md-10">
+                    <div className="cardsagenda">
+                      <div className="contsAgenda">
+                        <h5 className="titleagenda"><b>Nombre: </b>{element.actividad}</h5>
+                        <h5 className="titleagenda"><b>Fecha:</b> {element.dia}/{element.mes}/{element.año}</h5>
+                        <h5 className="titleagenda"><b>Hora:</b> {element.hora}:{element.minutos}</h5>
+                      </div>
+                      <div className="busagnda">
+                        <Button className="botonAgenda" onClick={() => buscar(element.codigo)}>{element.evalue}</Button>
+                        <Button variant='light' className="botoneditars" onClick={() => editar(element.codigo)}><img className='ico' alt="editar" src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648826022/editar_ztqaqc.png" /> Editar</Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>Editar completado</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    <Form onSubmit={handleSubmit}>
+                      <Form.Check
+                        onClick={handleEvalue}
+                        type="radio"
+                        value="Completado"
+                        name={element.codigo}
+                        label={`Completado `}
+                        id={`disabled-default`}
+                      />
+                      <Form.Check
+                        onClick={handleEvalue}
+                        type="radio"
+                        value="No completado"
+                        name={element.codigo}
+                        label={`No completado`}
+                        id={`disabled-default`}
+                      />
+                      <Button type="submit" onClick={guarda}>Guardar cambios</Button>
+                    </Form>
+                  </Modal.Body>
+                </Modal>
+              </div>
+            )
+            )
+          ) :
+          <p>Datos no disponibles</p>
+      }
       {
         modal === true ? <Editar modal={enviarDatosModal} /> : ''
       }

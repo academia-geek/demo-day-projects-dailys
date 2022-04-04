@@ -1,57 +1,196 @@
-.ico{
+.ico {
     width: 25px;
+    border: none !important;
+    background-color: inherit !important;
 }
-.form-control{
+
+.form-control {
     width: 100% !important;
     margin: auto !important;
 }
-.form-select{
+
+.form-select {
     width: 95% !important;
     margin: auto !important;
 }
-.form-agenda input select{
+
+.form-agenda input select {
     text-align: center;
 }
-.content-Agenda{
+
+.content-Agenda {
     background-color: white;
     width: 80%;
     margin: 15px auto;
     border-radius: 30px;
 }
-.fechass{
+
+.fechass {
     display: flex;
     flex-direction: row;
     margin: 15px auto;
     width: 45%;
 }
-.title-Agenda{
+
+.title-Agenda {
     text-align: center;
 }
-.inputs{
+
+.inputs {
     width: 45%;
     margin: auto;
 }
-.buton-agenda{
+
+.buton-agenda {
     width: 55%;
     margin: 15px auto;
 }
-.botonagenda{
+
+.botonagenda {
     width: 35%;
     margin: 15px auto;
 }
 
-.juju{
-    width: 45%;
+.juju {
+    width: 85%;
     margin: auto;
     margin-top: 4em;
 }
 
-.btn-no{
+.btn-no {
     background-color: #5c436c !important;
     color: antiquewhite !important;
 }
 
-.btn-si{
+.btn-si {
     background-color: #9477a7 !important;
     color: antiquewhite !important;
+}
+
+
+.meLleva{
+    background-color: #5c436c !important;
+}
+.imgAgenda {
+    width: 80px !important;
+    margin-left: 20% !important;
+}
+
+.titleagenda {
+    font-size: 20px !important;
+}
+
+.cardsagenda {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.botonAgenda {
+    width: 140px !important;
+    margin: 35px 0px !important;
+    background: #64549d !important;
+    color: var(--color-white) !important;
+    border: 2px solid #64549d !important;
+    text-align: center !important;
+}
+
+.imgagendas {
+    width: 13% !important;
+    padding: 15px !important;
+}
+
+.contsAgenda {
+    width: 60% !important;
+    position: relative !important;
+    top: 10px;
+}
+
+.busagnda {
+    width: 40% !important;
+    display: flex !important;
+    flex-direction: row;
+}
+
+.busagnda1 {
+    width: 18% !important;
+}
+
+.botoneditars {
+    margin: 34px 22px !important;
+}
+.opcionesaged{
+    width: 30% !important;
+    margin-left: 63%;
+}
+.botonAgen{
+    margin: 0 15px 0 0
+}
+.botonAgendss{
+    background: var(--fond-button) !important;
+    border: 2px solid var(--fond-button) !important;
+    width: 250px;
+    height: 35px;
+    font-size: 25px;
+    line-height: 19px;
+    margin-left: 25%;
+}
+@media screen and (max-width: 375px) {
+    .botonagenda {
+        width: 75%;
+        margin: auto !important;
+    }
+    .botonAgendss{
+        margin: 15px  0 0 0 !important;
+    }
+    .juju{
+        margin: 0 !important;
+        width: 100% !important; 
+    }
+    .cardsdf{
+        position: inherit !important;
+        width: 100% !important;
+    }
+    .contsAgenda {
+        width: 60% !important;
+        position: inherit !important;
+        top: 10px;
+    }
+    .cardsagenda {
+        display: block !important;
+    }
+    .opcionesaged{
+        margin: 0 0 0 25px !important;
+        width: 100% !important;
+    }
+    .contsAgenda {
+        width: 100% !important;
+        position: inherit !important;
+        top: 10px;
+    }
+    .imgagendas{
+        width: 100% !important;
+        padding: 15px 0 0 0 !important;
+    }
+    .cardsagenda{
+        padding: 10px !important;
+    }
+    .busagnda{
+        width: 100% !important;
+    }
+    .imgAgenda {
+        width: 80px !important;
+        margin-left: 35% !important;
+    }
+    .botonAgenda {
+        width: 50% !important;
+        margin: 0px !important;
+        background: #64549d !important;
+        color: var(--color-white) !important;
+        border: 2px solid #64549d !important;
+        text-align: center !important;
+    }
+    .botoneditars {
+        margin: 0px !important;
+        width: 50% !important;
+    }
 }

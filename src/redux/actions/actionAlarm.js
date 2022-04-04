@@ -1,6 +1,6 @@
 import { typesAlarm } from "../types/types"
 import { db } from "../../firebase/firebaseConfig";
-import { addDoc, collection, deleteDoc, doc, getDocs, query, where, updateDoc } from "@firebase/firestore";
+import { addDoc, collection, getDocs } from "@firebase/firestore";
 
 
 // -----------------------------------------------> listar el contenido de la base de datos

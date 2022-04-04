@@ -6,6 +6,7 @@ import { perfilReducer } from '../reducers/perfilReducer';
 import { loginReducer } from '../reducers/reducersLogin';
 import { registerReducer } from '../reducers/reducersRegister';
 import { taskReducer } from '../reducers/tareaReducer';
+import {QuizReducer} from '../reducers/QuizReducer'
 
 
 
@@ -17,8 +18,9 @@ const reducers = combineReducers({
     register: registerReducer,
     tarea: taskReducer,
     alarm: AlarmReducer,
-    emociones: emocionesReducer
-    perfil: perfilReducer
+    emociones: emocionesReducer,
+    perfil: perfilReducer,
+    quiz: QuizReducer
 })
 
 

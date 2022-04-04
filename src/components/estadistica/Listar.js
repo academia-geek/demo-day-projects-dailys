@@ -13,10 +13,13 @@ export const Listar = () => {
     const [nocompl, setNocompl] = useState(0)
 
     const { task } = useSelector(store => store.tarea)
+<<<<<<< HEAD
 
     useEffect(() => { conteo() }, [task])
 
     console.log(task)
+=======
+>>>>>>> e9a4b8322461f21a8bf484b676f8510f4338986f
     let completado = 0
     let nocompletado = 0
 
@@ -60,17 +63,45 @@ export const Listar = () => {
             },
         ],
     }
+<<<<<<< HEAD
 
     const opciones = {
         responsive: true,
         maintainAspectRatio: false
     }
+=======
+    const pepe = localStorage.setItem("data", JSON.stringify({
+        comple: compl,
+        nocompl: nocompl,
+        total: total
+    }))
+>>>>>>> e9a4b8322461f21a8bf484b676f8510f4338986f
 
     return (
         <div>
             <div claName="grafica">
                 <Pie data={data} options={opciones} />
             </div>
+<<<<<<< HEAD
+=======
+
+            <Table striped bordered hover>
+                <thead>
+                    <tr>
+                        <th>complidos</th>
+                        <th>No Cumplidos</th>
+                        <th>total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{compl}</td>
+                        <td>{nocompl}</td>
+                        <td>{total}</td>
+                    </tr>
+                </tbody>
+            </Table>
+>>>>>>> e9a4b8322461f21a8bf484b676f8510f4338986f
         </div>
     )
 }

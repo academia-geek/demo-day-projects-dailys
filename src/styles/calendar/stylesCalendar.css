@@ -73,6 +73,8 @@
 .modal-info {
   justify-content: center;
   text-align: center;
+  width: 65%;
+  margin: auto;
 }
 .modal-info th {
   background-color: #5c436c !important;

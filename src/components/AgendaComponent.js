@@ -43,7 +43,8 @@ export const AgendaComponent = () => {
       selecEvent: selector,
       idUser: uids.codigo,
       codigo: parseInt(Math.random() * (50 - 1) + 1),
-      evalue: "No completado"
+      evalue: "No completado",
+      quizDs: 0
     })
   }
   const handleSubmit = (e) => {
@@ -62,7 +63,7 @@ export const AgendaComponent = () => {
   return (
     <div className="contentAgenda">
       <div className="botonagenda">
-        <Button onClick={() => mostrar()} className="botonperfil">Agregar a la agenda</Button>
+        <Button onClick={() => mostrar()} className="botonAgendss"><img className='ico' alt="editar" src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648826191/mas_s2d0ov.png" /> Agregar a la agenda</Button>
       </div>
       <div className="content-Agenda">
 

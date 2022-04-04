@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500 !important;1,400&display=swap");
+.encuestaDiv {
+  text-align: center;
+  background-color: white;
+  width: 50%;
+  margin: auto;
+  padding: 1em;
+  border-radius: 15px;
+  font-family: "Domine", serif;
+}
+.encuestaDiv h2 {
+  color: #290676;
+}
+.encuestaDiv h5 {
+  color: #39267b;
+}
+
+.quits {
+  display: flex;
+  flex-direction: row;
+  text-align: center !important;
+  margin: auto !important;
+  justify-content: center !important;
+}
+
+.siguiente {
+  background-color: #372e4d !important;
+}
+
+.justify {
+  width: 70%;
+  margin: auto;
+}
+
+input[type=radio]:checked {
+  background-color: #9780eb !important;
+}
+
+/*# sourceMappingURL=encuesta.css.map */

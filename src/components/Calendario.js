@@ -13,16 +13,22 @@ const Calendario = () => {
   // const currentDay = day.getUTCDate();
   // const currentMonth = day.getUTCMonth() + 1;
   // const currentYear = day.getUTCFullYear();
-  console.log(day)
+  
   const handleClose = () => setShow(false);
 
   const dispatch = useDispatch();
 
   const { task } = useSelector(store => store.tarea)
 
+
   const uids = JSON.parse(localStorage.getItem("users"))
+   const codigo = uids.codigo
+  const eventos = task.filter((p) => p.idUser === codigo)
+  const especiales = eventos.filter((p) => p.selecEvent === "Especial")
+  console.log(especiales)
 
 
+  console.log(eventos)
   const osd = () => {
     setShow(true)
     if (day === undefined) {
@@ -37,76 +43,63 @@ const Calendario = () => {
     }
 
   }
+  console.log(dat)
 
   useEffect(() => {
     dispatch(listTasks());
 
   }, [dispatch])
 
+
+  console.log(dat)
   return (
     <div>
       <HomeComponent />
       <div className='calendar'>
         <Calendar value={day} onClickDay={() => osd()} onChange={setDay} />
       </div>
-
       <>
-        {/* <Modal show={show} aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose}>
-          <Modal.Header closeButton>
-          </Modal.Header>
-          <Modal.Body> */}
-            {
-              <form >
-                {
-                  (dat !== "") ? (
-                    dat.map((element, index) => (
-                      <div className='modal-info'>
-                        <h2>Programado</h2>
-                        <h6>{day.getUTCDate()}</h6>
-                        <Table striped bordered hover size="sm">
-                          <thead>
-                            <tr>
-                              <th>hora</th>
-                              <th>Actividad</th>
-
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>{element.hora}:{element.minutos}</td>
-                              <td>Sacar al perro</td>
-
-                            </tr>
-                            <tr>
-                              <td>08:34 pm</td>
-                              <td>Sacar al perro</td>
-
-                            </tr>
-                            <tr>
-                              <td>08:34 pm</td>
-                              <td colSpan={2}>Sacar al perro</td>
-
-                            </tr>
-                          </tbody>
-                        </Table>
-                        <button type='submit' >Guardar</button>
-                      </div>
-                    ))
-
-                  ) : ""
-                }
-              </form>
-            }
-          {/* </Modal.Body>
-
-        </Modal> */}
+        {
+          (show === true) ? (
+            <form>
+              <div className='modal-info'>
+                <h2>Programado</h2>
+                <Table striped bordered hover size="sm">
+                  <thead>
+                    <tr>
+                      <th>Hora</th>
+                      <th>Actividad</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {
+                      (dat !== "") ? (
+                        dat.map((element, index) => (
+                          <tr key={index}>
+                            <td>{element.hora}:{element.minutos}</td>
+                            <td>{element.actividad}</td>
+                          </tr>
+                        ))
+                      ) : ""
+                    }
+                  </tbody>
+                </Table>
+              </div>
+            </form>
+          ) : ''
+        }
       </>
 
       <div className="eventos">
 
         <h4>Eventos especiales:</h4>
-        <p>-Like a RockStar</p>
-        <p>- Slumber party</p>
+        {
+            especiales.map((e, i) => (
+              <div key={i} className='' >
+               <h5>-{e.actividad}</h5>
+              </div>
+            ))
+          }
       </div>
 
 

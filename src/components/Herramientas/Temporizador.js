@@ -97,29 +97,32 @@ export const Temporizador = () => {
                     </Modal.Header>
                     <Modal.Body>
                         <Form onSubmit={handleConfig}>
-                            <Form.Group className="mb-3" controlId="Horas">
+                            <Form.Group className="iii" controlId="Horas">
                                 <Form.Label>Hora</Form.Label>
                                 <Form.Control
                                     type="Number"
+                                    className="iii"
                                     placeholder="00 Horas"
                                     name="hor"
                                     value={hor}
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="minutos">
+                            <Form.Group className="iii" controlId="minutos">
                                 <Form.Label>Minutos</Form.Label>
                                 <Form.Control
                                     type="Number"
+                                    className="iii"
                                     placeholder="00 Minutos"
                                     name="min"
                                     value={min}
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="Horas">
+                            <Form.Group className="iii" controlId="Horas">
                                 <Form.Label>Segundos</Form.Label>
                                 <Form.Control
+                                    className="iii"
                                     type="Number"
                                     placeholder="00 Segundos"
                                     name="seg"
@@ -127,10 +130,10 @@ export const Temporizador = () => {
                                     onChange={handleInputChange}
                                 />
                             </Form.Group>
-                            <Button variant="secondary" onClick={handleClose}>
+                            <Button variant="secondary" onClick={handleClose} className="close close1">
                                 Close
                             </Button>
-                            <Button variant="primary" type="submit" onClick={handleClose}>
+                            <Button variant="primary" type="submit" onClick={handleClose} className="save">
                                 Save Changes
                             </Button>
                         </Form>
