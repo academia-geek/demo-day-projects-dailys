@@ -384,22 +384,27 @@ export const LastEncuesta = () => {
                                         ) : <h4>encuesta terminada</h4>
                                 }
                             </div>
-                        ) : 
-                       
-                            datas.map((e, i) => (
-                                
-                                <div key={i} className='resultas' >
-                                  <div className='tablita'>
-                                  
-                                    <h5 className='name'>{e.actividad}</h5>
-                                    
-                                    <div className='flex'>
-                                       <h6>{e.mensaje}</h6>
-                                    </div>
-                                  </div>
-                                </div>
-                              ))
-                        
+                        ) : <div> 
+                        <h3 className='titulo-encuesta'>Resultados ordenados por prioridad:</h3> 
+                        { 
+                            datas.map((e, i) => ( 
+
+                                <div key={i} className='resultas' > 
+                                    <div className='tablita'> 
+
+                                        <h5 className='name'>{e.actividad}</h5> 
+
+                                        <div className='flex'> 
+                                            <h6>{e.mensaje}</h6> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            )) 
+                        } 
+                    </div>
+
+
+
                 }
             </div>
             <Modal show={show} className="modal-encuesta">

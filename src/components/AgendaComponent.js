@@ -63,43 +63,47 @@ export const AgendaComponent = () => {
   return (
     <div className="contentAgenda">
       <div className="botonagenda">
-        <Button onClick={() => mostrar()} className="botonAgendss"><img className='ico' alt="editar" src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648826191/mas_s2d0ov.png" /> Agregar a la agenda</Button>
+        <button onClick={() => mostrar()} className="botonAgendss"><img width={70} alt="editar" src="https://res.cloudinary.com/paolavbm/image/upload/v1649186767/boton-agregar_fxgcar.png" /></button>
       </div>
-      <div className="content-Agenda">
+      <div  className="content-Agenda" >
+        <div>
 
-        {
-          active === true ? <Form onSubmit={handleSubmit} className="form-agenda">
-            <h2 className="title-Agenda citrus">Agrega tu actividad</h2>
-            <Form.Group className="mb-3 inputs">
-              <Form.Label>Nombre de la actividad</Form.Label>
-              <Form.Control type="text" name="nombre" placeholder="Ingrese el nombre" value={nombre} onChange={handleInputChange} />
-            </Form.Group>
-            <div className="mb-3 inputs">
-              <Form.Select aria-label="Default select example" value={selec} onChange={cambioDias} >
-              <option selected hidden>Seleccione un tipo de evento</option>
-                <option>Normal</option>
-                <option>Especial</option>
-                <option>Metas</option>
-              </Form.Select>
-            </div>
-
-            <div className="fechass">
-              <div className="alarmafecha">
-                <Form.Label>Fecha </Form.Label>
-                <DatePicker value={fechas} onChange={setFechas} />
+          {
+            active === true ? <Form onSubmit={handleSubmit} className="form-agenda">
+              <div className='uno'>
+                <h3 className="title-Agenda citrus">Agrega tu actividad</h3>
+              </div>
+              <Form.Group className="mb-3 inputs">
+                <Form.Label>Nombre de la actividad</Form.Label>
+                <Form.Control type="text" name="nombre" placeholder="Ingrese el nombre" value={nombre} onChange={handleInputChange} />
+              </Form.Group>
+              <div className="mb-3 inputs">
+                <Form.Select aria-label="Default select example" value={selec} onChange={cambioDias} >
+                  <option selected hidden>Seleccione un tipo de evento</option>
+                  <option>Normal</option>
+                  <option>Especial</option>
+                  <option>Metas</option>
+                </Form.Select>
               </div>
 
-              <div className="alarmafecha">
-                <Form.Label>Hora </Form.Label>
-                <TimePicker value={fechas} onChange={setFechas} />
+              <div className="fechass">
+                <div className="alarmafecha">
+                  <Form.Label>Fecha </Form.Label>
+                  <DatePicker value={fechas} onChange={setFechas} />
+                </div>
+
+                <div className="alarmafecha">
+                  <Form.Label>Hora </Form.Label>
+                  <TimePicker value={fechas} onChange={setFechas} />
+                </div>
               </div>
-            </div>
-            <div className="buton-agenda">
-              <Button onClick={() => setActive(false)} className="boton2">Cancelar</Button>
-              <Button type="submit" onClick={guarda} className="boton1">Agregar</Button>
-            </div>
-          </Form> : ''
-        }
+              <div className="buton-agenda">
+                <Button onClick={() => setActive(false)} className="boton00">Cancelar</Button>
+                <Button type="submit" onClick={guarda} className="boton01">Agregar</Button>
+              </div>
+            </Form> : ''
+          }
+        </div>
       </div>
       <ListarTareas />
     </div>
