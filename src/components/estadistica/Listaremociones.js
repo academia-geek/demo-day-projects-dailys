@@ -75,7 +75,7 @@ export const Listaremociones = () => {
             },
         ],
     };
-    const opciones = {
+     const opciones = {
         responsive: true,
         maintainAspectRatio: false
     }

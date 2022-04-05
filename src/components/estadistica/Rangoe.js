@@ -9,7 +9,6 @@ import {
     Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import "../../styles/estadistica/est.css"
 
 ChartJS.register(
     CategoryScale,
@@ -20,31 +19,37 @@ ChartJS.register(
     Legend
 );
 
+export const Rangoe = () => {
+const emocion = {emo: [3, 5, 1, 3, 9]}
 
-export const Rendimiento = () => {
-    // -----------------------------grafica de barras
+
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Chart.js Bar Chart',
+            },
+        },
+    };
+
     const datas = {
-        labels: ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"],
+        labels: ["Muy Feliz", "Feliz", "Normal", "Triste", "Deprimido/a"],
         datasets: [{
             label: "completados",
             backgroundColor: "rgba(255, 99, 132, 0.2)",
             borderColor: "rgba(255, 99, 132, 1)",
             borderWidth: 1,
-            data: [44546, 45684, 4844, 48646, 8431, 5484, 48464]
+            data: [12, 19, 3, 5, 2]
         }]
-    }
-
-    const options = {
-        responsive: true,
-        maintainAspectRatio: false
     }
 
   return (
     <div>
-          <h2 className='mt-5'>rango de actividades cumplidas en la ultima semana</h2>
-          <div claName="grafica">
-              <Bar options={options} data={datas} />
-          </div>
+          <div><Bar options={options} data={datas} /></div>
     </div>
   )
 }
