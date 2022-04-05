@@ -3,34 +3,45 @@
     margin: auto !important;
 }
 .premio{
-    width: 100%;
-    position: relative !important;
+    width: 45%;
+    position: relative;
+    border: 2px solid var(--fond-button);
+    border-radius: 5%;
+    padding: 5px;
 }
 .title-premio{
-    position: relative;
-    top: -660px ;
+    font-size: 30px;
+    width: 75%;
+    margin: auto !important;
     text-align: center;
-    font-size: 70px ;
+    position: relative;
+    top: -390px;
+    height: 0px;
 }
 .title-premio1{
-    position: relative;
-    top: -560px ;
+    font-size: 18px;
+    width: 90%;
+    margin: auto !important;
     text-align: center;
-    font-size: 30px ;
+    position: relative;
+    top: -250px;
+    height: 0px;
 }
 .title-premio2{
-    position: relative;
-    top: -520px ;
+    font-size: 27px;
+    width: 90%;
+    margin: auto !important;
     text-align: center;
-    font-size: 50px ;
+    position: relative;
+    top: -150px;
+    height: 0px;
 }
-.nombres{
-    text-transform: uppercase;
-}
-.imprimir{
-    background: var(--fond-button) !important;
-    color: white !important;
-    border: 2px solid var(--fond-button);
-    border-radius: 5px;
-    margin-left: 45% !important;
+.title-premio3{
+    font-size: 18px;
+    width: 90%;
+    margin: auto !important;
+    text-align: center;
+    position: relative;
+    top: -110px;
+    height: 0px;
 }

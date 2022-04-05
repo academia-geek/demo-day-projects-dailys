@@ -34,7 +34,7 @@ export const LastEncuesta = () => {
     let datas = task.filter(user => user.idUser === uids.codigo);
     const fit = datas.filter(use => use.quizDs === 0)
 
-   
+
 
     console.log(datas)
 
@@ -76,28 +76,28 @@ export const LastEncuesta = () => {
 
     let numer
     let mensaje2
-   
+
     const guardarDta = (e) => {
         e.preventDefault()
         const numer = Number(eva) + Number(eva1) + Number(eva2) + Number(eva3) + Number(eva4)
-        
-       
+
+
         if (numer >= 15) {
             mensaje2 = '¡Urgente!'
-           console.log(mensaje)
-          } else if ((numer >= 10) && (numer < 15)) {
+            console.log(mensaje)
+        } else if ((numer >= 10) && (numer < 15)) {
             mensaje2 = "Urgencia Media"
             console.log(mensaje)
-           } else if(numer < 10){
-             mensaje2 = 'Urgencia Baja'
-               console.log(mensaje)
-           }
+        } else if (numer < 10) {
+            mensaje2 = 'Urgencia Baja'
+            console.log(mensaje)
+        }
         setMensaje(mensaje2)
-     
+
         setAñadir({
             ...fit[0],
             quizDs: numer,
-            mensaje : mensaje2
+            mensaje: mensaje2
         })
         setShow(true)
         console.log(numer)
@@ -108,7 +108,7 @@ export const LastEncuesta = () => {
     const hadlenValue = (e) => {
         e.preventDefault()
         dispatch(editAsyn(fit[0].codigo, añadir))
-        
+
         setShow(false)
     }
 
@@ -119,21 +119,21 @@ export const LastEncuesta = () => {
 
 
 
-    datas.sort(function(a, b) {
+    datas.sort(function (a, b) {
         if (a.quizDs < b.quizDs) {
-          return 1;
+            return 1;
         }
         if (a.quizDs > b.quizDs) {
-          return -1;
+            return -1;
         }
         return 0;
-      });
+    });
 
 
-    
-    
 
-      console.log(datas)
+
+
+    console.log(datas)
 
     return (
         <div>
@@ -384,22 +384,28 @@ export const LastEncuesta = () => {
                                         ) : <h4>encuesta terminada</h4>
                                 }
                             </div>
-                        ) : 
-                       
-                            datas.map((e, i) => (
-                                
-                                <div key={i} className='resultas' >
-                                  <div className='tablita'>
-                                  
-                                    <h5 className='name'>{e.actividad}</h5>
-                                    
-                                    <div className='flex'>
-                                       <h6>{e.mensaje}</h6>
+                        ) : <div>
+                            <h1>titulo</h1>
+                            {
+                                datas.map((e, i) => (
+
+                                    <div key={i} className='resultas' >
+                                        <div className='tablita'>
+
+                                            <h5 className='name'>{e.actividad}</h5>
+
+                                            <div className='flex'>
+                                                <h6>{e.mensaje}</h6>
+                                            </div>
+                                        </div>
                                     </div>
-                                  </div>
-                                </div>
-                              ))
-                        
+                                ))
+                            }
+                        </div>
+
+
+
+
                 }
             </div>
             <Modal show={show} className="modal-encuesta">

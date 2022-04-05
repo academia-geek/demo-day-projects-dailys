@@ -28,8 +28,6 @@ export const Listar = () => {
         }
     })
 
-    console.log(firtes)
-
     const conteo = () => {
         // let datas = task.filter(user => user.idUser === users.codigo);
         task.forEach(element => {
@@ -43,11 +41,6 @@ export const Listar = () => {
         setCompl(completado)
         setNocompl(nocompletado)
     }
-    localStorage.setItem("dato", JSON.stringify({
-        compl: compl,
-        nocompl: nocompl,
-        total: compl + nocompl
-    }));
 
     const data = {
         labels: ['Completado', 'No Completado'],
