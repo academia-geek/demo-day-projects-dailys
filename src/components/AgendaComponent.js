@@ -11,13 +11,10 @@ export const AgendaComponent = () => {
   const [selec, setSelec] = useState({});
   const [fechas, setFechas] = useState(new Date())
   const [añadir, setAñadir] = useState({})
-
+  const [conAgenda, setConAgenda] = useState("content-Agenda")
   const dispatch = useDispatch();
-
   const uids = JSON.parse(localStorage.getItem("users"))
-
   const selector = selec[0]
-
   function cambioDias(e) {
     const opciones = e.target.options
     const seleccionadas = []
@@ -29,9 +26,7 @@ export const AgendaComponent = () => {
     setSelec(seleccionadas)
   }
   const [values, handleInputChange, reset] = useForm({ nombre: "" })
-
   const { nombre } = values
-
   const guarda = () => {
     setAñadir({
       dia: fechas.getUTCDate(),
@@ -52,10 +47,15 @@ export const AgendaComponent = () => {
     dispatch(registertarea(añadir))
     reset()
   }
-
   const mostrar = () => {
     setActive(true)
+    setConAgenda("content-Agenda2")
   }
+  const hes = () => {
+    setActive(false)
+    setConAgenda("content-Agenda")
+  }
+  console.log(conAgenda)
   useEffect(() => {
     dispatch(listTasks());
   }, [dispatch])
@@ -65,7 +65,7 @@ export const AgendaComponent = () => {
       <div className="botonagenda">
         <button onClick={() => mostrar()} className="botonAgendss"><img width={70} alt="editar" src="https://res.cloudinary.com/paolavbm/image/upload/v1649186767/boton-agregar_fxgcar.png" /></button>
       </div>
-      <div  className="content-Agenda" >
+      <div className={conAgenda} >
         <div>
 
           {
@@ -98,7 +98,7 @@ export const AgendaComponent = () => {
                 </div>
               </div>
               <div className="buton-agenda">
-                <Button onClick={() => setActive(false)} className="boton00">Cancelar</Button>
+                <Button onClick={() => hes() } className="boton00">Cancelar</Button>
                 <Button type="submit" onClick={guarda} className="boton01">Agregar</Button>
               </div>
             </Form> : ''

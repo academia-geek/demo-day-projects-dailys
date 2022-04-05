@@ -19,35 +19,23 @@
 .form-agenda input select {
     text-align: center;
 }
-.form-agenda{
+
+.form-agenda {
     position: relative;
-    
+
 }
 
-.input-arreglo{
-  width: 16em !important;
-}
-
-.content-Agenda {
-   background-color: white;
-    width: 40% !important;
-    margin: 10px auto;
-    border-radius: 30px;
-    font-family: 'Domine', serif;
-    padding: 1em;
-}
-
-.boton-modal-agenda{
+.boton-modal-agenda {
     text-align: center;
 }
 
-.boton-completadi{
+.boton-completadi {
     background-color: #64549d !important;
 }
 
 
-.citrus{
-    color: #372e4d  !important;
+.citrus {
+    color: #372e4d !important;
 }
 
 .MuiPickersToolbar-toolbar {
@@ -55,9 +43,10 @@
 }
 
 .MuiPickersDay-current {
-   background-color:  #64549d !important;
+    background-color: #64549d !important;
     font-weight: 600;
 }
+
 .fechass {
     display: flex;
     flex-direction: row;
@@ -67,7 +56,7 @@
 
 .title-Agenda {
     text-align: center;
-  
+
 }
 
 .inputs {
@@ -103,9 +92,10 @@
 }
 
 
-.meLleva{
+.meLleva {
     background-color: #5c436c !important;
 }
+
 .imgAgenda {
     width: 80px !important;
     margin-left: 20% !important;
@@ -138,7 +128,7 @@
     width: 60% !important;
     position: relative !important;
     top: 10px;
-  
+
 }
 
 .busagnda {
@@ -156,12 +146,14 @@
 .botoneditars {
     margin: 34px 22px !important;
 }
-.opcionesaged{
+
+.opcionesaged {
     width: 30% !important;
     margin-left: 63%;
-   
+
 }
-.botonAgen{
+
+.botonAgen {
     margin: 0 15px 0 0;
     /* background-color: #a38fcb!important; */
     background-color: inherit !important;
@@ -169,25 +161,28 @@
     color: #372e4d !important;
 }
 
-.botonAgen:hover{
-  
+.botonAgen:hover {
+
     background-color: #372e4d !important;
     color: antiquewhite !important;
 }
-.botonAgend{
+
+.botonAgend {
     background-color: inherit !important;
     border: none !important;
     color: #4D3582 !important;
 
     /* background-color:#4D3582!important; */
-  
+
 }
-.botonAgend:hover{
-  
+
+.botonAgend:hover {
+
     background-color: #372e4d !important;
     color: antiquewhite !important;
 }
-.botonAgendss{
+
+.botonAgendss {
     /* background: var(--fond-button) !important;
     border: 2px solid var(--fond-button) !important;
     width: 250px;
@@ -203,71 +198,85 @@
     border-radius: 100%;
 }
 
-.botonagenda{
+.botonagenda {
     text-align: center;
 }
 
 
-.titulo-tarea{
-    color: #372e4d  !important;
+.titulo-tarea {
+    color: #372e4d !important;
 }
-.sub{
+
+.sub {
     color: #626262 !important;
 }
 
 
-.tareaP{
+.tareaP {
     padding: 0.5em;
     border-radius: 20px !important;
     font-family: 'Domine', serif;
 }
+
 @media screen and (max-width: 375px) {
     .botonagenda {
         width: 75%;
         margin: auto !important;
     }
-    .botonAgendss{
-        margin: 15px  0 0 0 !important;
+
+    .botonAgendss {
+        margin: 15px 0 0 0 !important;
     }
-    .juju{
+
+    .juju {
         margin: 0 !important;
-        width: 100% !important; 
+        width: 100% !important;
     }
-    .cardsdf{
+
+    .cardsdf {
         position: inherit !important;
         width: 100% !important;
     }
+
     .contsAgenda {
         width: 60% !important;
         position: inherit !important;
         top: 10px;
     }
+
     .cardsagenda {
         display: block !important;
     }
-    .opcionesaged{
+
+    .opcionesaged {
         margin: 0 0 0 25px !important;
         width: 100% !important;
     }
+
     .contsAgenda {
         width: 100% !important;
         position: inherit !important;
         top: 10px;
     }
-    .imgagendas{
+
+    .imgagendas {
         width: 100% !important;
         padding: 15px 0 0 0 !important;
     }
-    .cardsagenda{
+
+    .cardsagenda {
         padding: 10px !important;
     }
-    .busagnda{
+
+    .busagnda {
         width: 100% !important;
     }
+
     .imgAgenda {
         width: 80px !important;
         margin-left: 35% !important;
     }
+
     .botonAgenda {
         width: 50% !important;
         margin: 0px !important;
@@ -276,20 +285,51 @@
         border: 2px solid #64549d !important;
         text-align: center !important;
     }
+
     .botoneditars {
         margin: 0px !important;
         width: 50% !important;
     }
 }
 
-.boton00{
-margin-right: 2em;
-width: 5em !important;
-background-color: #A792D6 !important;
+.content-Agenda {
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+    padding: 1em;
 }
 
-.boton01{
+.content-Agenda2 {
+    background-color: white;
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+    padding: 1em;
+}
+.content-Agenda{
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+}
+.content-Agenda2{
+    background-color: white;
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+    padding: 1em;
+}
+
+.boton00 {
+    margin-right: 2em;
+    width: 5em !important;
+    background-color: #A792D6 !important;
+}
+
+.boton01 {
     width: 5em !important;
     background-color: #4D3582 !important;
 }
-
