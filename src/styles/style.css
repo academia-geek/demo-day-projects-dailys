@@ -5,7 +5,7 @@
 }
 
 .card {
-    width: 85% !important;
+   
     margin: 15px auto !important;
     font-family: 'Domine', serif;
     line-height: 40px;
@@ -13,11 +13,23 @@
 
 .picachu {
     font-family: 'Domine', serif !important;
+    font-size: 30px;
 }
 
 
 .jajaja {
     color: #626262 !important;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.ju{
+    font-weight: bold;
+    color: #331d41 !important;
+}
+
+.tituloPerfil{
+    text-align: center;
 }
 
 .card-title {
@@ -27,13 +39,24 @@
 }
 
 .card-text {
-    font-size: 35px;
-
+    font-size: 30px;
+    
 }
 
-.titlee {
-    text-align: center;
-    font-size: 60px;
+.pepe{
+     width: 80% !important;
+}
+
+.contenedor-tarjetas{
+    width: 85%;
+    margin: auto;
+}
+
+
+
+.titlee{
+   text-align: center;
+   font-size: 60px;
 }
 
 .titlee1 {
@@ -43,17 +66,55 @@
 .botonperfil {
     background: var(--fond-button) !important;
     border: 2px solid var(--fond-button) !important;
-    width: 250px;
+    width: 6em;
     height: 35px;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 19px;
-    margin-left: 25%;
+    margin-left: 40%;
+    margin-top: 2.5em;
 }
 
+.contenedor-tarjetas{
+    display: flex;
+}
+
+.ujuuu{
+background-color:#64549d!important;
+color: white !important;
+
+}
+
+.ujuu{
+    color: white !important;
+}
+.tarjetas{
+width: 15em !important;
+height: 27em;
+border-radius: 10px !important;
+padding-top: 2em;
+}
+
+.img-perfil{
+    padding: 15px !important;
+}
+
+.asereje{
+ font-size: 18px !important;
+ line-height: 20px!important;
+    }
+
+
+    .logros{
+        text-align: center;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        color: #331d41;
+    }
 .col {
-    width: 25% !important;
+  
     height: 550px;
     text-align: center !important;
+    
 }
 
 .contTempori {
@@ -92,6 +153,10 @@
     line-height: 13px;
 }
 
+
+.jum{
+    margin-left: 2em;
+}
 .opciones {
     text-align: center;
     margin: 15px;

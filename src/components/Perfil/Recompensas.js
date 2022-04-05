@@ -84,49 +84,52 @@ export const Recompensas = () => {
 
 
     return (
-        <div className="row row-cols-1 row-cols-md-2 g-4">
+        <div className='info-recompensas'>
+        <div className="contenedor-tarjetas">
             <div className="col">
-                <div className="card" id={fondo} >
+                <div className="card tarjetas" id={fondo} >
                     <img src={image} className="card-img-top" alt="..."></img>
                     <div className="card-body">
-                        <h5 className="card-titles">Recompensa por cumplir 5 actividades</h5>
+                    <p className="card-titles asereje">Recompensa por cumplir 5 actividades</p>
                         <p className="card-text">{dats}/5</p>
                         {
                             buttons === true ? (
-                                <Button><Link to="/Premio">Descargar</Link></Button>
+                                <Button className='ujuuu'><Link to="/Premio" className='ujuu'>Descargar</Link></Button>
                             ) : ''
                         }
 
                     </div>
                 </div>
             </div>
-            <div className="col">
-                <div className="card">
+            <div className="col ">
+                <div className="card tarjetas">
                     <img src="https://cdn-icons-png.flaticon.com/512/2200/2200738.png" className="card-img-top" alt="..."></img>
                     <div className="card-body">
-                        <h5 className="card-titles">Recompensa por cumplir 10 actividades</h5>
+                        <p className="card-titles asereje">Recompensa por cumplir 10 actividades</p>
                         <p className="card-text">{dat}/10</p>
                     </div>
                 </div>
             </div>
             <div className="col">
-                <div className="card">
+                <div className="card tarjetas">
                     <img src="https://cdn-icons-png.flaticon.com/512/2200/2200738.png" className="card-img-top" alt="..."></img>
                     <div className="card-body">
-                        <h5 className="card-titles">Recompensa por cumplir 10 actividades</h5>
+                        
+                    <p className="card-titles asereje">Recompensa por cumplir 50 actividades</p>
                         <p className="card-text">{da}/50</p>
                     </div>
                 </div>
             </div>
-            <div className="col">
-                <div className="card">
+            <div className="col ">
+                <div className="card tarjetas">
                     <img src="https://cdn-icons-png.flaticon.com/512/2200/2200738.png" className="card-img-top" alt="..."></img>
                     <div className="card-body">
-                        <h5 className="card-titles">Recompensa por cumplir 10 actividades</h5>
+                    <p className="card-titles asereje">Recompensa por cumplir 100 actividades</p>
                         <p className="card-text">{d}/100</p>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

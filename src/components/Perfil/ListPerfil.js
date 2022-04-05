@@ -57,20 +57,28 @@ export const ListPerfil = (dates) => {
             {
                 perfil !== undefined ?
                     (
-                        <div className="card mb-3">
+                        <div className="card mb-3 pepe">
                             <div className="row g-0">
                                 <div className="col-md-4">
-                                    <img src={perfil.imagen} alt="photos1"></img>
+                                    <img src={perfil.imagen} alt="photos1" className='img-perfil'></img>
                                 </div>
                                 <div className="col-md-8">
-                                    <div className="card-body">
-                                        <h5 className="card-title picachu">Perfil</h5>
-                                        <p className="card-text jajaja">Nombre:</p>
-                                        <p className="card-text">{perfil.name}</p>
-                                        <p className="card-text"><small className="text-muted">Correo: </small></p>
-                                        <p className="card-text">{perfil.email}</p>
-                                        <p className="card-text"><small className="text-muted">Descripcion: </small></p>
-                                        <p className="card-text">{perfil.descripcion}</p>
+                                    <div className="card-body jum">
+
+                                      <div className='tituloPerfil'>
+                                        <h2 className=" picachu">Perfil</h2>
+                                     </div>
+                                        <div className='perfil-info'>
+                                        <p className="jajaja ju">Nombre:</p> <span className="jajaja">{perfil.name}</span>
+                                        </div>
+                                        <div className='perfil-info'>
+                                        <p className="jajaja ju">Correo:</p> <span className="jajaja">{perfil.email}</span>
+                                      
+                                        </div>
+                                        <div className='perfil-info'>
+                                        <p className="jajaja ju">Descripción:</p> <span className="jajaja">{perfil.descripcion}</span>
+
+                                        </div>
                                         <Button className="botonperfil" onClick={cargarData}>Editar perfil</Button>
                                     </div>
                                 </div>

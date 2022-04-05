@@ -19,14 +19,18 @@
 .form-agenda input select {
     text-align: center;
 }
+.form-agenda{
+    position: relative;
+    
+}
 
 .content-Agenda {
     background-color: white;
-    width: 80%;
+    width: 40% !important;
     margin: 10px auto;
     border-radius: 30px;
     font-family: 'Domine', serif;
-  
+    padding: 1em;
 }
 
 .boton-modal-agenda{
@@ -59,6 +63,7 @@
 
 .title-Agenda {
     text-align: center;
+  
 }
 
 .inputs {
@@ -67,13 +72,14 @@
 }
 
 .buton-agenda {
-    width: 55%;
-    margin: 15px auto;
+    width: 55% !important;
+    margin: 15px auto !important;
+    text-align: center;
 }
 
 .botonagenda {
-    width: 35%;
-    margin: 15px auto;
+    width: 35% !important;
+    margin: 15px auto !important;
 }
 
 .juju {
@@ -141,6 +147,8 @@
     width: 18% !important;
 }
 
+
+
 .botoneditars {
     margin: 34px 22px !important;
 }
@@ -151,15 +159,32 @@
 }
 .botonAgen{
     margin: 0 15px 0 0;
-    background-color: #5c436c !important
+    /* background-color: #a38fcb!important; */
+    background-color: inherit !important;
+    border: none !important;
+    color: #372e4d !important;
+}
+
+.botonAgen:hover{
+  
+    background-color: #372e4d !important;
+    color: antiquewhite !important;
 }
 .botonAgend{
-    
-    background-color:#9477a7!important;
-    
+    background-color: inherit !important;
+    border: none !important;
+    color: #4D3582 !important;
+
+    /* background-color:#4D3582!important; */
+  
+}
+.botonAgend:hover{
+  
+    background-color: #372e4d !important;
+    color: antiquewhite !important;
 }
 .botonAgendss{
-    background: var(--fond-button) !important;
+    /* background: var(--fond-button) !important;
     border: 2px solid var(--fond-button) !important;
     width: 250px;
     height: 35px;
@@ -168,7 +193,14 @@
     margin-left: 25%;
     background: #64549d !important;
     color: var(--color-white) !important;
-    border: 2px solid #64549d !important;
+    border: 2px solid #64549d !important; */
+    border-style: none !important;
+    border-color: inherit;
+    border-radius: 100%;
+}
+
+.botonagenda{
+    text-align: center;
 }
 
 
@@ -235,7 +267,7 @@
     .botonAgenda {
         width: 50% !important;
         margin: 0px !important;
-        background: #64549d !important;
+        background-color: #4D3582 !important;
         color: var(--color-white) !important;
         border: 2px solid #64549d !important;
         text-align: center !important;
@@ -244,5 +276,16 @@
         margin: 0px !important;
         width: 50% !important;
     }
+}
+
+.boton00{
+margin-right: 2em;
+width: 5em !important;
+background-color: #A792D6 !important;
+}
+
+.boton01{
+    width: 5em !important;
+    background-color: #4D3582 !important;
 }
 
