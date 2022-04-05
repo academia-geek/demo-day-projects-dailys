@@ -12,12 +12,23 @@ export const Listar = () => {
     const [compl, setCompl] = useState(0)
     const [nocompl, setNocompl] = useState(0)
     const { task } = useSelector(store => store.tarea)
+    const fecha = new Date();
+    const month = fecha.getUTCMonth() + 1;
+    const day = fecha.getUTCDate() - 1;
+    const year = fecha.getUTCFullYear();
 
     let completado = 0
     let nocompletado = 0
 
     const users = JSON.parse(localStorage.getItem('users'));
     const codigo = users.codigo
+    const firtes = task.filter(user => {
+        if (user.dia < day && user.mes <= month ) {
+            return user
+        }
+    })
+
+    console.log(firtes)
 
     const conteo = () => {
         // let datas = task.filter(user => user.idUser === users.codigo);
@@ -37,7 +48,7 @@ export const Listar = () => {
         nocompl: nocompl,
         total: compl + nocompl
     }));
-    console.log(nocompl, compl)
+
     const data = {
         labels: ['Completado', 'No Completado'],
         datasets: [

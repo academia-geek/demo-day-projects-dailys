@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from 'react-bootstrap'
-import { Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export const Recompensas = () => {
@@ -78,9 +78,6 @@ export const Recompensas = () => {
         valu3()
 
     }
-    const abrir = () => {
-        Navigate('/premio')
-    }
     useEffect(() => {
         valiars()
     })
@@ -96,7 +93,7 @@ export const Recompensas = () => {
                         <p className="card-text">{dats}/5</p>
                         {
                             buttons === true ? (
-                                <Button>Descargar</Button>
+                                <Button><Link to="/Premio">Descargar</Link></Button>
                             ) : ''
                         }
 
