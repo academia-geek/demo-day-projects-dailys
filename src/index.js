@@ -13,7 +13,7 @@ import DateFnsUtils from '@date-io/date-fns'
 import './styles/style.css'
 import "./styles/emociones/stylesEmociones.css"
 import "./styles/encuesta/encuesta.css"
-import './styles/recompensas/recompensas.css'
+import './styles/recompensas/Premio.css'
 
 ReactDOM.render(
   <Provider store={store}>
