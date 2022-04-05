@@ -12,6 +12,8 @@ export const ListarTareas = () => {
   const [añadir, setAñadir] = useState({})
 
   const { task } = useSelector(store => store.tarea);
+  const [compl, setCompl] = useState(0)
+  const [nocompl, setNocompl] = useState(0)
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -20,7 +22,8 @@ export const ListarTareas = () => {
 
   const [modal, setModal] = useState(false)
   const uids = JSON.parse(localStorage.getItem("users"))
-  const data = task.filter(user => user.idUser === uids.codigo)
+  const codigo = uids.codigo
+  const data = task.filter(user => user.idUser === codigo)
   const [enviarDatosModal, setEnviarDatosModal] = useState([])
   const [eva, setEva] = useState("")
   const [datas, setDatas] = useState({})
@@ -63,9 +66,29 @@ export const ListarTareas = () => {
     setModal(true)
     setEnviarDatosModal(traertarea)
   }
-  useEffect(() => {
+  let completado = 0
+  let nocompletado = 0
 
-  }, [task])
+  const conteo = () => {
+    // let datas = task.filter(user => user.idUser === users.codigo);
+    task.forEach(element => {
+      const { evalue, idUser } = element
+      if (evalue === "Completado" && codigo === idUser) {
+        completado++
+      } else if (evalue === "No completado" && codigo === idUser) {
+        nocompletado++
+      }
+    })
+    setCompl(completado)
+    setNocompl(nocompletado)
+  }
+  localStorage.setItem("dato", JSON.stringify({
+    compl: compl,
+    nocompl: nocompl,
+    total: compl + nocompl
+  }));
+
+  useEffect(() => { conteo() }, [task])
   return (
     <div className='juju'>
       <div className="opcionesaged">
@@ -101,7 +124,7 @@ export const ListarTareas = () => {
                     <Modal.Title>Editar completado</Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
-  
+
                     <Form onSubmit={handleSubmit}>
                       <Form.Check
                         onClick={handleEvalue}
@@ -120,10 +143,10 @@ export const ListarTareas = () => {
                         id={`disabled-default`}
                       />
                       <div className='boton-modal-agenda'>
-                      <Button type="submit" className='boton-completadi' onClick={guarda}>Guardar cambios</Button>
+                        <Button type="submit" className='boton-completadi' onClick={guarda}>Guardar cambios</Button>
                       </div>
                     </Form>
-                 
+
                   </Modal.Body>
                 </Modal>
               </div>
