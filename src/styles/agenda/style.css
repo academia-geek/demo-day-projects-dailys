@@ -24,8 +24,12 @@
     
 }
 
+.input-arreglo{
+  width: 16em !important;
+}
+
 .content-Agenda {
-    background-color: white;
+   background-color: white;
     width: 40% !important;
     margin: 10px auto;
     border-radius: 30px;

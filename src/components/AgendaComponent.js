@@ -75,7 +75,7 @@ export const AgendaComponent = () => {
               </div>
               <Form.Group className="mb-3 inputs">
                 <Form.Label>Nombre de la actividad</Form.Label>
-                <Form.Control type="text" name="nombre" placeholder="Ingrese el nombre" value={nombre} onChange={handleInputChange} />
+                <Form.Control type="text" className="input-arreglo" name="nombre" placeholder="Ingrese el nombre" value={nombre} onChange={handleInputChange} />
               </Form.Group>
               <div className="mb-3 inputs">
                 <Form.Select aria-label="Default select example" value={selec} onChange={cambioDias} >
