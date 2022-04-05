@@ -13,10 +13,6 @@ export const Listar = () => {
     const [nocompl, setNocompl] = useState(0)
 
     const { task } = useSelector(store => store.tarea)
-    const fecha = new Date();
-    const month = fecha.getUTCMonth() + 1;
-    const day = fecha.getUTCDate() - 1;
-    const year = fecha.getUTCFullYear();
 
     useEffect(() => { conteo() }, [task])
 
@@ -26,6 +22,7 @@ export const Listar = () => {
 
     const users = JSON.parse(localStorage.getItem('users'));
     const codigo = users.codigo
+    
 
     const conteo = () => {
         let datas = task.filter(user => user.idUser === users.codigo);
@@ -51,12 +48,12 @@ export const Listar = () => {
                 label: '# of Votes',
                 data: [compl, nocompl],
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)'
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 99, 132, 0.2)'
                 ],
                 borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)'
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)'
 
                 ],
                 borderWidth: 1,

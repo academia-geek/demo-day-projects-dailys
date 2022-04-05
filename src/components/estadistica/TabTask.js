@@ -35,109 +35,113 @@ export const TabTask = () => {
     }
     return (
         <div>
-            <div className="d-flex align-items-start">
-                <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <button className="nav-link active" id="v-pills-todo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-todo" type="button" role="tab" aria-controls="v-pills-todo" aria-selected="true">todo</button>
-                    <button className="nav-link" id="v-pills-completado-tab" data-bs-toggle="pill" data-bs-target="#v-pills-completado" type="button" role="tab" aria-controls="v-pills-completado" aria-selected="false">Completados</button>
-                    <button className="nav-link" id="v-pills-ncompletado-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ncompletado" type="button" role="tab" aria-controls="v-pills-ncompletado" aria-selected="false">No Completados</button>
+            <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li className="nav-item" role="presentation">
+                    <button class="nav-link active botones" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Todo</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button className="nav-link botones" id="v-pills-completado-tab" data-bs-toggle="pill" data-bs-target="#v-pills-completado" type="button" role="tab" aria-controls="v-pills-completado" aria-selected="false">Completados</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button className="nav-link botones" id="v-pills-ncompletado-tab" data-bs-toggle="pill" data-bs-target="#v-pills-ncompletado" type="button" role="tab" aria-controls="v-pills-ncompletado" aria-selected="false">No Completados</button>
+                </li>
+            </ul>
+            <div className="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <table className="tab-pane table fade show" id="v-pills-todo" role="tabpanel" aria-labelledby="v-pills-todo-tab">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Hora</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                (total) ?
+                                    (
+
+                                        total.map((element, index) => (
+
+                                            <tr key={index}>
+                                                <td>{element.actividad}</td>
+                                                <td>{element.hora}:{element.minutos}</td>
+                                                <td>{element.dia}/{element.mes}/{element.año}</td>
+                                                <td>{element.evalue}</td>
+                                            </tr>
+                                        )
+                                        )
+
+                                    ) :
+                                    <p>Datos no disponibles</p>
+                            }
+                        </tbody>
+                    </table>
                 </div>
-                <div className="tab-content" id="v-pills-tabContent">
-                    <div className="tab-pane table fade show active" id="v-pills-todo" role="tabpanel" aria-labelledby="v-pills-todo-tab">
-                        <table className="tab-pane table fade show" id="v-pills-todo" role="tabpanel" aria-labelledby="v-pills-todo-tab">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Hora</th>
-                                    <th>Fecha</th>
-                                    <th>Estado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    (total) ?
-                                        (
+                <div className="tab-pane fade" id="v-pills-completado" role="tabpanel" aria-labelledby="v-pills-completado-tab">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Hora</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                (compl) ?
+                                    (
 
-                                            total.map((element, index) => (
+                                        compl.map((element, index) => (
 
-                                                <tr key={index}>
-                                                    <td>{element.actividad}</td>
-                                                    <td>{element.hora}:{element.minutos}</td>
-                                                    <td>{element.dia}/{element.mes}/{element.año}</td>
-                                                    <td>{element.evalue}</td>
-                                                </tr>
-                                            )
-                                            )
+                                            <tr key={index}>
+                                                <td>{element.actividad}</td>
+                                                <td>{element.hora}:{element.minutos}</td>
+                                                <td>{element.dia}/{element.mes}/{element.año}</td>
+                                                <td>{element.evalue}</td>
+                                            </tr>
+                                        )
+                                        )
 
-                                        ) :
-                                        <p>Datos no disponibles</p>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="tab-pane fade" id="v-pills-completado" role="tabpanel" aria-labelledby="v-pills-completado-tab">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Hora</th>
-                                    <th>Fecha</th>
-                                    <th>Estado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    (compl) ?
-                                        (
+                                    ) :
+                                    <p>Datos no disponibles</p>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <div className="tab-pane fade" id="v-pills-ncompletado" role="tabpanel" aria-labelledby="v-pills-ncompletado-tab">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Hora</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                (nocompl) ?
+                                    (
 
-                                            compl.map((element, index) => (
+                                        nocompl.map((element, index) => (
 
-                                                <tr key={index}>
-                                                    <td>{element.actividad}</td>
-                                                    <td>{element.hora}:{element.minutos}</td>
-                                                    <td>{element.dia}/{element.mes}/{element.año}</td>
-                                                    <td>{element.evalue}</td>
-                                                </tr>
-                                            )
-                                            )
+                                            <tr key={index}>
+                                                <td>{element.actividad}</td>
+                                                <td>{element.hora}:{element.minutos}</td>
+                                                <td>{element.dia}/{element.mes}/{element.año}</td>
+                                                <td>{element.evalue}</td>
+                                            </tr>
+                                        )
+                                        )
 
-                                        ) :
-                                        <p>Datos no disponibles</p>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="tab-pane fade" id="v-pills-ncompletado" role="tabpanel" aria-labelledby="v-pills-ncompletado-tab">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Hora</th>
-                                    <th>Fecha</th>
-                                    <th>Estado</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {
-                                    (nocompl) ?
-                                        (
-
-                                            nocompl.map((element, index) => (
-
-                                                <tr key={index}>
-                                                    <td>{element.actividad}</td>
-                                                    <td>{element.hora}:{element.minutos}</td>
-                                                    <td>{element.dia}/{element.mes}/{element.año}</td>
-                                                    <td>{element.evalue}</td>
-                                                </tr>
-                                            )
-                                            )
-
-                                        ) :
-                                        <p>Datos no disponibles</p>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
+                                    ) :
+                                    <p>Datos no disponibles</p>
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
