@@ -11,13 +11,13 @@
     line-height: 40px;
 }
 
-.picachu{
+.picachu {
     font-family: 'Domine', serif !important;
     font-size: 30px;
 }
 
 
-.jajaja{
+.jajaja {
     color: #626262 !important;
     display: inline-block;
     font-size: 20px;
@@ -31,6 +31,7 @@
 .tituloPerfil{
     text-align: center;
 }
+
 .card-title {
     text-align: center;
     text-transform: uppercase;
@@ -58,9 +59,9 @@
    font-size: 60px;
 }
 
-.titlee1{
+.titlee1 {
     font-family: 'Domine', serif !important;
- }
+}
 
 .botonperfil {
     background: var(--fond-button) !important;
@@ -345,11 +346,46 @@ body {
     width: 65%;
     margin: auto;
 }
-.close1{
+
+.close1 {
     margin-left: 30% !important;
 }
+
 .modal-info th {
     background-color: #5c436c !important;
     color: antiquewhite;
     border: none;
+}
+
+.simssdf {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.imgres {
+    width: 45%;
+    padding: 25px;
+}
+
+.compar {
+    position: relative;
+    left: 60%;
+}
+
+.imprimir {
+    background: var(--fond-button);
+    color: white;
+    margin: 15px;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+}
+.imprimir2 {
+    background: var(--fond-button);
+    color: white;
+    margin: 15px;
+    border: 2px solid lightgrey;
+    border-radius: 5px;
+    padding: 9px;
 }

@@ -82,11 +82,11 @@ export const Listaremociones = () => {
     useEffect(() => {
         conteo()
     }, [task])
-    return (
-        <div>
-            <div>
-                <Pie data={data} options={opciones} />
-            </div>
-        </div>
-    )
+  return (
+    <div>
+        <div claName="grafica">
+          <Pie data={data} options={opciones}/>
+          </div>
+    </div>
+  )
 }

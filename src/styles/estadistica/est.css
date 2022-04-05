@@ -1,3 +1,16 @@
+body{
+    background-color: #F4F3FF !important;
+}
+
+.nav-pills .active{
+    background-color: #AD9CE9 !important;
+    color: white !important;
+}
+
+button{
+    color: #47525E !important;
+}
+
 .grafica{
     width:25%;
     margin: auto !important;
