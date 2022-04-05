@@ -1,5 +1,5 @@
-import React from 'react'
-// import { useDispatch, useSelector } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import "../../styles/estadistica/est.css"
@@ -7,44 +7,47 @@ import "../../styles/estadistica/est.css"
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const Listaremociones = () => {
-    // const [happy, setHappy] = useState(0)
-    // const [veryHappy, setVeryhappy] = useState(0)
-    // const [mehj, setMehj] = useState(0)
-    // const [sad, setSad] = useState(0)
-    // const [hedied, sehedied] = useState(0)
+    const [happy, setHappy] = useState(0)
+    const [veryHappy, setVeryhappy] = useState(0)
+    const [mehj, setMehj] = useState(0)
+    const [sad, setSad] = useState(0)
+    const [hedied, sehedied] = useState(0)
 
     // const dispatch = useDispatch();
 
-    // const { emo } = useSelector(store => store.emocion); 
-    // useEffect(() => { 
-    //     // dispatch(listEmos());
-    //     conteo()
-    // }, [dispatch])
-    // let feliz, muyfeliz, meh, triste, semurio = 0
+    const { task } = useSelector(store => store.tarea);
 
-    // const users = JSON.parse(localStorage.getItem('users'));
-    // const idUser = users.codigo
-    // const conteo = () => {
-    //     emo.forEach(element => {
-    //         const { asnwer, codigo } = element
-    //         if (asnwer === 1 && codigo === idUser) {
-    //             feliz++
-    //         } else if (asnwer === 2 && codigo === idUser) {
-    //             muyfeliz++
-    //         } else if (asnwer === 3 && codigo === idUser) {
-    //             meh++
-    //         } else if (asnwer === 4 && codigo === idUser) {
-    //             triste++
-    //         } else if (asnwer === 5 && codigo === idUser) {
-    //             semurio++
-    //         }
-    //     })
-    //     setHappy(feliz)
-    //     setVeryhappy(muyfeliz)
-    //     setMehj(meh)
-    //     setSad(triste)
-    //     sehedied(semurio)
-    // }
+    let feliz = 0
+    let muyfeliz = 0
+    let meh = 0
+    let triste = 0
+    let semurio = 0
+
+    const users = JSON.parse(localStorage.getItem('users'));
+    const dta = task.filter(user => user.name === "emociones")
+    const idUser = users.codigo
+
+    const conteo = () => {
+        dta.map(element => {
+            const { asnwer, codigo } = element
+            if (asnwer === 1 && codigo === idUser) {
+                feliz++
+            } else if (asnwer === 2 && codigo === idUser) {
+                muyfeliz++
+            } else if (asnwer === 3 && codigo === idUser) {
+                meh++
+            } else if (asnwer === 4 && codigo === idUser) {
+                triste++
+            } else if (asnwer === 5 && codigo === idUser) {
+                semurio++
+            }
+        })
+        setHappy(feliz)
+        setVeryhappy(muyfeliz)
+        setMehj(meh)
+        setSad(triste)
+        sehedied(semurio)
+    }
 
     // ----------------------------grafica
 
@@ -53,7 +56,7 @@ export const Listaremociones = () => {
         datasets: [
             {
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2],
+                data: [happy, veryHappy, mehj, sad, hedied],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -76,6 +79,9 @@ export const Listaremociones = () => {
         responsive: true,
         maintainAspectRatio: false
     }
+    useEffect(() => {
+        conteo()
+    }, [task])
     return (
         <div>
             <div>

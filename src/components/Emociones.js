@@ -1,8 +1,9 @@
 import { Modal, Button } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { AddEmocionesASync, listEmocionesFrasesAsync } from '../redux/actions/actionEmociones';
-import {HomeComponent} from './Navbar/Home/HomeComponent'
+import { listEmocionesFrasesAsync } from '../redux/actions/actionEmociones';
+import {registertarea} from '../redux/actions/actionTask'
+import { HomeComponent } from './Navbar/Home/HomeComponent'
 
 const Emociones = () => {
     const fecha = new Date();
@@ -37,13 +38,12 @@ const Emociones = () => {
         mes: month,
         año: year,
         codigo: codigo,
-        asnwer: asnwer
+        asnwer: Number(asnwer),
+        name: "emociones"
     }
 
-
     const enviarInfo = (e) => {
-
-        dispatch(AddEmocionesASync(informa))
+        dispatch(registertarea(informa))
         setShow(false)
     }
 
@@ -71,13 +71,13 @@ const Emociones = () => {
         <div>
             <HomeComponent />
             <div className='subDivEmociones'>
-            <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782823/a837c5c796c1daf0583b7ac1338952c6_iwwiii.jpg" alt='' width={200}/>
+                <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782823/a837c5c796c1daf0583b7ac1338952c6_iwwiii.jpg" alt='' width={200} />
                 <h2>Hola {name}</h2>
                 <h4>¿Cómo te sientes el día de hoy?</h4>
-           
+
 
                 <div className="emociones">
-                
+
                     <div class="">
                         <div class="select">
                             <label for="emocion" class="col-25"></label><br />
@@ -86,7 +86,7 @@ const Emociones = () => {
                             <input type="radio" name="emociones" id="muyFeliz" className="input-hidden" value="2" onChange={handleOnChange} />
                             <label for="muyFeliz" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/feliz_wxbvxo.png" alt="" required /></label>
                             <input type="radio" name="emociones" id="bored" className="input-hidden" value="3" onClick={handleOnChange} />
-                            <label for="bored" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/aburrido_1_hespzj.png" alt="" required /></label> 
+                            <label for="bored" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/aburrido_1_hespzj.png" alt="" required /></label>
 
                             <input type="radio" name="emociones" id="sad" className="input-hidden" value="4" onClick={handleOnChange} />
                             <label for="sad" id="hm"><img width={100} src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/cara-triste-en-cuadrado-redondeado_rwkpnb.png" alt="" required /></label>
@@ -105,13 +105,13 @@ const Emociones = () => {
 
             </div>
 
-            { 
-             emocion !== undefined
-             ?
-             <>
-        <Modal show={show}   aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose} className="modal1">
-          
-          <Modal.Body> 
+            {
+                emocion !== undefined
+                    ?
+                    <>
+                        <Modal show={show} aria-labelledby="example-custom-modal-styling-title" scrollable={true} onHide={handleClose} className="modal1">
+
+                            <Modal.Body>
 
                                 <img className='cat' src="https://res.cloudinary.com/paolavbm/image/upload/v1648782796/ebe4c9e75f78f80477a2e4ef2a640663_jgm1r3.jpg" alt='' width={150} /> <br />
                                 <h5>¡Gracias por confiar en nosotros!</h5>

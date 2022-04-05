@@ -1,0 +1,36 @@
+.imgPremio{
+    width: 100% !important;
+    margin: auto !important;
+}
+.premio{
+    width: 100%;
+    position: relative !important;
+}
+.title-premio{
+    position: relative;
+    top: -660px ;
+    text-align: center;
+    font-size: 70px ;
+}
+.title-premio1{
+    position: relative;
+    top: -560px ;
+    text-align: center;
+    font-size: 30px ;
+}
+.title-premio2{
+    position: relative;
+    top: -520px ;
+    text-align: center;
+    font-size: 50px ;
+}
+.nombres{
+    text-transform: uppercase;
+}
+.imprimir{
+    background: var(--fond-button) !important;
+    color: white !important;
+    border: 2px solid var(--fond-button);
+    border-radius: 5px;
+    margin-left: 45% !important;
+}
