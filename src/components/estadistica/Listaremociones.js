@@ -75,18 +75,18 @@ export const Listaremociones = () => {
             },
         ],
     };
-     const opciones = {
+    const opciones = {
         responsive: true,
         maintainAspectRatio: false
     }
     useEffect(() => {
         conteo()
     }, [task])
-    return (
-        <div>
-            <div>
-                <Pie data={data} options={opciones} />
-            </div>
-        </div>
-    )
+  return (
+    <div>
+        <div claName="grafica">
+          <Pie data={data} options={opciones}/>
+          </div>
+    </div>
+  )
 }

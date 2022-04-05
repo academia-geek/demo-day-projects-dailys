@@ -7,6 +7,7 @@ import { Rangoe } from './Rangoe';
 import { Rendimiento } from './Rendimiento';
 import { TabTask } from './TabTask';
 import "../../styles/estadistica/est.css"
+import { Link } from 'react-router-dom';
 
 export const Estadistica = () => {
 
@@ -14,14 +15,15 @@ export const Estadistica = () => {
     useEffect(() => {
     dispatch(listTasks());
   }, [dispatch])
-    // const usuario = { codigo: "uJMZsuD9PfOK5wF8uYl4MaCWuXU2"}
+    // const usuario = { codigo: "hNC06GXRN8YdvSzwpgJM8oFv9I73"}
     // localStorage.setItem('users', JSON.stringify(usuario))
     
     return (
         <div>
+            
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li className="nav-item" role="presentation">
-                    <button className="nav-link active"
+                    <button className="nav-link active botones"
                     id="pills-total-tab"
                     data-bs-toggle="pill"
                     data-bs-target="#pills-total"
@@ -32,7 +34,7 @@ export const Estadistica = () => {
                 </li>
                
                 <li class="nav-item" role="presentation">
-                    <button className="nav-link"
+                    <button className="nav-link botones"
                     id="pills-emociones-tab"
                     data-bs-toggle="pill"
                     data-bs-target="#pills-emociones"
