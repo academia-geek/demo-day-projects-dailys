@@ -16,7 +16,6 @@ export const Listar = () => {
 
     useEffect(() => { conteo() }, [task])
 
-    console.log(task)
     let completado = 0
     let nocompletado = 0
 
@@ -26,7 +25,6 @@ export const Listar = () => {
 
     const conteo = () => {
         let datas = task.filter(user => user.idUser === users.codigo);
-        console.log(datas)
         task.forEach(element => {
             
             const { evalue, idUser} = element
