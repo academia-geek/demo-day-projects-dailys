@@ -125,7 +125,7 @@ export const Rendimiento = () => {
             return dato
         }
     })
-    
+
     let comple = 0
     let nocomple = 0
 
