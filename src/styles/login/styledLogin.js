@@ -12,7 +12,7 @@ width: 30%;
 margin: auto;
 background-color: #ffff;
 border:  solid 1px lightgray;
-height: 75vh;
+height: 30em;
 border-radius: 15px;
 
 padding: 35px;

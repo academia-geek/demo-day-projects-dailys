@@ -3,7 +3,7 @@ export const SubDiv2 = styled.div`
 width: 30%;
 margin: auto;
 border:  solid 1px lightgray;
-height: 75vh;
+height: 31em;
 border-radius: 15px;
 padding: 2em;
 text-align: left;
@@ -34,6 +34,6 @@ font-weight: bold;
 width: 100%;
 background-color: #6a659d;
 color: white;
-height: 3em;
-margin-top: 2em;
+height: 2em;
+margin-top: 1em;
 `

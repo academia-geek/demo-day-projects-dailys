@@ -35,18 +35,18 @@ const Registro = () => {
             <form onSubmit={formik.handleSubmit}>
 
                <label for="name">Nombre completo</label>
-               <input onChange={formik.handleChange} className="correo" name='name' />
+               <input onChange={formik.handleChange} className="correo" name='name'placeholder='Nombres y apellidos'/>
 
 
                <label for="email">Dirección de correo electrónico</label>
-               <input onChange={formik.handleChange} className="correo" name='email' />
+               <input onChange={formik.handleChange} className="correo" name='email'placeholder='ejemplo@ejemplo.com'/>
 
 
                <label for="password1">Contraseña</label>
-               <input onChange={formik.handleChange} type="password" className="password" name='password1' placeholder='Como mínimo 6 carácteres' />
+               <input onChange={formik.handleChange} type="password" className="password" name='password1'  placeholder='Como mínimo 6 carácteres' />
 
                <label for="password2">Vuelva a escribir contraseña</label>
-               <input onChange={formik.handleChange} type="password" className="password2" name='password2' />
+               <input onChange={formik.handleChange} type="password" className="password" name='password2' placeholder='Escribe de nuevo la contraseña'/>
 
 
                <ButtonInicio type="submit" >Continuar</ButtonInicio>
