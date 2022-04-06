@@ -7,8 +7,8 @@ body{
     color: white !important;
 }
 
-button{
-    color: #47525E !important;
+.botones{
+  color: gray !important;
 }
 
 .grafica{

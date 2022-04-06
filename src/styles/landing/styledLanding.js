@@ -34,9 +34,11 @@ font-family: 'Patua One', cursive;
 
 
 export const DivFooter = styled.div`
-background-color: hsl(216, 53%, 9%) ;
-height: 70vh;
-padding: 10em 5em 2em 5em;
+ background-color: #372e4d !important;
+ color: white !important;
+height: 15em;
+padding: 5em 5em 2em 5em;
+margin-top: 4em;
 @media (max-width: 600px) {
    text-align: left ;
 height: 70em;
@@ -74,8 +76,11 @@ p{
 `
 
 export const  DivContCol = styled.div`
+margin-top: 2em;
 display: flex ;
 flex-direction: row ;
+text-align: center;
+margin-left: 4em;
 @media (max-width: 600px) {
    flex-direction: column;
    

@@ -1,6 +1,7 @@
 .imgPremio{
     width: 100% !important;
     margin: auto !important;
+    border-radius: 2em !important;
 }
 .premio{
     width: 45%;

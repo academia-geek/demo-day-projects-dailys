@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500 !important;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500 !important;1,400&display=swap");
 html {
+  background-color: #fbf3ff !important;
   margin: 0 !important;
   padding: 0;
   overflow: scroll !important;
@@ -18,7 +19,7 @@ html {
 .header .brand {
   font-family: "Patua One", cursive !important;
   color: #372e4d !important;
-  font-size: 20px !important;
+  font-size: 25px !important;
   font-weight: bold !important;
 }
 .header .buttons {
@@ -88,6 +89,9 @@ html {
   font-size: 15px !important;
   color: whitesmoke !important;
 }
+.main .init:hover {
+  background-color: #8f77e8 !important;
+}
 
 .coment {
   width: 50% !important;
@@ -96,7 +100,7 @@ html {
   color: #626262 !important;
   height: 15em !important;
   padding: 0.5em !important;
-  margin-top: 2em !important;
+  margin-top: 6em !important;
 }
 .coment p {
   font-family: "Lora", serif;
@@ -111,21 +115,28 @@ html {
 
 .card1 {
   width: 14em;
-  margin-right: 4em !important;
+  margin-right: 3em !important;
 }
 .card1 h4 {
   font-size: 18px !important;
-  font-family: "Lora", serif !important;
-  font-weight: bold !important;
+  font-family: "Patua One", cursive !important;
+  color: #1e1732 !important;
 }
 .card1 p {
   color: #626262 !important;
+  font-size: 16px;
 }
 
 .consejos-cards {
   text-align: left !important;
   display: flex !important;
   line-height: 16px !important;
+}
+
+.titulo-consejo {
+  margin-bottom: 2em;
+  border-radius: 8px;
+  margin-top: 2em;
 }
 
 .container-articulos {
@@ -137,6 +148,9 @@ html {
   scrollbar-width: none !important;
   /* Firefox */
   margin-top: 4em !important;
+}
+.container-articulos h4 {
+  font-family: "Patua One", cursive !important;
 }
 @media (max-width: 720px) {
   .container-articulos {
@@ -153,6 +167,52 @@ html {
   width: 100% !important;
   background-color: #372e4d !important;
   height: 6em !important;
+}
+
+.brand2 {
+  font-family: "Patua One", cursive !important;
+  color: white;
+  font-size: 36px !important;
+  font-weight: bold !important;
+  float: left;
+  position: absolute;
+  left: 4em;
+}
+
+.log1 {
+  border-style: none;
+  width: 4.5em;
+  margin-right: 1em;
+  background-color: #e2e2e2 !important;
+  height: 30px;
+  font-weight: bold !important;
+  border-radius: 5px !important;
+}
+
+.sign1 {
+  border-style: none;
+  width: 4.5em;
+  margin-right: 1em;
+  background-color: #5c436c !important;
+  height: 30px;
+  font-weight: bold !important;
+  border-radius: 5px !important;
+}
+
+.sign1:hover {
+  background-color: #ad9ce9 !important;
+}
+
+.log1:hover {
+  background-color: #cbbdd5 !important;
+}
+
+.link-log {
+  color: var(--color-sub-text) !important;
+}
+
+.link-sign {
+  color: white !important;
 }
 
 /*# sourceMappingURL=stylesLanding.css.map */

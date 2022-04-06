@@ -328,6 +328,7 @@ body {
     border: 2px solid #64549d;
 }
 
+
 .botonpers:hover {
     background: #7461b7;
     color: var(--color-white);
@@ -375,17 +376,28 @@ body {
 
 .imprimir {
     background: var(--fond-button);
-    color: white;
+    color: white !important;
     margin: 15px;
     border: 2px solid lightgrey;
     border-radius: 5px;
-    padding: 5px;
+    padding: 0.5em;
+    width: 8em;
 }
 .imprimir2 {
     background: var(--fond-button);
-    color: white;
+    color: white !important;
     margin: 15px;
     border: 2px solid lightgrey;
     border-radius: 5px;
-    padding: 9px;
+    padding: 0.7em;
+    width: 4em;
+}
+
+.olimpica{
+    width: 5em;
+    margin: auto;
+    position: relative;
+    top: -50px;
+    left: 270px;
+    border-radius: 50px;
 }
