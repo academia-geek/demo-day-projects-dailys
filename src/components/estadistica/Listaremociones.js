@@ -13,8 +13,6 @@ export const Listaremociones = () => {
     const [sad, setSad] = useState(0)
     const [hedied, sehedied] = useState(0)
 
-    // const dispatch = useDispatch();
-
     const { task } = useSelector(store => store.tarea);
 
     let feliz = 0

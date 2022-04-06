@@ -18,6 +18,7 @@ export const TabTask = () => {
         conteo()
     }, [task])
 
+    console.log(task)
 
     const users = JSON.parse(localStorage.getItem('users'));
     const codigo = users.codigo
