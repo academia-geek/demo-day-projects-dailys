@@ -1,5 +1,5 @@
 <h1 align="center">Hola 👋, Somos Dailys</h1>
-<h3 align="center">Un grupo de nuevos desarroladores Front-end</h3>
+
 
 
 ## Dailys
