@@ -8,6 +8,7 @@ import { Rendimiento } from './Rendimiento';
 import { TabTask } from './TabTask';
 import "../../styles/estadistica/est.css"
 import { Link } from 'react-router-dom';
+import {HomeComponent} from '../Navbar/Home/HomeComponent'
 
 export const Estadistica = () => {
 
@@ -20,7 +21,7 @@ export const Estadistica = () => {
     
     return (
         <div>
-            
+            <HomeComponent />
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li className="nav-item" role="presentation">
                     <button className="nav-link active botones"

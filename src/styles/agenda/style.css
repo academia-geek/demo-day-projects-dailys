@@ -229,13 +229,13 @@
     }
 
     .juju {
-        margin: 0 !important;
-        width: 100% !important;
+        margin: 0 auto !important;
+        /* width: 100% !important; */
     }
 
     .cardsdf {
         position: inherit !important;
-        width: 100% !important;
+        /* width: 100% !important; */
     }
 
     .contsAgenda {
