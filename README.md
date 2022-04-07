@@ -25,7 +25,6 @@ height="40"/> </a> </p>
 * **Carlos Medina** - *Desarrollador Front-end* - [Carlos Medina](https://github.com/lordkitsune28)
 * **Jefferson Garcia** - *Desarrollador Front-end* - [Jefferson Garcia](https://github.com/jeffcraftje)
 
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
 
 
 ⌨️ con ❤️ por [Paola Barreto](https://github.com/Paolavbm), [Jefferson Garcia](https://github.com/jeffcraftje), [Carlos Medina](https://github.com/lordkitsune28)😊
