@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { Table } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
 import "../../styles/estadistica/est.css"
 
 export const TabTask = () => {
+    const dispatch = useDispatch();
+
+    const [estado, setEstado] = useState()
     const [compl, setCompl] = useState(0)
     const [nocompl, setNocompl] = useState(0)
     const [total, setTotal] = useState(0)
+    const tareasusers = {}
 
     const { task } = useSelector(store => store.tarea)
 
@@ -13,7 +18,10 @@ export const TabTask = () => {
         conteo()
     }, [task])
 
+    console.log(task)
+
     const users = JSON.parse(localStorage.getItem('users'));
+    const codigo = users.codigo
 
 
     const conteo = () => {
@@ -26,12 +34,12 @@ export const TabTask = () => {
         setTotal(datas)
     }
     return (
-        <div>
+        <div className='p-5'>
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                 <li className="nav-item" role="presentation">
-                    <button className="nav-link active botones" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Todo</button>
+                    <button class="nav-link active botones" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Todo</button>
                 </li>
-                <li className="nav-item" role="presentation">
+                <li class="nav-item" role="presentation">
                     <button className="nav-link botones" id="v-pills-completado-tab" data-bs-toggle="pill" data-bs-target="#v-pills-completado" type="button" role="tab" aria-controls="v-pills-completado" aria-selected="false">Completados</button>
                 </li>
                 <li class="nav-item" role="presentation">
@@ -39,8 +47,8 @@ export const TabTask = () => {
                 </li>
             </ul>
             <div className="tab-content" id="pills-tabContent">
-                <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <table className="tab-pane table fade show" id="v-pills-todo" role="tabpanel" aria-labelledby="v-pills-todo-tab">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <table className="table">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
@@ -72,7 +80,7 @@ export const TabTask = () => {
                     </table>
                 </div>
                 <div className="tab-pane fade" id="v-pills-completado" role="tabpanel" aria-labelledby="v-pills-completado-tab">
-                    <table className="table">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
@@ -104,7 +112,7 @@ export const TabTask = () => {
                     </table>
                 </div>
                 <div className="tab-pane fade" id="v-pills-ncompletado" role="tabpanel" aria-labelledby="v-pills-ncompletado-tab">
-                    <table className="table">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>Nombre</th>
