@@ -8,6 +8,7 @@ import App from '../containers/App';
 import DasRouterUser from './DasRouterUser';
 import PrivateRoutes from './PrivateRoutes';
 import PublicRoutes from './PublicRoutes';
+import { Load } from '../components/Load';
 
 const AppRouter = () => {
 
@@ -27,7 +28,11 @@ const AppRouter = () => {
         })
     }, []);
     if (checking) {
-        return <h1>Espere...</h1>;
+        return (
+            <div className="d-flex justify-content-center">
+            <Load />
+            </div>
+        )
     }
     return (
         <BrowserRouter>
