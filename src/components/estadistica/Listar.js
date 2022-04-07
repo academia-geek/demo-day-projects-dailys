@@ -23,10 +23,7 @@ export const Listar = () => {
     
 
     const conteo = () => {
-        let datas = task.filter(user => user.idUser === users.codigo);
-        console.log(datas)
         task.forEach(element => {
-            
             const { evalue, idUser} = element
             if (evalue === "Completado" && codigo === idUser) {
                 completado++

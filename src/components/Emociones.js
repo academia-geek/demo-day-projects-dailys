@@ -41,6 +41,7 @@ const Emociones = () => {
         asnwer: Number(asnwer),
         name: "emociones"
     }
+    
 
     const enviarInfo = (e) => {
         dispatch(registertarea(informa))
