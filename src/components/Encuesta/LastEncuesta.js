@@ -15,6 +15,8 @@ export const LastEncuesta = () => {
 
     ////data de heroku 
     const [dataQ, setQuiz] = useState([])
+    const fecha = new Date();
+    const day = fecha.getUTCDate();
 
     const getData = () => {
         axios.get(url)
@@ -31,12 +33,11 @@ export const LastEncuesta = () => {
     const { task } = useSelector(store => store.tarea);
     const uids = JSON.parse(localStorage.getItem("users"))
     let datas = task.filter(user => user.idUser === uids.codigo);
-    const fit = datas.filter(use => use.quizDs === 0)
-
-
-
-    console.log(datas)
-
+    const fit = datas.filter(use => {
+        if(use.quizDs === 0 && use.dia === day){
+            return use
+        }
+    })
 
     //agregar cambios firebase
     const [eva, setEva] = useState(0)
@@ -78,8 +79,6 @@ export const LastEncuesta = () => {
     const guardarDta = (e) => {
         e.preventDefault()
         const numer = Number(eva) + Number(eva1) + Number(eva2) + Number(eva3) + Number(eva4)
-
-
         if (numer >= 15) {
             mensaje2 = '¡Urgente!'
             console.log(mensaje)

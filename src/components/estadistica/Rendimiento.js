@@ -10,7 +10,7 @@ export const Rendimiento = () => {
 
     const fecha = new Date();
     const month = fecha.getUTCMonth() + 1;
-    const day = fecha.getUTCDate() - 1;
+    const day = fecha.getUTCDate();
     const [compl, setCompl] = useState(0)
     const [compl1, setCompl1] = useState(0)
     const [compl2, setCompl2] = useState(0)
