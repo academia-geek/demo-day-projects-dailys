@@ -11,7 +11,7 @@ Dailys es un asistente virtual que ayuda al usuario a organizar mejor su tiempo 
 
 
 ### Wiki 📋
-https://github.com/academia-geek/demo-day-projects-dailys/wiki
+[desplieque de wiki](https://github.com/academia-geek/demo-day-projects-dailys/wiki)
 
 
 <h3 align="left">Lenguajes y herramientas:</h3>
