@@ -43,8 +43,8 @@ export const Listar = () => {
                 label: '# of Votes',
                 data: [compl, nocompl],
                 backgroundColor: [
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 99, 132, 0.2)'
+                    '#ad9ce9',
+                    '#4D3582'
                 ],
                 borderColor: [
                     'rgba(54, 162, 235, 1)',

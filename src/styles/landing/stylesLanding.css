@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Lora:ital@1&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500 !important;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arsenal:ital@1&family=Domine&family=Oswald:wght@300&family=Patua+One&family=Raleway:wght@200&family=Roboto:wght@500&family=Rubik:ital,wght@0,500 !important;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=Open+Sans&family=Patua+One&display=swap");
 html {
-  background-color: #fbf3ff !important;
+  background-color: #F4F3FF !important;
   margin: 0 !important;
   padding: 0;
   overflow: scroll !important;
@@ -26,6 +27,7 @@ html {
   display: flex !important;
   position: absolute !important;
   right: 1.5em !important;
+  font-family: "Patua One", cursive !important;
 }
 .header .buttons .log {
   border-style: none !important;
@@ -35,7 +37,6 @@ html {
   color: var(--color-sub-text);
   width: 5em !important;
   height: 30px;
-  font-weight: bold !important;
 }
 .header .buttons .sign {
   border-style: none !important;
@@ -44,7 +45,6 @@ html {
   background-color: #5c436c !important;
   color: white !important;
   width: 5em !important;
-  font-weight: bold !important;
 }
 
 .imagen-bienvenida {
@@ -195,7 +195,6 @@ html {
   margin-right: 1em;
   background-color: #5c436c !important;
   height: 30px;
-  font-weight: bold !important;
   border-radius: 5px !important;
 }
 

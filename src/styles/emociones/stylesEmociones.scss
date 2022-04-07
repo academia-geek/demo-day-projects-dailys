@@ -6,7 +6,7 @@
         display:inline-block;
         width: 50%;
         margin: auto;
-
+       
         .caritas{
             border-style: none;
             background-color: inherit;
@@ -16,10 +16,16 @@
             &:focus{
                 background-color:#d2c3f3;
             }
+
+            
         }
     }
    
-
+    h2{
+        font-family: 'Patua One', cursive !important;
+        color: #372e4d  !important;
+        font-size: 28px;
+    }
   
 }
 

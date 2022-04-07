@@ -7,7 +7,7 @@ export const Premio = () => {
     const componentRef = useRef();
     return (
         <div>
-            <Link to="/perfil">Volver</Link>
+            <button className='volver'><Link to="/perfil" className='volverLetra'>Volver</Link></button>
             <div className="simssdf">
                 <img src="https://stsa.org.hk/wp-content/uploads/2021/05/gold-trophy-icon-golden-goblet-with-star-reward-icon-white-isolated_138676-497.jpg" alt="" className="imgres"></img>
                 <ComponentToPrint ref={componentRef} />
