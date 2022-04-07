@@ -19,7 +19,7 @@ function DasRouterUser() {
             <Route path="/estadistica" element={<Estadistica />} />
             <Route path="/Emociones" element={<Emociones />} />
             <Route path="/Premio" element={<Premio />} />
-            {/* <Route path="*" element={<Navigate to="/" />} /> */}
+            <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     )
 }

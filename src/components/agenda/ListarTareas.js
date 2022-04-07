@@ -30,7 +30,7 @@ export const ListarTareas = () => {
   const [daas, setDaas] = useState(0)
   const [codigos, setCodigos] = useState("")
   const fecha = new Date();
-  const day = fecha.getUTCDate() - 1;
+  const day = fecha.getUTCDate();
   const det = data.filter(user => user.dia === day)
 
   const buscar = (codigo) => {
