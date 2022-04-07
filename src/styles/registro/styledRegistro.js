@@ -18,6 +18,7 @@ h3{
 label{
     font-weight: bold;
     color: #77767c;
+    font-size: 18px;
 }
 
 @media (max-width: 720px) {

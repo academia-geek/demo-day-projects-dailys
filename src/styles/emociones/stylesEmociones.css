@@ -17,6 +17,11 @@
 .subDivEmociones .emociones .caritas:focus {
   background-color: #d2c3f3;
 }
+.subDivEmociones h2 {
+  font-family: "Patua One", cursive !important;
+  color: #372e4d !important;
+  font-size: 28px;
+}
 
 .boton-guardar {
   text-align: center;
@@ -48,6 +53,10 @@ input[type=radio] + label > img {
 
 .cat {
   border-radius: 100%;
+}
+
+.modal {
+  text-align: center;
 }
 
 .aceptar {

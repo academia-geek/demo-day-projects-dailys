@@ -56,7 +56,10 @@
 
 .title-Agenda {
     text-align: center;
-
+    font-family: 'Patua One', cursive !important; 
+    font-size: 25px;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
 }
 
 .inputs {
@@ -70,9 +73,14 @@
     text-align: center;
 }
 
+.input-arreglo{
+    width: 16em !important;
+}
+
 .botonagenda {
     width: 35% !important;
     margin: 15px auto !important;
+    font-family: 'Patua One', cursive !important;
 }
 
 .juju {
@@ -113,7 +121,7 @@
 .botonAgenda {
     width: 140px !important;
     margin: 35px 0px !important;
-    background: #64549d !important;
+   background-color: #4D3582 !important;
     color: var(--color-white) !important;
     border: 2px solid #64549d !important;
     text-align: center !important;
@@ -145,12 +153,16 @@
 
 .botoneditars {
     margin: 34px 22px !important;
+    font-family: 'Patua One', cursive !important; 
 }
 
 .opcionesaged {
-    width: 30% !important;
-    margin-left: 63%;
-
+    width: 28.5% !important;
+    margin-left: 70%;
+    border-radius: 15px;
+    background-color: rgb(218, 197, 227);
+   
+   
 }
 
 .botonAgen {
@@ -159,27 +171,41 @@
     background-color: inherit !important;
     border: none !important;
     color: #372e4d !important;
+   font-size: 14.8px !important;
+    border-radius: 15px !important;
+    font-family: 'Patua One', cursive !important; 
+    outline:none !important;
 }
 
-.botonAgen:hover {
 
-    background-color: #372e4d !important;
-    color: antiquewhite !important;
-}
-
+.botonAgen:focus{
+   
+    background-color: #4D3582 !important;
+    color: white !important;
+    outline:none !important;
+    box-shadow: none !important;
+ }
 .botonAgend {
+    border-radius: 15px !important;
     background-color: inherit !important;
     border: none !important;
-    color: #4D3582 !important;
-
+    color: #372e4d !important;
+    font-family: 'Patua One', cursive !important; 
     /* background-color:#4D3582!important; */
-
+    font-size: 14.8px !important;
+    
+    outline:none !important
 }
 
-.botonAgend:hover {
 
-    background-color: #372e4d !important;
-    color: antiquewhite !important;
+
+.botonAgend:focus{
+
+    
+    background-color: #4D3582 !important;
+    color: white !important;
+    outline:none !important;
+    box-shadow: none !important;
 }
 
 .botonAgendss {
@@ -200,15 +226,18 @@
 
 .botonagenda {
     text-align: center;
+
 }
 
 
 .titulo-tarea {
     color: #372e4d !important;
+    font-family: 'Patua One', cursive !important; 
 }
 
 .sub {
     color: #626262 !important;
+    font-family: 'Patua One', cursive !important; 
 }
 
 
@@ -260,11 +289,12 @@
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 700px) {
     .botonagenda {
         width: 75%;
         margin: auto !important;
     }
+
     .inputs{
         width: 90% !important;
         margin: 0 !important;
@@ -273,6 +303,7 @@
         width: 92% !important;
         margin: auto !important;
     }
+
     .botonAgendss {
         margin: 15px 0 0 0 !important;
     }
@@ -362,4 +393,70 @@
         margin: 0px !important;
         width: 50% !important;
     }
+    .form-agenda{
+        width: 100% !important;
+    }
+
+    .content-Agenda2 {
+        
+        width: 100% !important;
+       
+    }
+}
+
+.content-Agenda {
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+    padding: 1em;
+ 
+}
+
+/* .content-Agenda2 {
+    background-color: white;
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+    padding: 1em;
+} */
+.content-Agenda{
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+}
+.content-Agenda2{
+    background-color: white;
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+    padding: 1em;
+}
+
+.form-label {
+   font-size: 18px !important;
+}
+
+.boton00 {
+    margin-right: 2em;
+    width: 5em !important;
+    background-color: #A792D6 !important;
+    border: none !important;
+}
+
+.boton01 {
+    width: 5em !important;
+    background-color: #4D3582 !important;
+    border: none !important;
+}
+
+.agenda-vacia{
+    margin-top: 4em;
+    text-align: center;
+    color: #626262 !important;
+    font-family: 'Patua One', cursive !important; 
+    margin-bottom: 3em;
 }

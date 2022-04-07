@@ -70,12 +70,12 @@ export const Alarma = () => {
                 </Form>
             </div>
             <div className="listarAlarmas">
-                <Table striped bordered hover variant="dark">
-                    <thead>
+                <Table striped bordered hover>
+                    <thead className='head'>
                         <tr>
                             <th>Hora</th>
                             <th>Fecha</th>
-                            <th>Accion</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -83,10 +83,11 @@ export const Alarma = () => {
                             (alarm) ?
                                 (
                                     alarm.map((element, index) => (
-                                        <tr key={index}>
+
+                                        <tr key={index} className="alarma">
                                             <td>{element.hora}:{element.minutos}</td>
                                             <td>{element.dia}/{element.mes}/{element.año}</td>
-                                            <td>{element.nombre}</td>
+                                         
                                         </tr>
                                     )
                                     )
