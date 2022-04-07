@@ -2,7 +2,7 @@
 <h3 align="center">Un grupo de nuevos desarroladores Front-end</h3>
 
 
-## Dailys 🚀
+## Dailys
 
 Dailys es un asistente virtual online que ayuda al usuario a organizar mejor su tiempo y hacer uso eficiente del mismo, para así aumentar las posibilidades de cumplimiento de tareas, deberes y objetivos. Su principal función es la del gestionamiento de tareas. Dailys ofrece al usuario diferentes herramientas que le facilitarán aumentar su productividad y de esta manera lograr que el usuario se sienta mas satisfecho con su rendimiento.
 
