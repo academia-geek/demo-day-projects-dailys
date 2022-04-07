@@ -25,7 +25,7 @@ export const Alarma = () => {
         mes: "",
         año: "",
         hora: "",
-        minutos: ""        
+        minutos: ""
     })
 
     const red = () => {
@@ -33,11 +33,6 @@ export const Alarma = () => {
             dispatch(ListAlarmSync())
         }
     }
-
-    const alrms = () =>{
-
-    }
-
 
     const guarda = () => {
         setAñadir({
@@ -88,7 +83,6 @@ export const Alarma = () => {
                             (alarm) ?
                                 (
                                     alarm.map((element, index) => (
-
                                         <tr key={index}>
                                             <td>{element.hora}:{element.minutos}</td>
                                             <td>{element.dia}/{element.mes}/{element.año}</td>

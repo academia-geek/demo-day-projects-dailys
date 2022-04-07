@@ -51,7 +51,7 @@ export const Temporizador = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const [values, handleInputChange, reset] = useForm({
+    const [values, handleInputChange] = useForm({
         hor: 0,
         min: 0,
         seg: 0

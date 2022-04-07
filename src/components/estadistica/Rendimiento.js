@@ -11,8 +11,6 @@ export const Rendimiento = () => {
     const fecha = new Date();
     const month = fecha.getUTCMonth() + 1;
     const day = fecha.getUTCDate() - 1;
-    const year = fecha.getUTCFullYear();
-    const semana = fecha.getDay()
     const [compl, setCompl] = useState(0)
     const [compl1, setCompl1] = useState(0)
     const [compl2, setCompl2] = useState(0)
@@ -105,6 +103,7 @@ export const Rendimiento = () => {
             return dato
         }
     })
+    
     let complet = 0
     let nocomplet = 0
 
@@ -184,7 +183,7 @@ export const Rendimiento = () => {
 
     // -----------------------------grafica de barras
     const datas = {
-        labels: ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"],
+        labels: ["Viernes", "Sabado", "Domingo", "Lunes", "Martes", "Miercoles", "Jueves"],
         datasets: [{
             label: "completados",
             backgroundColor: "rgba(54, 162, 235, 0.2)",
