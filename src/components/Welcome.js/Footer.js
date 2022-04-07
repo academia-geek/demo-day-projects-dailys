@@ -1,18 +1,12 @@
 import React from 'react'
-import {DivFooter, ImgLogo, DivCols, DivContCol, DivColumnFoo, DivFlex, ImgRedes} from  "../../styles/landing/styledLanding"
+import {DivFooter, DivCols, DivContCol, DivFlex, ImgRedes} from  "../../styles/landing/styledLanding"
 import "../../styles/landing/stylesLanding.css"
 
 const Footer = () => {
     
-  return (
-   
-          
+  return (   
     <DivFooter>
-     
-    
                   <h2 className='brand2'>  Dailys</h2>
-      
-
             <DivContCol>
 
             <DivCols>

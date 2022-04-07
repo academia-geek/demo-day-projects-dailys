@@ -1,22 +1,22 @@
-import { red } from '@material-ui/core/colors';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Form, Button, Modal } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { url } from '../../data/url';
-import { editAsyn, listTasks, registertarea } from '../../redux/actions/actionTask';
+import { editAsyn, listTasks } from '../../redux/actions/actionTask';
 import { HomeComponent } from '../Navbar/Home/HomeComponent'
 
 export const LastEncuesta = () => {
     //traer la data heruku y firebase
-    const [g, setG] = useState(0)
+    let g = 0
     const [show, setShow] = useState(false);
     const [mensaje, setMensaje] = useState('');
 
-    const handleClose = () => setShow(false);
 
     ////data de heroku 
     const [dataQ, setQuiz] = useState([])
+    const fecha = new Date();
+    const day = fecha.getUTCDate();
 
     const getData = () => {
         axios.get(url)
@@ -33,12 +33,11 @@ export const LastEncuesta = () => {
     const { task } = useSelector(store => store.tarea);
     const uids = JSON.parse(localStorage.getItem("users"))
     let datas = task.filter(user => user.idUser === uids.codigo);
-    const fit = datas.filter(use => use.quizDs === 0)
-
-
-
-    console.log(datas)
-
+    const fit = datas.filter(use => {
+        if(use.quizDs === 0 && use.dia === day){
+            return use
+        }
+    })
 
     //agregar cambios firebase
     const [eva, setEva] = useState(0)
@@ -75,14 +74,11 @@ export const LastEncuesta = () => {
     }
     const [añadir, setAñadir] = useState({})
 
-    let numer
     let mensaje2
 
     const guardarDta = (e) => {
         e.preventDefault()
         const numer = Number(eva) + Number(eva1) + Number(eva2) + Number(eva3) + Number(eva4)
-
-
         if (numer >= 15) {
             mensaje2 = '¡Urgente!'
             console.log(mensaje)
