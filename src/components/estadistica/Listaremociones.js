@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import "../../styles/estadistica/est.css"
@@ -79,10 +79,10 @@ export const Listaremociones = () => {
     }
     useEffect(() => {
         conteo()
-    }, [task])
+    }, [task, dta])
   return (
     <div>
-        <div claName="grafica">
+        <div className="grafica">
           <Pie data={data} options={opciones}/>
           </div>
     </div>
