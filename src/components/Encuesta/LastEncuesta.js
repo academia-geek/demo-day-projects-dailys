@@ -1,3 +1,4 @@
+import { red } from '@material-ui/core/colors';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Form, Button, Modal } from 'react-bootstrap';
@@ -390,7 +391,7 @@ export const LastEncuesta = () => {
                             datas.map((e, i) => ( 
 
                                 <div key={i} className='resultas' > 
-                                    <div className='tablita'> 
+                                    <div className='tablita' > 
 
                                         <h5 className='name'>{e.actividad}</h5> 
 
