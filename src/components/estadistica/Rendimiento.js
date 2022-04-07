@@ -10,7 +10,9 @@ export const Rendimiento = () => {
 
     const fecha = new Date();
     const month = fecha.getUTCMonth() + 1;
-    const day = fecha.getUTCDate();
+    const day = fecha.getUTCDate() - 1;
+    const year = fecha.getUTCFullYear();
+    const semana = fecha.getDay()
     const [compl, setCompl] = useState(0)
     const [compl1, setCompl1] = useState(0)
     const [compl2, setCompl2] = useState(0)
@@ -103,7 +105,6 @@ export const Rendimiento = () => {
             return dato
         }
     })
-    
     let complet = 0
     let nocomplet = 0
 
@@ -183,18 +184,18 @@ export const Rendimiento = () => {
 
     // -----------------------------grafica de barras
     const datas = {
-        labels: ["Viernes", "Sabado", "Domingo", "Lunes", "Martes", "Miercoles", "Jueves"],
+        labels: ["lunes", "martes", "miercoles", "jueves", "viernes", "sabado", "domingo"],
         datasets: [{
             label: "completados",
-            backgroundColor: "rgba(54, 162, 235, 0.2)",
-            borderColor: "rgba(54, 162, 235, 1)",
+            backgroundColor: "#b99fdf",
+            borderColor: "#b99fdf",
             borderWidth: 1,
             data: [compl6, compl5, compl4, compl3, compl2, compl1, compl]
         }, {
 
             label: "no completados",
-            backgroundColor: "rgba(255, 99, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: "#f3bbff",
+            borderColor: '#f3bbff',
             borderWidth: 1,
             data: [nocompl6, nocompl5, nocompl4, nocompl3, nocompl2, nocompl1, nocompl]
         }]
@@ -215,9 +216,9 @@ export const Rendimiento = () => {
     }, [task])
 
     return (
-        <div>
+        <div className='p-5'>
             <h2 className='mt-5'>Rendimiento de los ultimos 7 dias</h2>
-            <div >
+            <div className='pb-5' >
                 <Bar options={options} data={datas} />
             </div>
         </div>

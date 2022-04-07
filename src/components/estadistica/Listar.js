@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import "../../styles/estadistica/est.css"
@@ -7,6 +7,7 @@ import "../../styles/estadistica/est.css"
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const Listar = () => {
+    const dispatch = useDispatch();
 
     const [compl, setCompl] = useState(0)
     const [nocompl, setNocompl] = useState(0)
@@ -15,6 +16,7 @@ export const Listar = () => {
 
     useEffect(() => { conteo() }, [task])
 
+    console.log(task)
     let completado = 0
     let nocompletado = 0
 
@@ -23,7 +25,10 @@ export const Listar = () => {
     
 
     const conteo = () => {
+        let datas = task.filter(user => user.idUser === users.codigo);
+        console.log(datas)
         task.forEach(element => {
+            
             const { evalue, idUser} = element
             if (evalue === "Completado" && codigo === idUser) {
                 completado++
@@ -43,12 +48,12 @@ export const Listar = () => {
                 label: '# of Votes',
                 data: [compl, nocompl],
                 backgroundColor: [
-                    '#ad9ce9',
-                    '#4D3582'
+                    '#b99fdf',
+                    '#f3bbff'
                 ],
                 borderColor: [
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 99, 132, 1)'
+                    '#b99fdf',
+                    '#f3bbff'
 
                 ],
                 borderWidth: 1,
@@ -64,7 +69,9 @@ export const Listar = () => {
     return (
         <div>
             <div className="grafica">
-                <Pie data={data} options={opciones} />
+                <div className="w-50 mx-auto">
+                <Pie className='w-100' data={data} options={opciones} />
+                </div>
             </div>
         </div>
     )

@@ -7,19 +7,11 @@ body{
     color: white !important;
 }
 
-.botones{
-  color: gray !important;
+button{
+    color: #47525E !important;
 }
 
 .grafica{
-    width:25%;
+    width: 80rem !important;
     margin: auto !important;
-}
-
-.lulu{
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 2em !important;
-    margin-bottom: 0;
-    list-style: none;
 }
