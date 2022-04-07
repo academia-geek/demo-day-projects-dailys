@@ -143,8 +143,8 @@ padding-top: 2em;
 }
 
 .boton {
-    background: var(--fond-button);
-    border: 2px solid var(--fond-button);
+    background: var(--fond-button) !important;
+    border: 2px solid var(--fond-button) !important;
     width: 250px;
     height: 40px;
     font-size: 25px;
@@ -165,15 +165,15 @@ padding-top: 2em;
 .boton1 {
     margin: 15px;
     width: 230px;
-    background: #9e95b8;
-    border: #9e95b892;
+    background: #9e95b8 !important;
+    border: #9e95b892 !important;
 }
 
 .boton2 {
     margin: 15px;
     width: 230px;
-    background: #7d5b92;
-    border: #7d5b92;
+    background: #7d5b92 !important;
+    border: #7d5b92 !important;
 }
 
 a {
@@ -199,8 +199,13 @@ a {
     margin: 15px;
 }
 
+.head{
+    background-color: #372e4d !important;
+    color: white !important;
+}
+
 .listarAlarmas {
-    width: 85%;
+    width: 55%;
     margin: 15px auto;
 }
 
@@ -290,7 +295,7 @@ body {
 
 .botonlistes {
     background: #64549d;
-    color: var(--color-white);
+    color: var(--color-white) !important;
     border: 2px solid #64549d;
     width: 210px;
     margin: auto !important;
@@ -323,14 +328,14 @@ body {
 
 .botonpers {
     margin-left: 40% !important;
-    background: #64549d;
-    color: var(--color-white);
+    background: #64549d !important;
+    color: var(--color-white) !important;
     border: 2px solid #64549d;
 }
 
 
 .botonpers:hover {
-    background: #7461b7;
+    background: #7461b7 !important;
     color: var(--color-white);
     border: 2px solid #7461b7;
 }
@@ -375,7 +380,8 @@ body {
 }
 
 .imprimir {
-    background: var(--fond-button);
+    
+background-color: #5c436c;;
     color: white !important;
     margin: 15px;
     border: 2px solid lightgrey;
@@ -384,7 +390,8 @@ body {
     width: 8em;
 }
 .imprimir2 {
-    background: var(--fond-button);
+   
+background-color: #5c436c;;
     color: white !important;
     margin: 15px;
     border: 2px solid lightgrey;
@@ -400,4 +407,19 @@ body {
     top: -50px;
     left: 270px;
     border-radius: 50px;
+}
+
+.volverLetra{
+    color: white !important;
+}
+
+.volver{
+border-style: none;
+width: 4em;
+height: 2em;
+margin-left: 1.3em;
+border-radius: 5px;
+margin-top: 1em;
+
+background-color: #5c436c;
 }

@@ -5,6 +5,7 @@ import Cualidades from './Welcome.js/Cualidades'
 import Header from './Welcome.js/Header'
 import "../styles/landing/stylesLanding.css"
 import Footer from './Welcome.js/Footer'
+import { Link } from 'react-router-dom'
 
 const WelcomePage = () => {
   return (
@@ -18,7 +19,7 @@ const WelcomePage = () => {
         <p>
           En Dailys encontrarás diferentes herramientas que te ayudarán en el día a día a ser más organizado y mejorar tú rendimiento para el cumplimiento de actividades y metas.
         </p>
-        <button className='init'>Comenzar</button>
+        <Link to="/registro"><button className='init'> Comenzar</button></Link>
       </div>
       <Cualidades />
       <Comentarios />

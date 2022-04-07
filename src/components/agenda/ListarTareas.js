@@ -105,7 +105,7 @@ export const ListarTareas = () => {
   return (
     <div className='juju'>
       <div className="opcionesaged">
-        <Button className="botonAgen" onClick={cargarDataDay}>Actividades de hoy</Button>
+        <Button className="botonAgen" active={false} onClick={cargarDataDay}>Actividades de hoy</Button>
         <Button className="botonAgend" onClick={cargarDate}>Todas las actividades</Button>
       </div>
       <div>
@@ -172,7 +172,10 @@ export const ListarTareas = () => {
                   <p>Datos no disponibles</p>
               }
             </div>
-          ) : <p>NO hay actividades en la agenda</p>
+          ) : <div className='agenda-vacia'>
+            <h3>No hay actividades registradas</h3>
+            <img alt='sin resultados' src='https://res.cloudinary.com/paolavbm/image/upload/v1649338537/documento_tv30cb.png' width={100}/>
+          </div>
         }
       </div>
 

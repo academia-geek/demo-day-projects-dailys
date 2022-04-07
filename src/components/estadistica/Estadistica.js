@@ -18,9 +18,9 @@ export const Estadistica = () => {
 
 
     return (
-        <div>
+        <div className='estadistica-tarea'> 
             <HomeComponent />
-            <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <ul className="nav nav-pills mb-3 lulu" id="pills-tab" role="tablist">
                 <li className="nav-item" role="presentation">
                     <button className="nav-link active botones"
                         id="pills-total-tab"
