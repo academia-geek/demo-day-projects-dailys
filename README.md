@@ -6,12 +6,12 @@
 
 Dailys es un asistente virtual que ayuda al usuario a organizar mejor su tiempo y hacer uso eficiente del mismo, para así aumentar las posibilidades de cumplimiento de tareas, deberes y objetivos. Su principal función es la del gestionamiento de tareas. Dailys ofrece al usuario diferentes herramientas que le facilitarán aumentar su productividad y de esta manera lograr que el usuario se sienta mas satisfecho con su rendimiento.
 
-## Despliegue 🚀
-
+### Despliegue 🚀
+[Despliegue de la aplicación](https://github.com/academia-geek/demo-day-projects-dailys/wiki)
 
 
 ### Wiki 📋
-[desplieque de wiki](https://github.com/academia-geek/demo-day-projects-dailys/wiki)
+[Despliegue de la wiki](https://github.com/academia-geek/demo-day-projects-dailys/wiki)
 
 
 <h3 align="left">Lenguajes y herramientas:</h3>
