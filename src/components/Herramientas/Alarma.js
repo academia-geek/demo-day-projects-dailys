@@ -83,12 +83,8 @@ export const Alarma = () => {
                             (alarm) ?
                                 (
                                     alarm.map((element, index) => (
-<<<<<<< HEAD
 
                                         <tr key={index} className="alarma">
-=======
-                                        <tr key={index}>
->>>>>>> e84c27dece8916f9134ee376e0b7c50662990d18
                                             <td>{element.hora}:{element.minutos}</td>
                                             <td>{element.dia}/{element.mes}/{element.año}</td>
                                          
