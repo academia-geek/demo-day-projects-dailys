@@ -22,7 +22,7 @@ export const HomeComponent = () => {
                 </div>
                 <div className="nav-sg d1">
                     <Link to="/home">
-                        <h1 className="title" >Inicio</h1>
+                        <h1 className="title" >Agenda</h1>
                     </Link>
                 </div>
                 <div className="nav-sg d6"> 

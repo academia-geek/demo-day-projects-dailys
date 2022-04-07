@@ -1,19 +1,17 @@
-import { red } from '@material-ui/core/colors';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Form, Button, Modal } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { url } from '../../data/url';
-import { editAsyn, listTasks, registertarea } from '../../redux/actions/actionTask';
+import { editAsyn, listTasks } from '../../redux/actions/actionTask';
 import { HomeComponent } from '../Navbar/Home/HomeComponent'
 
 export const LastEncuesta = () => {
     //traer la data heruku y firebase
-    const [g, setG] = useState(0)
+    let g = 0
     const [show, setShow] = useState(false);
     const [mensaje, setMensaje] = useState('');
 
-    const handleClose = () => setShow(false);
 
     ////data de heroku 
     const [dataQ, setQuiz] = useState([])
@@ -75,7 +73,6 @@ export const LastEncuesta = () => {
     }
     const [añadir, setAñadir] = useState({})
 
-    let numer
     let mensaje2
 
     const guardarDta = (e) => {

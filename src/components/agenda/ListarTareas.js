@@ -27,7 +27,11 @@ export const ListarTareas = () => {
   const [enviarDatosModal, setEnviarDatosModal] = useState([])
   const [eva, setEva] = useState("")
   const [datas, setDatas] = useState({})
+  const [daas, setDaas] = useState(0)
   const [codigos, setCodigos] = useState("")
+  const fecha = new Date();
+  const day = fecha.getUTCDate() - 1;
+  const det = data.filter(user => user.dia === day)
 
   const buscar = (codigo) => {
     const traertarea = task.find(t => t.codigo === codigo)
@@ -87,74 +91,91 @@ export const ListarTareas = () => {
     nocompl: nocompl,
     total: compl + nocompl
   }));
+  const cargarDate = () =>{
+    setDaas(data)
+  }
+  const cargarDataDay = () =>{
+    setDaas(det)
+  }
 
-  useEffect(() => { conteo() }, [task])
+  useEffect(() => {
+    setDaas(det)
+    conteo()
+  }, [task])
   return (
     <div className='juju'>
       <div className="opcionesaged">
-        <Button className="botonAgen">Actividades de hoy</Button>
-        <Button className="botonAgend">Todas las actividades</Button>
+        <Button className="botonAgen" onClick={cargarDataDay}>Actividades de hoy</Button>
+        <Button className="botonAgend" onClick={cargarDate}>Todas las actividades</Button>
+      </div>
+      <div>
+        {
+          (daas.length !== 0) ? (
+            <div>
+              {
+                (daas) ?
+                  (
+                    daas.map((element, index) => (
+                      <div className="card mb-3 cardsdf tareaP" key={index}>
+                        <div className="row g-0">
+                          <div className="col-md-4 imgagendas">
+                            <img src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648913032/deberes_2_hl8dhm.png" className="imgAgenda img-fluid rounded-start" alt="..."></img>
+                          </div>
+                          <div className="col-md-10">
+                            <div className="cardsagenda">
+                              <div className="contsAgenda">
+                                <h5 className="titleagenda titulo-tarea"><b>Nombre: </b>{element.actividad}</h5>
+                                <h6 className="sub"><b>Fecha:</b> {element.dia}/{element.mes}/{element.año}</h6>
+                                <h6 className="sub"><b>Hora:</b> {element.hora}:{element.minutos}</h6>
+                              </div>
+                              <div className="busagnda">
+                                <Button className="botonAgenda" onClick={() => buscar(element.codigo)}>{element.evalue}</Button>
+                                <Button variant='light' className="botoneditars" onClick={() => editar(element.codigo)}><img className='ico' alt="editar" src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648826022/editar_ztqaqc.png" /> Editar</Button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <Modal show={show} onHide={handleClose} className='complet'>
+                          <Modal.Header closeButton>
+                            <Modal.Title>Editar completado</Modal.Title>
+                          </Modal.Header>
+                          <Modal.Body>
+
+                            <Form onSubmit={handleSubmit}>
+                              <Form.Check
+                                onClick={handleEvalue}
+                                type="radio"
+                                value="Completado"
+                                name={element.codigo}
+                                label={`Completado `}
+                                id={`disabled-default`}
+                              />
+                              <Form.Check
+                                onClick={handleEvalue}
+                                type="radio"
+                                value="No completado"
+                                name={element.codigo}
+                                label={`No completado`}
+                                id={`disabled-default`}
+                              />
+                              <div className='boton-modal-agenda'>
+                                <Button type="submit" className='boton-completadi' onClick={guarda}>Guardar cambios</Button>
+                              </div>
+                            </Form>
+
+                          </Modal.Body>
+                        </Modal>
+                      </div>
+                    )
+                    )
+                  ) :
+                  <p>Datos no disponibles</p>
+              }
+            </div>
+          ) : <p>NO hay actividades en la agenda</p>
+        }
       </div>
 
-      {
-        (data) ?
-          (
-            data.map((element, index) => (
-              <div className="card mb-3 cardsdf tareaP" key={index}>
-                <div className="row g-0">
-                  <div class="col-md-4 imgagendas">
-                    <img src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648913032/deberes_2_hl8dhm.png" className="imgAgenda img-fluid rounded-start" alt="..."></img>
-                  </div>
-                  <div className="col-md-10">
-                    <div className="cardsagenda">
-                      <div className="contsAgenda">
-                        <h5 className="titleagenda titulo-tarea"><b>Nombre: </b>{element.actividad}</h5>
-                        <h6 className="sub"><b>Fecha:</b> {element.dia}/{element.mes}/{element.año}</h6>
-                        <h6 className="sub"><b>Hora:</b> {element.hora}:{element.minutos}</h6>
-                      </div>
-                      <div className="busagnda">
-                        <Button className="botonAgenda" onClick={() => buscar(element.codigo)}>{element.evalue}</Button>
-                        <Button variant='light' className="botoneditars" onClick={() => editar(element.codigo)}><img className='ico' alt="editar" src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1648826022/editar_ztqaqc.png" /> Editar</Button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <Modal show={show} onHide={handleClose} className='complet'>
-                  <Modal.Header closeButton>
-                    <Modal.Title>Editar completado</Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body>
-
-                    <Form onSubmit={handleSubmit}>
-                      <Form.Check
-                        onClick={handleEvalue}
-                        type="radio"
-                        value="Completado"
-                        name={element.codigo}
-                        label={`Completado `}
-                        id={`disabled-default`}
-                      />
-                      <Form.Check
-                        onClick={handleEvalue}
-                        type="radio"
-                        value="No completado"
-                        name={element.codigo}
-                        label={`No completado`}
-                        id={`disabled-default`}
-                      />
-                      <div className='boton-modal-agenda'>
-                        <Button type="submit" className='boton-completadi' onClick={guarda}>Guardar cambios</Button>
-                      </div>
-                    </Form>
-
-                  </Modal.Body>
-                </Modal>
-              </div>
-            )
-            )
-          ) :
-          <p>Datos no disponibles</p>
-      }
       {
         modal === true ? <Editar modal={enviarDatosModal} /> : ''
       }

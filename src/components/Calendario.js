@@ -13,15 +13,14 @@ const Calendario = () => {
   // const currentDay = day.getUTCDate();
   // const currentMonth = day.getUTCMonth() + 1;
   // const currentYear = day.getUTCFullYear();
-  
-  const handleClose = () => setShow(false);
+
   const dispatch = useDispatch();
 
   const { task } = useSelector(store => store.tarea)
 
 
   const uids = JSON.parse(localStorage.getItem("users"))
-   const codigo = uids.codigo
+  const codigo = uids.codigo
   const eventos = task.filter((p) => p.idUser === codigo)
   const especiales = eventos.filter((p) => p.selecEvent === "Especial")
   const metas = eventos.filter((p) => p.selecEvent === "Metas")
@@ -38,10 +37,10 @@ const Calendario = () => {
         if (user.idUser === uids.codigo && user.dia === day.getUTCDate() && user.mes === day.getUTCMonth() + 1 && user.año === day.getUTCFullYear()) {
           return user;
         }
+
       })
       setDat(data)
     }
-
   }
   console.log(dat)
 
@@ -71,18 +70,27 @@ const Calendario = () => {
                       <th>Actividad</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    {
-                      (dat !== "") ? (
-                        dat.map((element, index) => (
-                          <tr key={index}>
-                            <td>{element.hora}:{element.minutos}</td>
-                            <td>{element.actividad}</td>
-                          </tr>
-                        ))
-                      ) : ""
-                    }
-                  </tbody>
+                  {
+                    (dat.length !== 0) ? (
+                      <tbody>
+                        {
+                          (dat !== "") ? (
+                            dat.map((element, index) => (
+                              <tr key={index}>
+                                <td>{element.hora}:{element.minutos}</td>
+                                <td>{element.actividad}</td>
+                              </tr>
+                            ))
+                          ) : ''
+                        }
+                      </tbody>
+                    ) : (
+                      <tr>
+                        <td>No hay actividades agendadas</td>
+                        <td>No hay actividades agendadas</td>
+                      </tr>
+                    )
+                  }
                 </Table>
               </div>
             </form>
@@ -94,12 +102,12 @@ const Calendario = () => {
 
         <h4>Eventos especiales:</h4>
         {
-            especiales.map((e, i) => (
-              <div key={i} className='' >
-               <h5>-{e.actividad}</h5>
-              </div>
-            ))
-          }
+          especiales.map((e, i) => (
+            <div key={i} className='' >
+              <h5>-{e.actividad}</h5>
+            </div>
+          ))
+        }
       </div>
 
 
@@ -109,14 +117,14 @@ const Calendario = () => {
 
         <h4>Metas del mes:</h4>
         {
-            metas.map((e, i) => (
-              <div key={i} className='' >
-               <h5>-{e.actividad}</h5>
-              </div>
-            ))
-          }
+          metas.map((e, i) => (
+            <div key={i} className='' >
+              <h5>-{e.actividad}</h5>
+            </div>
+          ))
+        }
       </div>
-    </div>
+    </div >
 
   )
 }

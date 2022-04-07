@@ -27,6 +27,7 @@ export const AgendaComponent = () => {
   }
   const [values, handleInputChange, reset] = useForm({ nombre: "" })
   const { nombre } = values
+  
   const guarda = () => {
     setAñadir({
       dia: fechas.getUTCDate(),
@@ -55,7 +56,7 @@ export const AgendaComponent = () => {
     setActive(false)
     setConAgenda("content-Agenda")
   }
-  console.log(conAgenda)
+
   useEffect(() => {
     dispatch(listTasks());
   }, [dispatch])
@@ -98,7 +99,7 @@ export const AgendaComponent = () => {
                 </div>
               </div>
               <div className="buton-agenda">
-                <Button onClick={() => hes() } className="boton00">Cancelar</Button>
+                <Button onClick={() => hes()} className="boton00">Cancelar</Button>
                 <Button type="submit" onClick={guarda} className="boton01">Agregar</Button>
               </div>
             </Form> : ''
