@@ -5,6 +5,7 @@ import { Button, Form, Modal } from 'react-bootstrap';
 import { editAsyn } from '../../redux/actions/actionTask';
 import Editar from './Editar';
 import "../../styles/agenda/style.css"
+import toast, { Toaster } from 'react-hot-toast';
 
 export const ListarTareas = () => {
 
@@ -38,6 +39,7 @@ export const ListarTareas = () => {
     setShow(true)
     setDatas(traertarea)
     setCodigos(codigo)
+    
   }
 
   const handleEvalue = (e) => {
@@ -48,6 +50,7 @@ export const ListarTareas = () => {
     e.preventDefault()
     dispatch(editAsyn(codigos, añadir))
     setShow(false)
+    toast.success('Recompensa alcanzada!')
   }
 
   const guarda = () => {
@@ -91,10 +94,10 @@ export const ListarTareas = () => {
     nocompl: nocompl,
     total: compl + nocompl
   }));
-  const cargarDate = () =>{
+  const cargarDate = () => {
     setDaas(data)
   }
-  const cargarDataDay = () =>{
+  const cargarDataDay = () => {
     setDaas(det)
   }
 
@@ -174,7 +177,7 @@ export const ListarTareas = () => {
             </div>
           ) : <div className='agenda-vacia'>
             <h3>No hay actividades registradas</h3>
-            <img alt='sin resultados' src='https://res.cloudinary.com/paolavbm/image/upload/v1649338537/documento_tv30cb.png' width={100}/>
+            <img alt='sin resultados' src='https://res.cloudinary.com/paolavbm/image/upload/v1649338537/documento_tv30cb.png' width={100} />
           </div>
         }
       </div>
@@ -182,6 +185,7 @@ export const ListarTareas = () => {
       {
         modal === true ? <Editar modal={enviarDatosModal} /> : ''
       }
+      <Toaster />
     </div >
   )
 }

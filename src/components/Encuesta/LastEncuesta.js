@@ -32,7 +32,11 @@ export const LastEncuesta = () => {
     const dispatch = useDispatch();
     const { task } = useSelector(store => store.tarea);
     const uids = JSON.parse(localStorage.getItem("users"))
-    let datas = task.filter(user => user.idUser === uids.codigo);
+    let datas = task.filter(user => {
+        if(user.idUser === uids.codigo && user.dia === day){
+            return user
+        }
+    });
     const fit = datas.filter(use => {
         if(use.quizDs === 0 && use.dia === day){
             return use
@@ -143,7 +147,7 @@ export const LastEncuesta = () => {
                             <div>
                                 {
                                     (fit.length !== 0) ? (
-                                        <h2>{fit[g].actividad} : {fit[g].quizDs}</h2>
+                                        <h2>{fit[g].actividad}</h2>
                                     ) : ''
                                 }
                                 {
