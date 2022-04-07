@@ -147,7 +147,7 @@ export const LastEncuesta = () => {
                             <div>
                                 {
                                     (fit.length !== 0) ? (
-                                        <h2>{fit[g].actividad} : {fit[g].quizDs}</h2>
+                                        <h2>{fit[g].actividad}</h2>
                                     ) : ''
                                 }
                                 {
