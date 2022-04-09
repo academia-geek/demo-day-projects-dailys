@@ -62,7 +62,7 @@ body {
 .navMobile {
   display: flex;
   position: fixed;
-  top: 538px;
+  bottom: 0px;
   background: white;
   height: 45px;
   line-height: 40px;

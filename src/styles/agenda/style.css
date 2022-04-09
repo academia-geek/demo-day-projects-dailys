@@ -288,6 +288,55 @@
     background-color: #4D3582 !important;
 }
 
+.content-Agenda {
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+    padding: 1em;
+ 
+}
+
+.content-Agenda{
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+}
+.content-Agenda2{
+    background-color: white;
+    width: 40% !important;
+    margin: 10px auto;
+    border-radius: 30px;
+    font-family: 'Domine', serif;
+    padding: 1em;
+}
+
+.form-label {
+   font-size: 18px !important;
+}
+
+.boton00 {
+    margin-right: 2em;
+    width: 5em !important;
+    background-color: #A792D6 !important;
+    border: none !important;
+}
+
+.boton01 {
+    width: 5em !important;
+    background-color: #4D3582 !important;
+    border: none !important;
+}
+
+.agenda-vacia{
+    margin-top: 4em;
+    text-align: center;
+    color: #626262 !important;
+    font-family: 'Patua One', cursive !important; 
+    margin-bottom: 3em;
+}
+
 
 @media screen and (max-width: 700px) {
     .botonagenda {
@@ -300,7 +349,7 @@
         margin: 0 !important;
     }
     .form-select {
-        width: 92% !important;
+        width: 76% !important;
         margin: auto !important;
     }
 
@@ -335,7 +384,15 @@
         margin: 10px auto;
         padding: 1em;
         width: 90% !important;
-    }    
+    }  
+    .content-Agenda2{
+        background-color: white;
+        width: 90% !important;
+        margin: 10px auto;
+        border-radius: 30px;
+        font-family: 'Domine', serif;
+        padding: 1em;
+    }  
     .cardsdf {
         position: inherit !important;
         /* width: 100% !important; */
@@ -396,67 +453,4 @@
     .form-agenda{
         width: 100% !important;
     }
-
-    .content-Agenda2 {
-        
-        width: 100% !important;
-       
-    }
-}
-
-.content-Agenda {
-    width: 40% !important;
-    margin: 10px auto;
-    border-radius: 30px;
-    font-family: 'Domine', serif;
-    padding: 1em;
- 
-}
-
-/* .content-Agenda2 {
-    background-color: white;
-    width: 40% !important;
-    margin: 10px auto;
-    border-radius: 30px;
-    font-family: 'Domine', serif;
-    padding: 1em;
-} */
-.content-Agenda{
-    width: 40% !important;
-    margin: 10px auto;
-    border-radius: 30px;
-    font-family: 'Domine', serif;
-}
-.content-Agenda2{
-    background-color: white;
-    width: 40% !important;
-    margin: 10px auto;
-    border-radius: 30px;
-    font-family: 'Domine', serif;
-    padding: 1em;
-}
-
-.form-label {
-   font-size: 18px !important;
-}
-
-.boton00 {
-    margin-right: 2em;
-    width: 5em !important;
-    background-color: #A792D6 !important;
-    border: none !important;
-}
-
-.boton01 {
-    width: 5em !important;
-    background-color: #4D3582 !important;
-    border: none !important;
-}
-
-.agenda-vacia{
-    margin-top: 4em;
-    text-align: center;
-    color: #626262 !important;
-    font-family: 'Patua One', cursive !important; 
-    margin-bottom: 3em;
 }

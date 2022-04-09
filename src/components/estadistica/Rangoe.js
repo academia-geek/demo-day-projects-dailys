@@ -198,16 +198,18 @@ export const Rangoe = () => {
         labels: ["Feliz", "Muy Feliz", "Normal", "Triste", "Deprimido/a"],
         datasets: [{
             label: "Frecuencia",
-            backgroundColor: "rgba(255, 99, 132, 0.2)",
-            borderColor: "rgba(255, 99, 132, 1)",
+            backgroundColor: '#b99fdf',
+            borderColor: '#b99fdf',
             borderWidth: 1,
             data: [happy, veryHappy, mehj, sad, hedied]
         }]
     }
 
   return (
-    <div>
-          <div><Bar options={options} data={datas} /></div>
+    <div className='no-tocar'>
+          <div className="w-75 my-5 mx-auto">
+              <Bar options={options} data={datas} />
+              </div>
     </div>
   )
 }

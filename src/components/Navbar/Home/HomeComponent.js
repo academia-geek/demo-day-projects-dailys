@@ -36,7 +36,7 @@ export const HomeComponent = () => {
                     <SwipeableTemporaryDrawer />
                 </div>
                 <div className="nav-sd">
-                    <Link to="">
+                    <Link to="/">
                         <Image className="imgNav" src="https://res.cloudinary.com/dsnsjqasu/image/upload/v1647903757/lista-de-tareas_zk7yif.png" alt='Tareas'></Image>
                     </Link>
                 </div>

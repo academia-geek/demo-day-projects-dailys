@@ -7,7 +7,40 @@ body{
     color: white !important;
 }
 
+.botones{
+    color: #47525E !important;
+}
+
 .grafica{
     width: 80rem !important;
-    margin: auto !important;
+    margin: 0px auto 0px auto !important;
+}
+
+.tabla-c{
+    background-color: #AD9CE9;
+    color: white;
+}
+
+@media screen and (max-width:720px) {
+    .pie{
+        margin: 0px !important;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .grafica{
+        margin: 0px !important;
+        width: 100% !important;
+    }
+    .tabla-no-tocar{
+        font-size: 10px;
+        margin: 0px !important;
+    }
+    .pie {
+        width: 100% !important;
+        margin: 0px !important;
+    }
+    .no-tocar{
+        padding: 10px 0px 50px 0px !important;
+    }
 }
