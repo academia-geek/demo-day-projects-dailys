@@ -10,7 +10,43 @@
    font-family: 'Domine', serif;
 
   
-  
+   @media (max-width: 600px) {
+    width: 80%;
+    margin-bottom: 5em;
+
+    h5 {
+        color: #39267b;
+        font-size: 15px!important;
+    }
+    .checks {
+        margin: 20px !important;
+        font-size: 19px !important;
+    }
+    .form-check {
+        display: block;
+        min-height: 0rem !important;
+        padding-left: 0em !important;
+        margin-bottom: 0.125rem !important;
+    }
+    .form-check {
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 0.2em;
+        margin-bottom: 0.125rem;
+    }
+
+    .checks {
+        margin: 20px !important;
+        font-size: 12px !important;
+    }
+    .quits {
+       
+        
+        text-align: center !important;
+        margin: auto !important;
+       
+    }
+  }
    h2{
     color: #290676
    }
@@ -81,14 +117,4 @@ input[type="radio"]:checked {
     .caritas{
         width: 5em;
     }
-
-    @media (max-width: 600px) {
- 
-        .caritas{
-            width: 4em;
-            padding: 0;
-            margin-top: 0.5em;
-        }
-        
-      }
 }

@@ -83,17 +83,17 @@ const Emociones = () => {
                         <div class="select">
                             <label for="emocion" class="col-25"></label><br />
                             <input type="radio" name="emociones" id="feliz" class="input-hidden" value="1" onChange={handleOnChange} />
-                            <label for="feliz"><img className="caritas" src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/happy-face_yapson.png"  alt="" required /></label>
+                            <label for="feliz"><img className="caritas1" src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/happy-face_yapson.png"  alt="" required /></label>
                             <input type="radio" name="emociones" id="muyFeliz" className="input-hidden" value="2" onChange={handleOnChange} />
-                            <label for="muyFeliz" id="hm"><img width={100} className="caritas"  src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/feliz_wxbvxo.png" alt="" required /></label>
+                            <label for="muyFeliz" id="hm"><img width={100} className="caritas1"  src="https://res.cloudinary.com/paolavbm/image/upload/v1648686956/feliz_wxbvxo.png" alt="" required /></label>
                             <input type="radio" name="emociones" id="bored" className="input-hidden" value="3" onClick={handleOnChange} />
-                            <label for="bored" id="hm"><img width={100} className="caritas" src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/aburrido_1_hespzj.png" alt="" required /></label>
+                            <label for="bored" id="hm"><img width={100} className="caritas1" src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/aburrido_1_hespzj.png" alt="" required /></label>
 
                             <input type="radio" name="emociones" id="sad" className="input-hidden" value="4" onClick={handleOnChange} />
-                            <label for="sad" id="hm"><img width={100} className="caritas" src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/cara-triste-en-cuadrado-redondeado_rwkpnb.png" alt="" required /></label>
+                            <label for="sad" id="hm"><img width={100} className="caritas1" src="https://res.cloudinary.com/paolavbm/image/upload/v1648686935/cara-triste-en-cuadrado-redondeado_rwkpnb.png" alt="" required /></label>
 
                             <input type="radio" name="emociones" id="dead" className="input-hidden" value="5" onClick={handleOnChange} />
-                            <label for="dead" id="hm"><img width={100} className="caritas" src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/muerto_df1akx.png' alt="" required /></label> <br />
+                            <label for="dead" id="hm"><img width={100} className="caritas1" src='https://res.cloudinary.com/paolavbm/image/upload/v1648686935/muerto_df1akx.png' alt="" required /></label> <br />
 
 
                         </div>

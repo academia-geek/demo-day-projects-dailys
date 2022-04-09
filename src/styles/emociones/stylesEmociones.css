@@ -1,11 +1,15 @@
 .subDivEmociones {
   text-align: center;
-  padding: em;
 }
 .subDivEmociones .emociones {
   display: inline-block;
   width: 50%;
   margin: auto;
+}
+@media (max-width: 600px) {
+  .subDivEmociones .emociones {
+    width: 80%;
+  }
 }
 .subDivEmociones .emociones .caritas {
   border-style: none;
@@ -63,6 +67,15 @@ input[type=radio] + label > img {
   width: 5em;
   background-color: #ad9ce9 !important;
   outline: none !important;
+}
+
+.caritas1 {
+  width: 6em;
+}
+@media (max-width: 600px) {
+  .caritas1 {
+    width: 5em;
+  }
 }
 
 /*# sourceMappingURL=stylesEmociones.css.map */
