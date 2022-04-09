@@ -6,7 +6,7 @@ font-family: 'Patua One', cursive;
     border: none;
     height: 19em;
     border-radius: 15px;
-
+ 
 
 }
 
@@ -26,11 +26,18 @@ font-family: 'Patua One', cursive;
             &:focus {
               background-color:  #916093;
               color: white;
+             
             }
            
         }
+        
     }
   
+
+    @media (max-width: 600px) {
+      width: 90% !important;
+      
+    }
  }
  
 
@@ -67,6 +74,12 @@ font-family: 'Patua One', cursive;
       font-weight: bold;
       margin-bottom: 0.6em;
     }
+
+    @media (max-width: 600px) {
+      width: 80% !important;
+      padding: 0.9em;
+      
+    }
   }
 
   .eventos{
@@ -85,6 +98,11 @@ font-family: 'Patua One', cursive;
       font-weight: bold;
       margin-bottom: 0.6em;
     }
+
+    @media (max-width: 600px) {
+      width: 80% !important;
+      padding: 0.9em;
+    }
   }
 
   .modal-info{
@@ -92,10 +110,19 @@ font-family: 'Patua One', cursive;
     text-align: center;
     width: 65%;
     margin: auto;
-
+    
+    margin-top: 4em !important;
+    @media (max-width: 600px) {
+      width: 100% !important;
+     
+    }
     th{
       background-color:#5c436c !important;
       color: antiquewhite;
       border: none;
     }
+  }
+
+  .react-calendar__year-view .react-calendar__tile, .react-calendar__decade-view .react-calendar__tile, .react-calendar__century-view .react-calendar__tile {
+    padding: 1em 0.5em;
   }

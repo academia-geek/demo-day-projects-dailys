@@ -8,6 +8,40 @@
   border-radius: 15px;
   font-family: "Domine", serif;
 }
+@media (max-width: 600px) {
+  .encuestaDiv {
+    width: 80%;
+    margin-bottom: 5em;
+  }
+  .encuestaDiv h5 {
+    color: #39267b;
+    font-size: 15px !important;
+  }
+  .encuestaDiv .checks {
+    margin: 20px !important;
+    font-size: 19px !important;
+  }
+  .encuestaDiv .form-check {
+    display: block;
+    min-height: 0rem !important;
+    padding-left: 0em !important;
+    margin-bottom: 0.125rem !important;
+  }
+  .encuestaDiv .form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 0.2em;
+    margin-bottom: 0.125rem;
+  }
+  .encuestaDiv .checks {
+    margin: 20px !important;
+    font-size: 12px !important;
+  }
+  .encuestaDiv .quits {
+    text-align: center !important;
+    margin: auto !important;
+  }
+}
 .encuestaDiv h2 {
   color: #290676;
 }
@@ -59,6 +93,10 @@ input[type=radio]:checked {
   background-color: #9780eb !important;
   margin-right: 2em;
   margin-top: 1em;
+}
+
+.select .caritas {
+  width: 5em;
 }
 
 /*# sourceMappingURL=encuesta.css.map */

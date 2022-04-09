@@ -24,7 +24,7 @@ export const PefilComponent = () => {
       <HomeComponent />
       <ListPerfil dates={data} />
       <div className="logros">
-      <h2 >Logros y recompensas</h2>
+      <h2 className='logrosyRecompensas' >Logros y recompensas</h2>
       </div>
       <Recompensas />
     </div>

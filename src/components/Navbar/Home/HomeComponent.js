@@ -20,7 +20,7 @@ export const HomeComponent = () => {
                 <div className="logos">
                     <SwipeableTemporaryDrawer />
                 </div>
-                <div className="nav-sg d1">
+                {/* <div className="nav-sg d1">
                     <Link to="/home">
                         <h1 className="title" >Agenda</h1>
                     </Link>
@@ -29,7 +29,7 @@ export const HomeComponent = () => {
                     <Link to="/" onClick={() => handleLogout()}>
                         <h1 className="title">Cerrar sesión</h1>
                     </Link>
-                </div>
+                </div> */}
             </div>
             <div className="navMobile">
                 <div className="nav-sd">

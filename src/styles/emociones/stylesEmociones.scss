@@ -1,18 +1,23 @@
 .subDivEmociones{
     text-align: center;
-    padding: 1em;
+  
 
     .emociones{
         display:inline-block;
         width: 50%;
         margin: auto;
+        @media (max-width: 600px) {
+            width: 80%;
+           
+        }        
        
         .caritas{
+            
             border-style: none;
             background-color: inherit;
            border-radius: 50em;
            padding: 0;
-           margin-left: 1em;
+           margin-left: 0.2em;
             &:focus{
                 background-color:#d2c3f3;
             }
@@ -72,3 +77,11 @@ input[type=radio] + label>img {
      outline: none !important;
 }
 
+.caritas1{
+    width: 6em;
+
+    @media (max-width: 600px) {
+        width: 5em;
+       
+    } 
+}

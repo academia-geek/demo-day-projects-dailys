@@ -2,17 +2,18 @@
 
 .col-md-4 img {
     width: 100%;
+   
 }
 
 .card {
-   
+    
     margin: 15px auto !important;
     font-family: 'Domine', serif;
     line-height: 40px;
 }
 
 .picachu {
-    font-family: 'Domine', serif !important;
+    font-family: 'Patua One', cursive !important;
     font-size: 30px;
 }
 
@@ -109,6 +110,7 @@ padding-top: 2em;
         margin-top: 3em;
         margin-bottom: 3em;
         color: #331d41;
+        font-family: 'Patua One', cursive !important;
     }
 .col {
   
@@ -131,6 +133,7 @@ padding-top: 2em;
     background: white;
     margin: 15px;
     border-radius: 160px;
+    font-size: 20px;
 }
 
 .contens {
@@ -211,6 +214,7 @@ a {
 
 body {
     font-family: none;
+  
 }
 
 * {
@@ -344,7 +348,69 @@ body {
     .modal-quizz .modal-dialog {
         max-width: 85% !important;
     }
+
+   
 }
+
+@media (max-width: 700px) {
+
+    .contTempori {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .contens {
+        text-align: center;
+    }
+
+    .boton {
+        background: var(--fond-button) !important;
+        border: 2px solid var(--fond-button) !important;
+        width: 245px;
+        height: 28px;
+        font-size: 25px;
+        line-height: 19px;
+        margin: 10px;
+        line-height: 13px;
+    }
+
+
+    .listarAlarmas {
+        width: 90%;
+        margin: 15px auto;
+    }
+    .contes {
+        width: 80%;
+        height: 7em;
+        text-align: center;
+        font-size: 15px;
+        margin: 15px;
+        border-radius: 20em;
+    }
+    .contenedor-tarjetas{
+        display: flex;
+        flex-direction: column;
+    }
+
+   .botonperfil{
+       margin: auto !important;
+   
+   }
+   
+   .pepe{
+       width: 90% !important;
+       
+   }
+
+   .tarjetas{
+       width: 100% !important;
+       height: 35em;
+   }
+}
+
+
 
 .modal-info {
     justify-content: center;
@@ -391,7 +457,7 @@ background-color: #5c436c;;
 }
 .imprimir2 {
    
-background-color: #5c436c;;
+background-color: #5c436c;
     color: white !important;
     margin: 15px;
     border: 2px solid lightgrey;

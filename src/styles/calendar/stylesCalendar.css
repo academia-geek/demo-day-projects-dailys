@@ -18,6 +18,11 @@
   background-color: #916093;
   color: white;
 }
+@media (max-width: 600px) {
+  .calendar {
+    width: 90% !important;
+  }
+}
 
 .react-calendar__tile--now {
   border: 2px black solid;
@@ -51,6 +56,12 @@
   font-weight: bold;
   margin-bottom: 0.6em;
 }
+@media (max-width: 600px) {
+  .metas {
+    width: 80% !important;
+    padding: 0.9em;
+  }
+}
 
 .eventos {
   border-radius: 15px;
@@ -69,17 +80,33 @@
   font-weight: bold;
   margin-bottom: 0.6em;
 }
+@media (max-width: 600px) {
+  .eventos {
+    width: 80% !important;
+    padding: 0.9em;
+  }
+}
 
 .modal-info {
   justify-content: center;
   text-align: center;
   width: 65%;
   margin: auto;
+  margin-top: 4em !important;
+}
+@media (max-width: 600px) {
+  .modal-info {
+    width: 100% !important;
+  }
 }
 .modal-info th {
   background-color: #5c436c !important;
   color: antiquewhite;
   border: none;
+}
+
+.react-calendar__year-view .react-calendar__tile, .react-calendar__decade-view .react-calendar__tile, .react-calendar__century-view .react-calendar__tile {
+  padding: 1em 0.5em;
 }
 
 /*# sourceMappingURL=stylesCalendar.css.map */

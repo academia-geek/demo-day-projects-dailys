@@ -1,18 +1,22 @@
 .subDivEmociones {
   text-align: center;
-  padding: 1em;
 }
 .subDivEmociones .emociones {
   display: inline-block;
   width: 50%;
   margin: auto;
 }
+@media (max-width: 600px) {
+  .subDivEmociones .emociones {
+    width: 80%;
+  }
+}
 .subDivEmociones .emociones .caritas {
   border-style: none;
   background-color: inherit;
   border-radius: 50em;
   padding: 0;
-  margin-left: 1em;
+  margin-left: 0.2em;
 }
 .subDivEmociones .emociones .caritas:focus {
   background-color: #d2c3f3;
@@ -63,6 +67,15 @@ input[type=radio] + label > img {
   width: 5em;
   background-color: #ad9ce9 !important;
   outline: none !important;
+}
+
+.caritas1 {
+  width: 6em;
+}
+@media (max-width: 600px) {
+  .caritas1 {
+    width: 5em;
+  }
 }
 
 /*# sourceMappingURL=stylesEmociones.css.map */
