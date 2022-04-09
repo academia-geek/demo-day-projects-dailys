@@ -216,9 +216,9 @@ export const Rendimiento = () => {
     }, [task])
 
     return (
-        <div className='p-5'>
+        <div className='p-5 no-tocar text-center'>
             <h2 className='mt-5'>Rendimiento de los ultimos 7 dias</h2>
-            <div className='pb-5' >
+            <div className="w-75 my-5 mx-auto">
                 <Bar options={options} data={datas} />
             </div>
         </div>
