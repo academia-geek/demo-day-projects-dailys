@@ -70,20 +70,20 @@ export const Temporizador = () => {
                 <div className="contes">
                     <div className="texts">
                         <h2>{hora}</h2>
-                        <h3>horas</h3>
+                        <p className='det'>Horas</p>
                     </div>
                 </div>
                 <div className="contes">
                     <div className="texts">
                         <h2 >{minu}</h2>
-                        <h3 >Minutos</h3>
+                        <p className='det'>Minutos</p>
                     </div>
 
                 </div>
                 <div className="contes">
                     <div className="texts">
                         <h2>{num}</h2>
-                        <h3>Segundos</h3>
+                        <p className='det'>Segundos</p>
                     </div>
 
                 </div>

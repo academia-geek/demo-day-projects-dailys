@@ -9,6 +9,8 @@
    border-radius: 15px;
    font-family: 'Domine', serif;
 
+  
+  
    h2{
     color: #290676
    }
@@ -16,6 +18,8 @@
    h5{
        color: #39267b;
    }
+
+ 
 }
 
 .quits{
@@ -70,4 +74,21 @@ input[type="radio"]:checked {
     }
 
     
+}
+
+
+.select{
+    .caritas{
+        width: 5em;
+    }
+
+    @media (max-width: 600px) {
+ 
+        .caritas{
+            width: 4em;
+            padding: 0;
+            margin-top: 0.5em;
+        }
+        
+      }
 }
