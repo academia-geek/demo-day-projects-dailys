@@ -7,7 +7,6 @@ import "../../styles/estadistica/est.css"
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const Listar = () => {
-    const dispatch = useDispatch();
 
     const [compl, setCompl] = useState(0)
     const [nocompl, setNocompl] = useState(0)
@@ -16,7 +15,6 @@ export const Listar = () => {
 
     useEffect(() => { conteo() }, [task])
 
-    console.log(task)
     let completado = 0
     let nocompletado = 0
 
@@ -25,8 +23,7 @@ export const Listar = () => {
     
 
     const conteo = () => {
-        let datas = task.filter(user => user.idUser === users.codigo);
-        console.log(datas)
+       
         task.forEach(element => {
             
             const { evalue, idUser} = element
@@ -69,8 +66,8 @@ export const Listar = () => {
     return (
         <div>
             <div className="grafica">
-                <div className="w-50 mx-auto">
-                <Pie className='w-100' data={data} options={opciones} />
+                <div className="w-50 mx-auto pie">
+                    <Pie className="w-100" data={data} options={opciones} />
                 </div>
             </div>
         </div>

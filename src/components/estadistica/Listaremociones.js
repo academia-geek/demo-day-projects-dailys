@@ -83,8 +83,10 @@ export const Listaremociones = () => {
     }, [task])
   return (
     <div>
-          <div className="w-50 mx-auto">
-              <Pie className='w-100' data={data} options={opciones} />
+          <div className="grafica">
+              <div className="w-50 mx-auto pie">
+                  <Pie className="w-100" data={data} options={opciones} />
+              </div>
           </div>
     </div>
   )
