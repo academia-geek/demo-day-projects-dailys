@@ -6,19 +6,37 @@ body{
     background-color: #AD9CE9 !important;
     color: white !important;
 }
-
+.pie{
+    width: 50%;
+    margin: 10px auto;
+    height: 350px;
+}
+.tass{
+    margin: 25px;
+}
 .botones{
     color: #47525E !important;
 }
 
 .grafica{
     width: 80rem !important;
-    margin: 0px auto 0px auto !important;
+    margin: 0px auto !important;
+}
+.dttss{
+    margin: 25px;
 }
 
 .tabla-c{
     background-color: #AD9CE9;
     color: white;
+}
+.titulosss{
+    margin-top: 55px;
+}
+.holss{
+    height: 350px;
+    margin: 15px !important;
+    padding: 25px !important;
 }
 
 @media screen and (max-width:720px) {
@@ -27,20 +45,38 @@ body{
     }
 }
 
-@media screen and (max-width:370px) {
+@media screen and (max-width:375px) {
     .grafica{
-        margin: 0px !important;
-        width: 100% !important;
+        width: 80% !important;
+    }
+    .titulosss{
+        margin-top: 0px;
+    }
+    .dttss{
+        margin: 0px;
+    }
+    .tass{
+        margin: 10px !important;;
+    }
+    .tab-content{
+        margin: 10px;
     }
     .tabla-no-tocar{
         font-size: 10px;
         margin: 0px !important;
+        width: 100% !important;
     }
     .pie {
         width: 100% !important;
         margin: 0px !important;
+        height: 180px !important;
     }
     .no-tocar{
-        padding: 10px 0px 50px 0px !important;
+        height: 250px;
+    }
+    .holss{
+        height: 250px;
+        margin: 0px !important;
+        padding: 10px !important;
     }
 }

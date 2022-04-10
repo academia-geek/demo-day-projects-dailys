@@ -343,7 +343,9 @@
         width: 75%;
         margin: auto !important;
     }
-
+    .eventos{
+        opacity: 1 !important;
+    }
     .inputs{
         width: 90% !important;
         margin: 0 !important;
@@ -396,6 +398,9 @@
     .cardsdf {
         position: inherit !important;
         /* width: 100% !important; */
+    }
+    .img-perfil {
+        padding: 0px !important;
     }
 
     .contsAgenda {

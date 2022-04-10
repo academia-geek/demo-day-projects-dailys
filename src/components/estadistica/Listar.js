@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import "../../styles/estadistica/est.css"
@@ -66,7 +66,7 @@ export const Listar = () => {
     return (
         <div>
             <div className="grafica">
-                <div className="w-50 mx-auto pie">
+                <div className="pie">
                     <Pie className="w-100" data={data} options={opciones} />
                 </div>
             </div>

@@ -2,11 +2,11 @@
 
 .col-md-4 img {
     width: 100%;
-   
+
 }
 
 .card {
-    
+
     margin: 15px auto !important;
     font-family: 'Domine', serif;
     line-height: 40px;
@@ -24,12 +24,12 @@
     font-size: 20px;
 }
 
-.ju{
+.ju {
     font-weight: bold;
     color: #331d41 !important;
 }
 
-.tituloPerfil{
+.tituloPerfil {
     text-align: center;
 }
 
@@ -41,23 +41,23 @@
 
 .card-text {
     font-size: 30px;
-    
+
 }
 
-.pepe{
-     width: 80% !important;
+.pepe {
+    width: 80% !important;
 }
 
-.contenedor-tarjetas{
+.contenedor-tarjetas {
     width: 85%;
     margin: auto;
 }
 
 
 
-.titlee{
-   text-align: center;
-   font-size: 60px;
+.titlee {
+    text-align: center;
+    font-size: 60px;
 }
 
 .titlee1 {
@@ -75,48 +75,50 @@
     margin-top: 2.5em;
 }
 
-.contenedor-tarjetas{
+.contenedor-tarjetas {
     display: flex;
 }
 
-.ujuuu{
-background-color:#64549d!important;
-color: white !important;
+.ujuuu {
+    background-color: #64549d !important;
+    color: white !important;
 
 }
 
-.ujuu{
+.ujuu {
     color: white !important;
 }
-.tarjetas{
-width: 15em !important;
-height: 27em;
-border-radius: 10px !important;
-padding-top: 2em;
+
+.tarjetas {
+    width: 15em !important;
+    height: 27em;
+    border-radius: 10px !important;
+    padding-top: 2em;
 }
 
-.img-perfil{
-    padding: 15px !important;
+.img-perfil {
+    padding: 15px;
 }
 
-.asereje{
- font-size: 18px !important;
- line-height: 20px!important;
-    }
+.asereje {
+    font-size: 18px !important;
+    line-height: 20px !important;
+}
 
 
-    .logros{
-        text-align: center;
-        margin-top: 3em;
-        margin-bottom: 3em;
-        color: #331d41;
-        font-family: 'Patua One', cursive !important;
-    }
+.logros {
+    text-align: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    color: #331d41;
+    font-family: 'Patua One', cursive !important;
+}
+
 .col {
-  
+
     height: 550px;
     text-align: center !important;
-    
+
 }
 
 .contTempori {
@@ -157,9 +159,10 @@ padding-top: 2em;
 }
 
 
-.jum{
+.jum {
     margin-left: 2em;
 }
+
 .opciones {
     text-align: center;
     margin: 15px;
@@ -202,7 +205,7 @@ a {
     margin: 15px;
 }
 
-.head{
+.head {
     background-color: #372e4d !important;
     color: white !important;
 }
@@ -214,7 +217,7 @@ a {
 
 body {
     font-family: none;
-  
+
 }
 
 * {
@@ -222,7 +225,7 @@ body {
 }
 
 .table {
-    width: 85% !important;
+    width: 85%;
     margin: 15px auto;
 }
 
@@ -240,10 +243,6 @@ body {
     margin: 0 0 0 15px !important;
 }
 
-.grafica {
-    width: 25%;
-    margin: auto !important;
-}
 
 .navb-titu {
     color: var(--fond-default) !important;
@@ -344,72 +343,6 @@ body {
     border: 2px solid #7461b7;
 }
 
-@media (min-width: 576px) {
-    .modal-quizz .modal-dialog {
-        max-width: 85% !important;
-    }
-
-   
-}
-
-@media (max-width: 700px) {
-
-    .contTempori {
-        display: flex;
-        flex-direction: row;
-        width: 90%;
-        margin: auto;
-    }
-    
-    .contens {
-        text-align: center;
-    }
-
-    .boton {
-        background: var(--fond-button) !important;
-        border: 2px solid var(--fond-button) !important;
-        width: 245px;
-        height: 28px;
-        font-size: 25px;
-        line-height: 19px;
-        margin: 10px;
-        line-height: 13px;
-    }
-
-
-    .listarAlarmas {
-        width: 90%;
-        margin: 15px auto;
-    }
-    .contes {
-        width: 80%;
-        height: 7em;
-        text-align: center;
-        font-size: 15px;
-        margin: 15px;
-        border-radius: 20em;
-    }
-    .contenedor-tarjetas{
-        display: flex;
-        flex-direction: column;
-    }
-
-   .botonperfil{
-       margin: auto !important;
-   
-   }
-   
-   .pepe{
-       width: 90% !important;
-       
-   }
-
-   .tarjetas{
-       width: 100% !important;
-       height: 35em;
-   }
-}
-
 
 
 .modal-info {
@@ -446,8 +379,9 @@ body {
 }
 
 .imprimir {
-    
-background-color: #5c436c;;
+
+    background-color: #5c436c;
+    ;
     color: white !important;
     margin: 15px;
     border: 2px solid lightgrey;
@@ -455,9 +389,10 @@ background-color: #5c436c;;
     padding: 0.5em;
     width: 8em;
 }
+
 .imprimir2 {
-   
-background-color: #5c436c;
+
+    background-color: #5c436c;
     color: white !important;
     margin: 15px;
     border: 2px solid lightgrey;
@@ -466,7 +401,7 @@ background-color: #5c436c;
     width: 4em;
 }
 
-.olimpica{
+.olimpica {
     width: 5em;
     margin: auto;
     position: relative;
@@ -475,17 +410,159 @@ background-color: #5c436c;
     border-radius: 50px;
 }
 
-.volverLetra{
+.volverLetra {
     color: white !important;
 }
 
-.volver{
-border-style: none;
-width: 4em;
-height: 2em;
-margin-left: 1.3em;
-border-radius: 5px;
-margin-top: 1em;
+.volver {
+    border-style: none;
+    width: 4em;
+    height: 2em;
+    margin-left: 1.3em;
+    border-radius: 5px;
+    margin-top: 1em;
 
-background-color: #5c436c;
+    background-color: #5c436c;
+}
+
+@media (min-width: 576px) {
+    .modal-quizz .modal-dialog {
+        max-width: 85% !important;
+    }
+
+
+}
+
+@media (max-width: 700px) {
+
+    .contTempori {
+        display: flex;
+        flex-direction: row;
+        width: 90%;
+        margin: auto;
+    }
+    .jum{
+        margin-left: 0 !important;
+    }
+    .card {
+        margin: auto !important;
+        font-family: 'Domine', serif;
+        line-height: 40px;
+    }
+
+    .imgres {
+        display: none;
+    }
+    .simssdf {
+        display: flex;
+        flex-direction: row;
+        margin: 15px !important;
+    }
+    .premio {
+        width: 95% !important;
+        position: relative;
+        border: 2px solid var(--fond-button);
+        border-radius: 5%;
+        padding: 5px;
+    }
+    .title-premio {
+        font-size: 25px !important;
+        width: 80% !important;
+        margin: auto !important;
+        text-align: center;
+        position: relative;
+        top: -290px !important;
+        height: 0px;
+    }
+    .title-premio1 {
+        font-size: 18px;
+        width: 90%;
+        margin: auto !important;
+        text-align: center;
+        position: relative;
+        top: -195px !important;
+        height: 0px;
+    }
+    .title-premio2 {
+        font-size: 27px;
+        width: 90%;
+        margin: auto !important;
+        text-align: center;
+        position: relative;
+        top: -95px !important;
+        height: 0px;
+    }
+    .title-premio3 {
+        font-size: 18px;
+        width: 90%;
+        margin: auto !important;
+        text-align: center;
+        position: relative;
+        top: -60px !important;
+        height: 0px;
+    }
+    .olimpica {
+        width: 5em;
+        margin: auto;
+        position: relative;
+        top: 0 !important;
+        left: 140px !important;
+        border-radius: 50px;
+    }
+    .compar {
+        position: relative;
+        left: 0 !important;
+    }
+    .contens {
+        text-align: center;
+    }
+
+    .boton {
+        background: var(--fond-button) !important;
+        border: 2px solid var(--fond-button) !important;
+        width: 245px;
+        height: 28px;
+        font-size: 25px;
+        line-height: 19px;
+        margin: 10px;
+        line-height: 13px;
+    }
+
+
+    .listarAlarmas {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .contes {
+        width: 80%;
+        height: 7em;
+        text-align: center;
+        font-size: 15px;
+        margin: 15px;
+        border-radius: 20em;
+    }
+
+    .contenedor-tarjetas {
+        display: flex;
+        flex-direction: column;
+        position: inherit !important;
+    }
+
+    .botonperfil {
+        margin: auto !important;
+
+    }
+
+    .pepe {
+        width: 90% !important;
+        position: inherit !important;
+
+    }
+
+    .tarjetas {
+        width: 100% !important;
+        height: 35em;
+        position: inherit !important;
+    }
 }

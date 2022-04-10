@@ -11,8 +11,6 @@ export const Rendimiento = () => {
     const fecha = new Date();
     const month = fecha.getUTCMonth() + 1;
     const day = fecha.getUTCDate() - 1;
-    const year = fecha.getUTCFullYear();
-    const semana = fecha.getDay()
     const [compl, setCompl] = useState(0)
     const [compl1, setCompl1] = useState(0)
     const [compl2, setCompl2] = useState(0)
@@ -216,9 +214,9 @@ export const Rendimiento = () => {
     }, [task])
 
     return (
-        <div className='p-5 no-tocar text-center'>
-            <h2 className='mt-5'>Rendimiento de los ultimos 7 dias</h2>
-            <div className="w-75 my-5 mx-auto">
+        <div className='no-tocar text-center'>
+            <h2 className="titulosss">Rendimiento de los ultimos 7 dias</h2>
+            <div className="mx-auto holss">
                 <Bar options={options} data={datas} />
             </div>
         </div>

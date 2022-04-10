@@ -84,7 +84,7 @@ export const Listaremociones = () => {
   return (
     <div>
           <div className="grafica">
-              <div className="w-50 mx-auto pie">
+              <div className="pie">
                   <Pie className="w-100" data={data} options={opciones} />
               </div>
           </div>

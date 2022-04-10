@@ -207,7 +207,7 @@ export const Rangoe = () => {
 
   return (
     <div className='no-tocar'>
-          <div className="w-75 my-5 mx-auto">
+          <div className="mx-auto">
               <Bar options={options} data={datas} />
               </div>
     </div>
